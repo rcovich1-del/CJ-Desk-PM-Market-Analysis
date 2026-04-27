@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Market Rundown — April 25, 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  a { color: #c9a84c; text-decoration: none; }
+  /* MASTHEAD */
+  .masthead {
+    background: #161b22;
+    border-bottom: 2px solid #c9a84c;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .masthead-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #c9a84c;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .masthead-date {
+    font-size: 13px;
+    color: #8b949e;
+    text-align: right;
+  }
+  .masthead-sub {
+    font-size: 11px;
+    color: #6e7681;
+    margin-top: 2px;
+  }
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #13181f;
+    border-left: 3px solid #444c56;
+    padding: 10px 32px;
+    font-size: 11px;
+    color: #6e7681;
+    line-height: 1.5;
+  }
+  /* MAIN LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px 32px; }
+  /* SECTION HEADERS */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #21262d;
+  }
+  .section-number {
+    background: #c9a84c;
+    color: #0d1117;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    letter-spacing: 0.06em;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e6edf3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  /* STAT BOX ROW */
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .stat-box {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    padding: 12px 16px;
+    min-width: 120px;
+    flex: 1;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+  .stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e6edf3;
+  }
+  .stat-change {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .pos { color: #3fb950; }
+  .neg { color: #f85149; }
+  .neu { color: #8b949e; }
+  /* TONE CALLOUT */
+  .callout {
+    background: #161b22;
+    border-left: 3px solid #c9a84c;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #c9d1d9;
+  }
+  .callout.risk { border-left-color: #f85149; }
+  .callout.info { border-left-color: #388bfd; }
+  .callout.warn { border-left-color: #d29922; }
+  .callout.green { border-left-color: #3fb950; }
+  .callout-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8b949e;
+    margin-bottom: 5px;
+  }
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  th {
+    background: #161b22;
+    color: #8b949e;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #21262d;
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #161b22;
+    color: #c9d1d9;
+    vertical-align: top;
+  }
+  tr:hover td { background: #161b22; }
+  /* BADGES */
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-bps { background: #1f3d2a; color: #3fb950; }
+  .badge-bcs { background: #3d1f1f; color: #f85149; }
+  .badge-ic { background: #1f2d3d; color: #58a6ff; }
+  .badge-diag { background: #2d2010; color: #d29922; }
+  .badge-high { background: #3d1f1f; color: #f85149; }
+  .badge-mod { background: #2d2010; color: #d29922; }
+  .badge-low { background: #1f3d2a; color: #3fb950; }
+  .badge-exec { background: #1f3d2a; color: #3fb950; }
+  .badge-monitor { background: #1f2d3d; color: #58a6ff; }
+  .badge-signal { background: #2d2010; color: #d29922; }
+  /* POSTURE BOX */
+  .posture-box {
+    background: #161b22;
+    border: 1px solid #c9a84c;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .posture-label { font-size: 11px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.08em; }
+  .posture-value { font-size: 22px; font-weight: 700; color: #c9a84c; margin: 4px 0; }
+  .posture-note { font-size: 12px; color: #8b949e; }
+  /* CANDIDATE CARD */
+  .candidate-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .candidate-ticker {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e6edf3;
+    display: inline;
+  }
+  .candidate-name {
+    font-size: 13px;
+    color: #8b949e;
+    margin-left: 8px;
+  }
+  .candidate-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .meta-item {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #8b949e;
+  }
+  .meta-item span { color: #e6edf3; font-weight: 600; }
+  /* SCENARIO GRID */
+  .scenario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .scenario-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 5px;
+    padding: 12px 14px;
+  }
+  .scenario-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e6edf3;
+    margin-bottom: 4px;
+  }
+  .scenario-prob {
+    font-size: 11px;
+    color: #8b949e;
+    margin-bottom: 6px;
+  }
+  .scenario-body { font-size: 12px; color: #c9d1d9; }
+  /* CLOSING NOTE */
+  .closing-note {
+    background: #0d1117;
+    border: 1px solid #c9a84c;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .closing-note-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #c9a84c;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  /* FOOTER */
+  .footer {
+    background: #161b22;
+    border-top: 1px solid #21262d;
+    padding: 16px 32px;
+    font-size: 11px;
+    color: #6e7681;
+    text-align: center;
+    margin-top: 32px;
+  }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0 8px 20px; }
+  li { margin: 3px 0; }
+  h3 { color: #e6edf3; font-size: 14px; margin: 16px 0 8px; }
+  h4 { color: #c9a84c; font-size: 13px; margin: 12px 0 6px; }
+  .week-note { font-size: 12px; color: #8b949e; margin-top: 4px; }
+  @media (max-width: 700px) {
+    .scenario-grid { grid-template-columns: 1fr; }
+    .stat-box { min-width: 100px; }
+    .masthead { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div>
+    <div class="masthead-title">CJ Desk PM Market Rundown</div>
+    <div class="masthead-date">Week Ending Friday, April 25, 2026</div>
+    <div class="masthead-sub">Session Date: April 24, 2026 &nbsp;|&nbsp; End-of-Day Edition</div>
+  </div>
+  <div style="text-align:right;">
+    <div style="color:#c9a84c;font-weight:700;font-size:13px;">SELECTIVE OFFENSE</div>
+    <div style="color:#8b949e;font-size:11px;margin-top:2px;">Execution Posture</div>
+  </div>
+</div>
+
+<!-- DISCLAIMER 1467C (TOP) -->
+<div class="disclaimer">
+  <strong style="color:#8b949e;">Disclosure:</strong> This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+</div>
+
+<div class="container">
+
+<!-- ============================================================ -->
+<!-- SECTION 1 — PM MARKET RECAP -->
+<!-- ============================================================ -->
+<div class="section-header">
+  <div class="section-number">01</div>
+  <div class="section-title">PM Market Recap</div>
+</div>
+
+<!-- STAT BOXES -->
+<div class="stat-row">
+  <div class="stat-box">
+    <div class="stat-label">S&amp;P 500</div>
+    <div class="stat-value">7,165.08</div>
+    <div class="stat-change pos">+0.80% ▲ NEW ATH</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">Nasdaq</div>
+    <div class="stat-value">24,836.60</div>
+    <div class="stat-change pos">+1.63% ▲ NEW ATH</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">Dow Jones</div>
+    <div class="stat-value">49,230.71</div>
+    <div class="stat-change neg">−0.16% ▼</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">Russell 2000</div>
+    <div class="stat-value">$276.11</div>
+    <div class="stat-change pos">+0.22% ▲</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">VIX</div>
+    <div class="stat-value">18.71</div>
+    <div class="stat-change pos">−3.11% ▼</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">WTI Crude</div>
+    <div class="stat-value">$94.70</div>
+    <div class="stat-change neg">−1.51% ▼</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">10-Yr Yield</div>
+    <div class="stat-value">4.31%</div>
+    <div class="stat-change neu">Flat</div>
+  </div>
+</div>
+
+<div class="week-note" style="margin-bottom:12px;">Weekly: S&amp;P +0.6% &nbsp;|&nbsp; Nasdaq +1.5% &nbsp;|&nbsp; Dow −0.4% &nbsp;|&nbsp; Russell flat &nbsp;|&nbsp; SPY $713.94 &nbsp;|&nbsp; QQQ $663.88</div>
+
+<div class="callout">
+  <div class="callout-label">Market Tone</div>
+  Semiconductors-led risk-on into record highs, but Dow divergence and NDX channel resistance warning keep the posture selectively offensive rather than outright bullish. Tech carried the tape; the Dow's red print and small-cap flat finish signal the rally is concentrated, not broad.
+</div>
+
+<h3>Sector Leadership</h3>
+<table>
+  <thead><tr><th>Sector / Name</th><th>Move</th><th>Key Driver</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Semiconductors / Technology</strong></td><td class="pos">+23.6% INTC, +13.9% AMD, +8.71% SMCI, +4.32% NVDA</td><td>Intel Q1 blowout; 18th consecutive up day for chip index; Nvidia retook $5T market cap</td></tr>
+    <tr><td><strong>Gold / Precious Metals</strong></td><td class="pos">NEM +8.68% (week)</td><td>Iran uncertainty + softer dollar; safe-haven bid in miners</td></tr>
+    <tr><td><strong>Mega-Cap Tech / Comms</strong></td><td class="pos">AMZN +3.49%, META +2.41%, MSFT +2.13%, GOOGL +1.63%</td><td>Earnings anticipation build into Mag 7 superweek</td></tr>
+    <tr><td><strong>Energy</strong></td><td class="neg">XOM −1.08%, CVX −1.27%</td><td>WTI −1.51% on US–Iran peace talk hopes (Pakistan meetings)</td></tr>
+    <tr><td><strong>Financials</strong></td><td class="neg">JPM −1.09%, BAC −0.80%, GS −0.47%</td><td>Rotation into tech; rate environment mixed signal</td></tr>
+    <tr><td><strong>Industrials / Defense</strong></td><td class="neg">BA −0.73%</td><td>Dow underperformance; industrial drag persists</td></tr>
+  </tbody>
+</table>
+
+<h3>Key Session Drivers</h3>
+<ol style="margin-left:18px;font-size:13px;line-height:1.8;">
+  <li><strong>Intel Q1 Blowout:</strong> EPS $0.29 vs. $0.01 est; Rev $13.6B. DCAI +22% YoY, gross margin ~41% (+500bps). Best day since 1987. AMD +13.9% in sympathy.</li>
+  <li><strong>Nvidia $5 Trillion Recaptured:</strong> NVDA +4.32%, AI infrastructure narrative fully intact.</li>
+  <li><strong>US–Iran Peace Talk Hopes:</strong> Witkoff/Kushner traveling to Pakistan. WTI sold off on reduced conflict risk premium.</li>
+  <li><strong>Apple CEO Succession:</strong> Tim Cook → John Ternus (SVP Hardware Engineering) effective September 1. AAPL is the heaviest SPX/NDX weight heading into April 30 earnings.</li>
+  <li><strong>S&amp;P 500 and Nasdaq Record Closes:</strong> Both indices hit new all-time highs, extending recovery from the early-April geopolitical selloff.</li>
+</ol>
+
+<h3>Trader Takeaway</h3>
+<div class="scenario-grid">
+  <div class="scenario-card">
+    <div class="scenario-title" style="color:#3fb950;">Risk-On Scenario</div>
+    <div class="scenario-body">Mag 7 earnings beat and guide up. VIX compresses to 16–17. SPX extends toward 7,300. AI capex/revenue confirmation carries the tape higher. Premium-selling cushion widens further.</div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-title" style="color:#f85149;">Risk-Off Scenario</div>
+    <div class="scenario-body">One or more Mag 7 misses. NDX fails channel resistance. AAPL underperforms on CEO transition + earnings. VIX spikes toward 23–25. Fast rotation. BPS strike management becomes urgent.</div>
+  </div>
+</div>
+<p style="font-size:12px;color:#8b949e;margin-top:8px;"><strong style="color:#c9d1d9;">Watch Monday:</strong> CDNS/RMBS AC prints, Warsh Senate testimony, Iran weekend outcome, oil gap direction at open.</p>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 — NEWS & CATALYST REVIEW -->
+<!-- ============================================================ -->
+<div class="section-header">
+  <div class="section-number">02</div>
+  <div class="section-title">News &amp; Catalyst Review</div>
+</div>
+
+<h3>Macro Catalysts</h3>
+<p>US–Iran peace talks revived as envoys travel to Pakistan. WTI fell ~1.51% to ~$94.70 on reduced conflict premium — but crude is still balancing near elevated levels and ShadowTrader flags a potential breakout-higher as a market top signal. 10-year Treasury held at ~4.31%, flat on the week. Dollar modestly weak. Kevin Warsh Senate Banking Committee testimony begins week of April 27 — rate philosophy will be closely parsed.</p>
+
+<h3>Earnings Catalysts</h3>
+<table>
+  <thead><tr><th>Name</th><th>Result</th><th>Reaction</th><th>Takeaway</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Intel (INTC)</strong></td>
+      <td>EPS $0.29 vs. $0.01 est; Rev $13.6B beat</td>
+      <td class="pos">+23.6%</td>
+      <td>DCAI +22% YoY, GM ~41%. AI server demand confirmed. Best day since 1987.</td>
+    </tr>
+    <tr>
+      <td><strong>Texas Instruments (TXN)</strong></td>
+      <td>Beat; Q2 guide $1.77–$2.05 vs. $1.57 est</td>
+      <td class="pos">Strong</td>
+      <td>Analog/industrial cycle recovery + AI adjacency. Positive sector read-through.</td>
+    </tr>
+    <tr>
+      <td><strong>IBM</strong></td>
+      <td>Q1 gap-down (prior session)</td>
+      <td class="neg">Gap-down; buy program</td>
+      <td>Legacy soft; software transition ongoing. Gap-down buy program executed.</td>
+    </tr>
+  </tbody>
+</table>
+<p style="font-size:12px;color:#8b949e;"><strong style="color:#c9d1d9;">S&amp;P 500 Q1 Blended EPS Growth:</strong> +15.1% YoY as of April 24 — accelerating from 13.0% the prior week.</p>
+
+<h3>Stock-Specific Catalysts</h3>
+<p><strong>Apple CEO Succession (April 20):</strong> Tim Cook transitions to Executive Chairman; John Ternus (SVP Hardware Engineering, Apple since 2001) becomes CEO effective September 1, 2026. First major Ternus product expected to be the Foldable iPhone. AAPL has rallied +6% on the month ahead of April 30 earnings. ShadowTrader designated AAPL the "Number One Draft Pick" — the heaviest weight in both SPX and NDX.</p>
+<p><strong>AMD:</strong> +13.9% sympathy with Intel. Semiconductor cycle read-through is unambiguous. <strong>SMCI:</strong> +8.71% on AI data center infrastructure momentum. <strong>RMBS:</strong> Surging into April 27 AC earnings; IVR/IVP 100%, IV 95%, pre-earnings call volume 2.5× normal.</p>
+
+<h3>What Still Matters vs. One-Day Noise</h3>
+<table>
+  <thead><tr><th>Theme</th><th>Classification</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Mag 7 earnings (April 27–May 1)</td><td><span class="badge badge-high">Carry Forward</span></td><td>Highest conviction event cluster of the quarter</td></tr>
+    <tr><td>Intel/semi cycle recovery</td><td><span class="badge badge-high">Carry Forward</span></td><td>TXN + AMD confirm; multi-week structural setup</td></tr>
+    <tr><td>Apple CEO transition + April 30 earnings</td><td><span class="badge badge-high">Carry Forward</span></td><td>Ternus narrative + AI pipeline + valuation</td></tr>
+    <tr><td>US–Iran peace talks</td><td><span class="badge badge-mod">Watch Weekend</span></td><td>Outcome binary for oil and risk-on continuation</td></tr>
+    <tr><td>Kevin Warsh testimony</td><td><span class="badge badge-mod">Carry Forward</span></td><td>Rate path implications for tech multiples</td></tr>
+    <tr><td>VIX at 18–19</td><td><span class="badge badge-mod">Carry Forward</span></td><td>Entry window before Mag 7 IV expands</td></tr>
+    <tr><td>IBM gap-down buy program</td><td><span class="badge badge-low">One-Day</span></td><td>Executed; move complete</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <div class="callout-label">Trader Relevance</div>
+  Five Mag 7 names representing ~25% of the S&amp;P 500, all up 6–11% into their prints. The bar is high. AAPL carries layered risk: new CEO, AI pipeline uncertainty, elevated valuation. ShadowTrader's "Next Week is PIVOTAL" — the AI monetization thesis either gets confirmed or tested. For premium sellers: position Monday–Tuesday before IV expands into Wednesday's prints.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 — TRADE DISCOVERY LAYER -->
+<!-- ============================================================ -->
+<div class="section-header">
+  <div class="section-number">03</div>
+  <div class="section-title">Trade Discovery Layer</div>
+</div>
+
+<div class="callout risk">
+  <div class="callout-label">ShadowTrader Overlay — Cautious</div>
+  New ATH but NDX already at channel resistance. Crude oil near breakout level — if it surges, ShadowTrader flags it as a potential market top signal. Sunday note: "How To Short This Market!" All structures must be defined-risk. No naked exposure. Do not add risk through the Mag 7 earnings window without explicit event management.
+</div>
+
+<h3>Top 3 Candidates</h3>
+
+<!-- CDNS -->
+<div class="candidate-card">
+  <span class="candidate-ticker">CDNS</span>
+  <span class="candidate-name">Cadence Design Systems</span>
+  <span class="badge badge-bps" style="margin-left:8px;">BPS — Pre-Earnings</span>
+  <span class="badge badge-high" style="margin-left:4px;">Earnings April 27 AC</span>
+  <div class="candidate-meta">
+    <div class="meta-item">Price <span>$332.89</span></div>
+    <div class="meta-item">IVR <span class="pos">100%</span></div>
+    <div class="meta-item">IVP <span class="pos">100%</span></div>
+    <div class="meta-item">IV% <span>57.01%</span></div>
+    <div class="meta-item">Exp Move <span>$25.37</span></div>
+    <div class="meta-item">Options Vol <span>47,443</span></div>
+    <div class="meta-item">3M RelVol <span>1.26×</span></div>
+    <div class="meta-item">Source <span>CJ_BPS</span></div>
+  </div>
+  <p style="font-size:12px;color:#c9d1d9;">IVR/IVP at maximum — IV is entirely earnings-driven. BPS structure: sell ~$310P / buy ~$290P (defined risk, $20 width). IV crush post-print is the profit mechanism. <strong>This is a binary event play, not a passive premium-selling setup.</strong> Appropriate only for traders explicitly structuring around the April 27 AC earnings event with full awareness of binary risk. Sector context: EDA tools in full AI build-out cycle; Intel's DCAI +22% is a positive signal for CDNS's customer pipeline.</p>
+</div>
+
+<!-- COF -->
+<div class="candidate-card">
+  <span class="candidate-ticker">COF</span>
+  <span class="candidate-name">Capital One Financial</span>
+  <span class="badge badge-ic" style="margin-left:8px;">Iron Condor</span>
+  <span class="badge badge-low" style="margin-left:4px;">No Imminent Earnings</span>
+  <div class="candidate-meta">
+    <div class="meta-item">Price <span>$191.39</span></div>
+    <div class="meta-item">IVR <span>49.21%</span></div>
+    <div class="meta-item">IVP <span>72%</span></div>
+    <div class="meta-item">IV% <span>35.46%</span></div>
+    <div class="meta-item">Exp Move <span>$6.47</span></div>
+    <div class="meta-item">Options Vol <span>11,734</span></div>
+    <div class="meta-item">3M RelVol <span>0.95×</span></div>
+    <div class="meta-item">Source <span>CJ_Iron_Condor</span></div>
+  </div>
+  <p style="font-size:12px;color:#c9d1d9;">The cleanest setup on the board — elevated IV, no binary event. Iron Condor: Sell $185P / Buy $180P (downside); Sell $198C / Buy $203C (upside). Wings ~3% outside expected move on each side. Target net credit $1.50–$2.00. Monitor financial sector weakness (JPM/BAC both weak Friday) — accelerating financials selloff would pressure the put side. Target 45–30 DTE expiry for maximum theta.</p>
+</div>
+
+<!-- NVDA -->
+<div class="candidate-card">
+  <span class="candidate-ticker">NVDA</span>
+  <span class="candidate-name">Nvidia Corporation</span>
+  <span class="badge badge-diag" style="margin-left:8px;">Bullish Diagonal</span>
+  <span class="badge badge-low" style="margin-left:4px;">Next Earnings: May+</span>
+  <div class="candidate-meta">
+    <div class="meta-item">Price <span>$208.27</span></div>
+    <div class="meta-item">IVR <span>32.74%</span></div>
+    <div class="meta-item">IVP <span>52%</span></div>
+    <div class="meta-item">IV% <span>39.50%</span></div>
+    <div class="meta-item">Exp Move <span>$3.57</span></div>
+    <div class="meta-item">Options Vol <span>6,755,450</span></div>
+    <div class="meta-item">3M RelVol <span>1.23×</span></div>
+    <div class="meta-item">Source <span>CJ_Bullish_Diagonal</span></div>
+  </div>
+  <p style="font-size:12px;color:#c9d1d9;">Selective-offense AI play. Bullish diagonal: Buy June 210C (~60 DTE) / Sell May 215C (~30 DTE). Net debit; short call decays faster. Maintains long-delta AI exposure with defined max risk = net debit paid. ShadowTrader caution at NDX channel resistance requires starter sizing. Stop: NVDA breaks below $200 support → close and reassess.</p>
+</div>
+
+<h3>Secondary Discovery List</h3>
+<table>
+  <thead><tr><th>Ticker</th><th>Screener</th><th>IVR</th><th>IVP</th><th>IV%</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>RMBS</strong></td><td>CJ_BPS / CJ_BCS</td><td class="pos">100%</td><td class="pos">100%</td><td>95.04%</td><td>Earnings April 27 AC — pure binary event; extreme IV, extreme caution. Watch for post-print IV normalization entry.</td></tr>
+    <tr><td><strong>ARM</strong></td><td>CJ_BCS</td><td>Elevated</td><td>—</td><td>Elevated</td><td>Earnings May 6; IV still expanding into event. Premature to sell premium. Re-evaluate post-print.</td></tr>
+    <tr><td><strong>BMY</strong></td><td>Naked Put Candidate</td><td>—</td><td>—</td><td>—</td><td>Bristol-Myers; dividend-yield income context for put-selling in defined-risk accounts.</td></tr>
+    <tr><td><strong>TEVA</strong></td><td>CJ_Iron_Condor</td><td>—</td><td>—</td><td>—</td><td>Small-cap pharma; verify earnings schedule and IV before structuring.</td></tr>
+  </tbody>
+</table>
+
+<div class="callout info">
+  <div class="callout-label">Trader Takeaway — Trade Discovery</div>
+  COF is the cleanest premium-selling setup — Iron Condor, defined risk, no binary event. CDNS is viable only as an explicit earnings play with full event-risk awareness. NVDA is the selective-offense directional play for managed long-delta AI exposure. Monday–Tuesday is the entry window. The post-Mag 7 IV normalization environment will likely offer the best Q2 premium-selling entries of the year.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 — PORTFOLIO RISK CARRY FORWARD -->
+<!-- ============================================================ -->
+<div class="section-header">
+  <div class="section-number">04</div>
+  <div class="section-title">Portfolio Risk Carry Forward</div>
+</div>
+
+<h3>Exposure &amp; Greeks Overview</h3>
+<table>
+  <thead><tr><th>Greek</th><th>Profile</th><th>Environment Note</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Delta</strong></td><td>Neutral-to-mildly long</td><td>BPS positions have cushion at ATH; diagonal structures carry positive delta. Semi/AI names significantly appreciated Friday.</td></tr>
+    <tr><td><strong>Theta</strong></td><td class="pos">Positive — generating</td><td>VIX at 18–19; theta at a reasonable pace. Not peak-IV but above baseline floor.</td></tr>
+    <tr><td><strong>Gamma</strong></td><td>Negative / manageable</td><td>Event-driven gamma spike risk arrives Wednesday April 29 (Mag 7). Review all strikes before then.</td></tr>
+    <tr><td><strong>Vega</strong></td><td>Short — benefiting</td><td>VIX compression trend is a tailwind. Risk: Mag 7 disappointment spikes VIX 3–5 points rapidly.</td></tr>
+    <tr><td><strong>Rho</strong></td><td>Minor</td><td>10yr at 4.31%, stable. Rho negligible on short-term options.</td></tr>
+  </tbody>
+</table>
+
+<h3>Gamma / Earnings Exposure Map</h3>
+<table>
+  <thead><tr><th>Name</th><th>Earnings Date</th><th>Days Out</th><th>Action Required</th></tr></thead>
+  <tbody>
+    <tr><td><strong>CDNS</strong></td><td>April 27 AC</td><td style="color:#f85149;font-weight:700;">1 trading day</td><td>Explicit decision before Monday close — hold as defined binary or close</td></tr>
+    <tr><td><strong>RMBS</strong></td><td>April 27 AC</td><td style="color:#f85149;font-weight:700;">1 trading day</td><td>Close or hold as defined binary with full IV crush awareness</td></tr>
+    <tr><td><strong>MSFT</strong></td><td>April 29 AC</td><td style="color:#d29922;font-weight:700;">3 trading days</td><td>Close unhedged positions by Tuesday; review strike proximity</td></tr>
+    <tr><td><strong>GOOGL</strong></td><td>April 29 AC</td><td style="color:#d29922;font-weight:700;">3 trading days</td><td>Same as MSFT</td></tr>
+    <tr><td><strong>META</strong></td><td>April 29 AC</td><td style="color:#d29922;font-weight:700;">3 trading days</td><td>ATH + high expectations = high binary risk; close unintended exposure</td></tr>
+    <tr><td><strong>AMZN</strong></td><td>April 29 AC</td><td style="color:#d29922;font-weight:700;">3 trading days</td><td>AWS narrative + margin trajectory = binary; manage before Wednesday</td></tr>
+    <tr><td><strong>AAPL</strong></td><td>April 30 AC</td><td style="color:#d29922;font-weight:700;">4 trading days</td><td>Highest risk — CEO transition + AI pipeline + earnings = compounded uncertainty</td></tr>
+    <tr><td><strong>ARM</strong></td><td>May 6 AC</td><td style="color:#3fb950;">~8 trading days</td><td>IV still expanding; do not sell premium — monitor only</td></tr>
+  </tbody>
+</table>
+
+<h3>Stress Scenarios</h3>
+<div class="scenario-grid">
+  <div class="scenario-card">
+    <div class="scenario-title" style="color:#3fb950;">Mag 7 Sweep Beat <span style="color:#8b949e;font-weight:400;">45%</span></div>
+    <div class="scenario-body">All five beat and guide up. VIX to 15–16. SPX extends toward 7,300+. Long-delta diagonals gain. BPS positions see cushion widen further. Trail short strikes upward; do not add new risk at elevated levels.</div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-title" style="color:#d29922;">Mixed Prints <span style="color:#8b949e;font-weight:400;">35%</span></div>
+    <div class="scenario-body">1–2 misses, 2–3 beats. VIX pops to 21–23. Individual names gap 5–10%. Active delta management required. IC positions on index-correlated names could see short strikes tested. Do not allow passive drift.</div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-title" style="color:#f85149;">Widespread Disappointment <span style="color:#8b949e;font-weight:400;">12%</span></div>
+    <div class="scenario-body">2–3 major misses or soft guidance. VIX spikes 25+. SPX retreats to 6,900–7,000. Pre-plan: VIX above 22 = reduce size; SPX below 7,050 = close at-risk BPS positions. Do not wait for forced management.</div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-title" style="color:#f85149;">Iran Talks Collapse / Oil Spike <span style="color:#8b949e;font-weight:400;">8%</span></div>
+    <div class="scenario-body">WTI gaps above $97. VIX spikes on geopolitical re-escalation. Energy BPS positions at risk. Broader market opens lower Monday. Assess energy-sector exposure before Monday open.</div>
+  </div>
+</div>
+
+<h3>Next Session Priorities</h3>
+<ol style="margin-left:18px;font-size:13px;line-height:1.9;">
+  <li>CDNS / RMBS — explicit decision before Monday close (close or hold as defined binary)</li>
+  <li>Mag 7 exposure — close or adjust all positions in MSFT/GOOGL/META/AMZN/AAPL that are not explicitly structured around the earnings event, by Tuesday close</li>
+  <li>Financial BPS delta check — verify JPM/BAC/GS cushion after Friday weakness; adjust if necessary</li>
+  <li>COF Iron Condor entry — confirm no new catalyst; enter Monday if price action is stable</li>
+  <li>NVDA Bullish Diagonal — starter position, sized to defined-risk budget</li>
+  <li>Warsh testimony monitor — hawkish signal = reduce tech exposure immediately</li>
+</ol>
+
+<div class="callout">
+  <div class="callout-label">Risk Posture for Tomorrow</div>
+  Selective Offense. The task from now through Wednesday is capital preservation, not return maximization. Enter COF and NVDA with appropriate sizing. Arrive at Wednesday's Mag 7 prints with dry powder. The post-print IV crush environment will likely offer the best Q2 premium-selling entries of the year.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 — TOMORROW GAME PLAN -->
+<!-- ============================================================ -->
+<div class="section-header">
+  <div class="section-number">05</div>
+  <div class="section-title">Tomorrow Game Plan — Monday, April 27</div>
+</div>
+
+<div class="callout warn">
+  <div class="callout-label">Opening Backdrop</div>
+  <strong>Fragile-Constructive.</strong> Record SPX/Nasdaq closes, semiconductor renaissance in full swing — but NDX is at channel resistance, five Mag 7 names report in 48–72 hours, CDNS/RMBS report tonight, and Iran weekend diplomatic outcome is unresolved.
+</div>
+
+<h3>Primary Themes to Watch</h3>
+<table>
+  <thead><tr><th>#</th><th>Theme</th><th>Key Signal</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>CDNS / RMBS earnings (April 27 AC)</strong></td><td>First IV-crush data points of the week. Tone-setter for whether earnings-IV structures are working in current tape.</td></tr>
+    <tr><td>2</td><td><strong>Iran / Pakistan diplomatic outcome</strong></td><td>Oil gap at Monday open. Constructive = WTI stays below $96; breakdown = spike toward $97–100, risk-off.</td></tr>
+    <tr><td>3</td><td><strong>Kevin Warsh Senate testimony</strong></td><td>Any hawkish rate signal pressures tech multiples at ATH. Parse tone carefully.</td></tr>
+    <tr><td>4</td><td><strong>NDX channel resistance test</strong></td><td>QQQ around $663–665. Holding above = channel attempt; failing below = caution signal.</td></tr>
+    <tr><td>5</td><td><strong>AAPL as the tape's anchor</strong></td><td>Earnings April 30 AC, CEO transition narrative. Daily price action is a leading indicator of broad market health.</td></tr>
+  </tbody>
+</table>
+
+<h3>Priority Watchlist</h3>
+<table>
+  <thead><tr><th>Category</th><th>Names</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><span class="badge badge-exec">Active Execution</span></td>
+      <td><strong>COF, NVDA</strong></td>
+      <td>COF Iron Condor — confirm no catalyst, enter if stable. NVDA Bullish Diagonal — starter position only.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-monitor">Active Monitor</span></td>
+      <td><strong>CDNS, RMBS, AAPL</strong></td>
+      <td>CDNS/RMBS post-earnings gap direction (tonight AC). AAPL daily price action + CEO transition headlines.</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-signal">Session Tone Signals</span></td>
+      <td><strong>QQQ $663–665, VIX, WTI</strong></td>
+      <td>QQQ above $663 = channel test; VIX above 21 = reduce size; WTI above $97 = risk-off overlay.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="posture-box">
+  <div class="posture-label">Execution Posture</div>
+  <div class="posture-value">Selective Offense</div>
+  <div class="posture-note">Constructive backdrop, but concentrated binary calendar requires disciplined sizing. Enter defined-risk positions Monday–Tuesday. Close event-adjacent positions before Wednesday. Preserve capital capacity for post-Mag 7 entries.</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CLOSING DESK NOTE -->
+<!-- ============================================================ -->
+<div class="closing-note">
+  <div class="closing-note-title">Closing Desk Note</div>
+  <p><strong>Posture: Selective Offense.</strong> Record highs in hand, but this is not the moment to push exposure. The five largest weights in the index report in a 48-hour window starting Wednesday. ShadowTrader is cautious — NDX at channel resistance, crude oil a potential top signal if it breaks higher. The winning play is patience: enter COF and NVDA with defined sizing Monday–Tuesday, protect existing positions from earnings binary risk, and arrive at Wednesday's open with dry powder. The post-Mag 7 IV normalization will likely offer the best premium-selling entries of Q2 2026. Do not let the record-high tape create overconfidence into the most concentrated 48-hour earnings window of the quarter. The week is pivotal — position accordingly.</p>
+</div>
+
+</div><!-- /container -->
+
+<!-- DISCLAIMER 1467D (BOTTOM) -->
+<div class="disclaimer" style="border-top: 1px solid #21262d; margin-top: 0;">
+  <strong style="color:#8b949e;">Options Disclaimer:</strong> Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  CJ Desk PM Market Rundown &nbsp;|&nbsp; Week Ending April 25, 2026 &nbsp;|&nbsp; Session Date: April 24, 2026 &nbsp;|&nbsp; End-of-Day Edition
+</div>
+
+</body>
+</html>
