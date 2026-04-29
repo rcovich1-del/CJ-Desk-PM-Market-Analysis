@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Market Rundown — April 29, 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  a { color: #c9a84c; text-decoration: none; }
+
+  /* Masthead */
+  .masthead {
+    background: #161b22;
+    border-bottom: 2px solid #c9a84c;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .masthead-title { font-size: 20px; font-weight: 700; color: #c9a84c; letter-spacing: 0.5px; }
+  .masthead-date { color: #8b949e; font-size: 13px; }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: #1c2128;
+    border-left: 3px solid #c9a84c;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #8b949e;
+    line-height: 1.5;
+  }
+  .disclaimer-label { color: #c9a84c; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+
+  /* Layout */
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px 32px; }
+
+  /* Section headers */
+  .section-header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 8px;
+    margin: 32px 0 16px 0;
+    color: #c9a84c;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .sub-header {
+    color: #e6edf3;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px 0 8px 0;
+    padding-left: 8px;
+    border-left: 2px solid #c9a84c;
+  }
+
+  /* Stat boxes */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .stat-box {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .stat-label { font-size: 11px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .stat-ticker { font-size: 13px; font-weight: 600; color: #e6edf3; margin-bottom: 4px; }
+  .stat-price { font-size: 18px; font-weight: 700; color: #e6edf3; }
+  .stat-change { font-size: 13px; font-weight: 600; margin-top: 4px; }
+  .pos { color: #3fb950; }
+  .neg { color: #f85149; }
+  .neu { color: #8b949e; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  thead tr { background: #1c2128; }
+  th { padding: 9px 12px; text-align: left; color: #c9a84c; font-weight: 600; border-bottom: 1px solid #30363d; white-space: nowrap; }
+  td { padding: 8px 12px; border-bottom: 1px solid #21262d; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1c2128; }
+
+  /* Callout boxes */
+  .callout {
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .callout-gold { background: #1a1800; border: 1px solid #c9a84c; }
+  .callout-red { background: #1a0b0b; border: 1px solid #f85149; }
+  .callout-green { background: #0b1a0c; border: 1px solid #3fb950; }
+  .callout-blue { background: #0d1b2a; border: 1px solid #388bfd; }
+  .callout-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+  }
+  .callout-gold .callout-label { color: #c9a84c; }
+  .callout-red .callout-label { color: #f85149; }
+  .callout-green .callout-label { color: #3fb950; }
+  .callout-blue .callout-label { color: #388bfd; }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin: 1px;
+  }
+  .badge-gold { background: #2a2000; color: #c9a84c; border: 1px solid #c9a84c; }
+  .badge-green { background: #0b1a0c; color: #3fb950; border: 1px solid #3fb950; }
+  .badge-red { background: #1a0b0b; color: #f85149; border: 1px solid #f85149; }
+  .badge-blue { background: #0d1b2a; color: #388bfd; border: 1px solid #388bfd; }
+  .badge-grey { background: #1c2128; color: #8b949e; border: 1px solid #30363d; }
+
+  /* Posture block */
+  .posture-block {
+    background: #161b22;
+    border: 2px solid #c9a84c;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 16px 0;
+  }
+  .posture-label { color: #8b949e; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .posture-value { color: #c9a84c; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .posture-desc { color: #c9d1d9; font-size: 13px; }
+
+  /* Prose */
+  p { margin-bottom: 10px; color: #c9d1d9; }
+  .prose { margin: 8px 0; }
+  ul { list-style: none; padding: 0; }
+  ul li { padding: 3px 0; padding-left: 14px; position: relative; }
+  ul li::before { content: "▸"; position: absolute; left: 0; color: #c9a84c; font-size: 10px; top: 5px; }
+
+  /* Scenario table */
+  .prob-high { color: #3fb950; }
+  .prob-med { color: #c9a84c; }
+  .prob-low { color: #f85149; }
+
+  /* Watchlist */
+  .watchlist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .watchlist-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .watchlist-card-title { color: #c9a84c; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+  .watchlist-item { color: #c9d1d9; font-size: 13px; padding: 4px 0; border-bottom: 1px solid #21262d; }
+  .watchlist-item:last-child { border-bottom: none; }
+  .wl-ticker { font-weight: 600; color: #e6edf3; }
+  .wl-note { color: #8b949e; font-size: 12px; display: block; }
+
+  /* Footer */
+  footer {
+    background: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 16px 32px;
+    margin-top: 40px;
+    color: #8b949e;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  /* Closing note */
+  .closing-note {
+    background: #161b22;
+    border: 2px solid #c9a84c;
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin: 24px 0;
+  }
+  .closing-note h3 { color: #c9a84c; font-size: 15px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .closing-note p { color: #c9d1d9; margin-bottom: 8px; }
+
+  @media (max-width: 900px) {
+    .stat-grid { grid-template-columns: repeat(3, 1fr); }
+    .watchlist-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-title">CJ Desk · PM Market Rundown</div>
+  <div class="masthead-date">Wednesday, April 29, 2026</div>
+</div>
+
+<!-- DISCLAIMER 1467C -->
+<div class="disclaimer">
+  <div class="disclaimer-label">1467C — For General Information Only</div>
+  This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+</div>
+
+<div class="container">
+
+<!-- ==================== SECTION 1: MARKET RECAP ==================== -->
+<div class="section-header">Section 1 — PM Market Recap</div>
+
+<!-- Stat Boxes -->
+<div class="stat-grid">
+  <div class="stat-box">
+    <div class="stat-label">S&amp;P 500</div>
+    <div class="stat-ticker">SPY</div>
+    <div class="stat-price">$655.38</div>
+    <div class="stat-change neu">−0.04%</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">Nasdaq 100</div>
+    <div class="stat-ticker">QQQ</div>
+    <div class="stat-price">$588.00</div>
+    <div class="stat-change pos">+0.04%</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">Dow Jones</div>
+    <div class="stat-ticker">DIA</div>
+    <div class="stat-price">$461.97</div>
+    <div class="stat-change neg">−0.57%</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">Russell 2000</div>
+    <div class="stat-ticker">IWM</div>
+    <div class="stat-price">$270.95</div>
+    <div class="stat-change neg">−1.08%</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-label">Volatility</div>
+    <div class="stat-ticker">VIX</div>
+    <div class="stat-price">18.80</div>
+    <div class="stat-change neg">+5.45%</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <div class="callout-label">Market Tone</div>
+  Defensive-but-stable. The tape drifted on event-risk paralysis — the Fed, an oil shock, and four Mag-7 prints arriving simultaneously after the bell. Buyers stayed sidelined until catalysts resolved. Energy dominated; small caps bore the most damage.
+</div>
+
+<div class="sub-header">Sector Leadership</div>
+<table>
+  <thead><tr><th>Sector</th><th>ETF</th><th>Performance</th><th>Key Driver</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge badge-green">Leading</span> Energy</td><td>XLE</td><td class="pos">Strong outperformer</td><td>WTI +7% to $106.88; Iran blockade escalation</td></tr>
+    <tr><td><span class="badge badge-green">Leading</span> Healthcare</td><td>XLV</td><td class="pos">+0.26%</td><td>Defensive rotation; no specific catalyst</td></tr>
+    <tr><td><span class="badge badge-green">Leading</span> Technology</td><td>XLK</td><td class="pos">+0.22%</td><td>Held ground ahead of Mag-7 prints</td></tr>
+    <tr><td><span class="badge badge-red">Lagging</span> Small Caps</td><td>IWM</td><td class="neg">−1.08%</td><td>Rate-sensitive; Fed hold + yield backup</td></tr>
+    <tr><td><span class="badge badge-red">Lagging</span> Financials</td><td>XLF</td><td class="neu">Soft</td><td>Higher-for-longer Fed messaging</td></tr>
+    <tr><td><span class="badge badge-red">Lagging</span> Real Estate</td><td>XLRE</td><td class="neg">Pressured</td><td>10-year yield spike; REIT headwinds</td></tr>
+  </tbody>
+</table>
+
+<div class="sub-header">Volatility Environment</div>
+<div class="callout callout-blue">
+  <div class="callout-label">VIX Assessment</div>
+  VIX closed at <strong>18.80</strong>, up +0.97 pts (+5.45%) from Tuesday's close of 17.83. Now in the upper half of the normal 15–20 band. The spike came from event-risk demand (Fed + four Mag-7 prints same session). <strong>For premium sellers:</strong> VIX at 18.80 is constructive — premiums elevated but not panic-level. Post-event IV compression expected on resolved names (VIAV, EAT, PHM). Structural support from unresolved Iran/oil risk and upcoming AAPL (May 1) and MCHP (May 7) keeps a VIX floor near 17–18.
+</div>
+
+<div class="sub-header">Key Session Drivers</div>
+<table>
+  <thead><tr><th>#</th><th>Catalyst</th><th>Impact</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Fed holds at 3.75%</strong> — third consecutive hold. Hawkish dissent. Tariffs and oil-driven inflation constrain policy. 10-year yield backed up immediately.</td><td><span class="badge badge-red">Bearish</span> yields, small caps</td></tr>
+    <tr><td>2</td><td><strong>Iran blockade escalation, oil +7%</strong> — Trump maintains U.S. naval blockade until Iran agrees to nuclear deal. WTI $106.88, Brent $118.03. Four-year high for crude.</td><td><span class="badge badge-green">Bullish</span> energy; <span class="badge badge-red">bearish</span> inflation</td></tr>
+    <tr><td>3</td><td><strong>Mag-7 simultaneous 80-second window</strong> — GOOGL blowout (+4% AH); MSFT solid beat (−1-2% AH on capex); META −7% AH; AMZN −2-3% AH on FCF.</td><td><span class="badge badge-gold">Mixed</span> tech</td></tr>
+    <tr><td>4</td><td><strong>Small-cap underperformance</strong> — IWM −1.08% on rate backup and consumer caution in higher oil/inflation environment.</td><td><span class="badge badge-red">Bearish</span> small caps</td></tr>
+    <tr><td>5</td><td><strong>VIAV unusual session activity</strong> — Q3 FY2026 beat (+42.8% revenue), stock +12.6%, IV at 100% IVR/IVP post-earnings.</td><td><span class="badge badge-gold">Watch</span></td></tr>
+  </tbody>
+</table>
+
+<div class="sub-header">Trader Takeaway for Tomorrow</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:12px 0;">
+  <div class="callout callout-green">
+    <div class="callout-label">Risk-On Scenario</div>
+    GOOGL/MSFT beats dominate premarket. Oil consolidates below $108. VIX pulls back to 17. Indices open +0.3-0.5%. Premium-sell entries improve on IV compression. Bullish diagonal and BPS setups see improved entries.
+  </div>
+  <div class="callout callout-red">
+    <div class="callout-label">Risk-Off Scenario</div>
+    META −7% and AMZN capex fear contagion dominate. Oil above $110 on Iran escalation. VIX presses 21–22. Small caps extend declines. Defensive posture warranted; fade opens, avoid new net delta exposure.
+  </div>
+</div>
+<p style="color:#8b949e; font-size:12px;">Watch: WTI crude open · NQ premarket direction · 10-year Treasury yield level</p>
+
+<!-- ==================== SECTION 2: NEWS & CATALYSTS ==================== -->
+<div class="section-header">Section 2 — News and Catalyst Review</div>
+
+<div class="sub-header">Macro Catalysts</div>
+<table>
+  <thead><tr><th>Event</th><th>Detail</th><th>Implication</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Fed Rate Hold</strong></td><td>FOMC held at 3.75% upper bound for third consecutive meeting. Hawkish dissent. Tariffs + oil-driven inflation above 2% target.</td><td>No cuts visible. 10-year yield backed up. Rate-sensitive sectors under continued pressure.</td></tr>
+    <tr><td><strong>Iran / Strait of Hormuz</strong></td><td>Trump declared blockade continues until nuclear deal. Iran refuses to reopen Hormuz. ~20M bbl/day affected. WTI $106.88, Brent $118.03.</td><td>Dominant macro theme. Oil at 4-year high. Structural inflation headwind. No resolution catalyst on horizon.</td></tr>
+    <tr><td><strong>Treasury Yields</strong></td><td>10-year yield jumped sharply post-Fed decision on combination of hawkish hold and oil-driven inflation expectations.</td><td>Rate-sensitive sector headwind: REITs, utilities, homebuilders, small caps.</td></tr>
+  </tbody>
+</table>
+
+<div class="sub-header">Earnings Catalysts</div>
+<table>
+  <thead><tr><th>Name</th><th>Ticker</th><th>Result</th><th>AH Reaction</th><th>Takeaway</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Microsoft Q3 FY26</td>
+      <td><strong>MSFT</strong></td>
+      <td>EPS $4.27 vs $4.06 ✓ | Rev $82.9B vs $81.39B ✓ | Azure +40% | AI ARR $37B (+123% YoY)</td>
+      <td class="neg">−1–2% AH</td>
+      <td>Beat on fundamentals; $190B capex guide created concern. Solid but expensive.</td>
+    </tr>
+    <tr>
+      <td>Alphabet Q1 2026</td>
+      <td><strong>GOOGL</strong></td>
+      <td>Rev $109.9B vs $107B ✓ | EPS $5.11 vs $2.63 ✓✓ | Cloud +63% to $20B | Net income +81% YoY</td>
+      <td class="pos">+4% AH</td>
+      <td>Blowout quarter. Best growth since 2022. Cloud acceleration validates AI spend thesis.</td>
+    </tr>
+    <tr>
+      <td>Amazon Q1 2026</td>
+      <td><strong>AMZN</strong></td>
+      <td>EPS $2.78 vs $1.64 ✓ (+69%) | Rev $181.5B vs $177.1B ✓ | AWS +28% (fastest in 15 qtrs)</td>
+      <td class="neg">−2–3% AH</td>
+      <td>Revenue/EPS blowout; FCF collapsed 95% to $1.2B on AI capex. FCF concern dominated reaction.</td>
+    </tr>
+    <tr>
+      <td>Meta Q1 2026</td>
+      <td><strong>META</strong></td>
+      <td>Rev $56.3B vs $55.4B ✓ (+33% YoY) | Op margin 41% | DAP 3.56B vs 3.62B est ✗</td>
+      <td class="neg">−7% AH</td>
+      <td>Revenue beat; DAP miss + capex raised to $125–145B (prior $115–135B). Double negative drove selloff.</td>
+    </tr>
+    <tr>
+      <td>Viavi Solutions Q3 FY26</td>
+      <td><strong>VIAV</strong></td>
+      <td>Rev +42.8% YoY | Non-GAAP EPS +17% vs est | Q4 guide +8.6% above est</td>
+      <td class="pos">+12.6% intraday</td>
+      <td>Strong beat across the board. IV spiked to 100% IVR/IVP. Post-earnings IV compression underway.</td>
+    </tr>
+    <tr>
+      <td>Brinker International Q3</td>
+      <td><strong>EAT</strong></td>
+      <td>Rev $1.47B (+3.2%) | Adj EPS $2.90 vs $2.66 prior | Comp sales +3.3% | Raised guidance</td>
+      <td class="pos">Elevated rel-vol 3.09x</td>
+      <td>Modest beat with execution intact. Margin headwinds noted at Maggiano's but core Chili's performing.</td>
+    </tr>
+    <tr>
+      <td>PulteGroup Q1 2026</td>
+      <td><strong>PHM</strong></td>
+      <td>Rev −12.4% to $3.41B | EPS −30.4% to $1.79 | Extended buyback program</td>
+      <td class="neg">Weak</td>
+      <td>Housing affordability headwinds confirmed. Buyback establishes floor. Condor range bounded.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="sub-header">What Still Matters Tomorrow</div>
+<table>
+  <thead><tr><th>Theme</th><th>Status</th><th>Carry-Forward vs. Noise</th></tr></thead>
+  <tbody>
+    <tr><td>Iran / Strait of Hormuz blockade</td><td><span class="badge badge-red">Ongoing</span></td><td><strong>Carry-forward</strong> — structural; no resolution catalyst</td></tr>
+    <tr><td>Fed hawkish hold / yield backup</td><td><span class="badge badge-red">In play</span></td><td><strong>Carry-forward</strong> — no cuts visible, yield backup a risk</td></tr>
+    <tr><td>Mag-7 AH earnings reactions</td><td><span class="badge badge-gold">Filtering</span></td><td><strong>Carry-forward</strong> — premarket reaction is the key read</td></tr>
+    <tr><td>Russell 2000 / small-cap underperformance</td><td><span class="badge badge-red">Structural</span></td><td><strong>Carry-forward</strong> — higher rates + weaker consumer</td></tr>
+    <tr><td>MCHP earnings (May 7)</td><td><span class="badge badge-gold">Approaching</span></td><td><strong>Carry-forward</strong> — top premium-selling setup building</td></tr>
+    <tr><td>Apple (AAPL) earnings May 1</td><td><span class="badge badge-blue">2 sessions</span></td><td><strong>Carry-forward</strong> — next Mag-7 test, IV building</td></tr>
+    <tr><td>PHM homebuilder weakness</td><td><span class="badge badge-grey">Known</span></td><td><strong>One-day noise</strong> — priced; condor range defined</td></tr>
+  </tbody>
+</table>
+
+<!-- ==================== SECTION 3: TRADE DISCOVERY ==================== -->
+<div class="section-header">Section 3 — Trade Discovery Layer</div>
+
+<p style="color:#8b949e; font-size:12px; margin-bottom:16px;">Screeners: CJ_BPS · CJ_BPS_EARNINGS · CJ_BCS · CJ_Iron_Condor · CJ_Bullish_Diagonal · CJ_Bearish_Diagonal · HIGH IV PREMIUM SELLER · Naked Put Candidate · High IV% 14 Days to Earnings · Market tone overlay: neutral-to-cautious, defined-risk structures preferred.</p>
+
+<div class="sub-header">Top 3 Candidates</div>
+
+<!-- Candidate 1: MCHP -->
+<div class="callout callout-gold" style="margin-bottom:12px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+    <div>
+      <span class="badge badge-gold" style="font-size:14px; padding:4px 12px;">MCHP</span>
+      <span class="badge badge-green">BPS EARNINGS</span>
+      <span class="badge badge-red">IVR 100%</span>
+      <span class="badge badge-red">IVP 100%</span>
+      <span class="badge badge-grey">Earnings May 7</span>
+    </div>
+    <div style="color:#c9d1d9; font-size:13px;"><strong>$90.17</strong> · ExpMove $2.77 · 8 days to earnings</div>
+  </div>
+  <p><strong>Strategy: Bull Put Spread — Pre-Earnings Premium Capture.</strong> MCHP sits at maximum IV rank and percentile with earnings confirmed for May 7. Textbook pre-earnings defined-risk sell. Expected move of $2.77 (~3.1%) defines the boundary; short put placed below $87.40, $5-wide spread ($85/$80 target area). IV crushes post-earnings regardless of outcome. Semiconductor tied to AI infrastructure buildout — fundamental narrative intact. Credit target: $0.80–$1.20.</p>
+</div>
+
+<!-- Candidate 2: PHM -->
+<div class="callout callout-blue" style="margin-bottom:12px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+    <div>
+      <span class="badge badge-blue" style="font-size:14px; padding:4px 12px;">PHM</span>
+      <span class="badge badge-blue">IRON CONDOR</span>
+      <span class="badge badge-grey">IVR 49.87%</span>
+      <span class="badge badge-grey">IVP 51%</span>
+      <span class="badge badge-green">Post-Earnings</span>
+    </div>
+    <div style="color:#c9d1d9; font-size:13px;"><strong>$120.71</strong> · ExpMove $5.57 · IV 35.93%</div>
+  </div>
+  <p><strong>Strategy: Iron Condor — Post-Earnings Mean Reversion.</strong> Earnings event resolved. IV at 35.93% with IVR near median — the sweet spot for a condor. Short call above $126.25, short put below $115.15. Buyback announcement provides floor support. Housing headwinds (rates, affordability) are well-known and priced; no surprise guidance cuts removes further catalyst risk. $3–5 wings per side, 30–35% credit target, manage at 50% captured.</p>
+</div>
+
+<!-- Candidate 3: SYY -->
+<div class="callout callout-blue" style="margin-bottom:12px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+    <div>
+      <span class="badge badge-blue" style="font-size:14px; padding:4px 12px;">SYY</span>
+      <span class="badge badge-blue">BEARISH DIAGONAL</span>
+      <span class="badge badge-grey">IVR 38%</span>
+      <span class="badge badge-red">IVP 87%</span>
+    </div>
+    <div style="color:#c9d1d9; font-size:13px;"><strong>$73.97</strong> · ExpMove $2.86 · IV 24.42%</div>
+  </div>
+  <p><strong>Strategy: Bearish Diagonal — Premium Sell with Macro Downside Lean.</strong> IVR/IVP divergence (38% rank vs 87% percentile) signals IV elevated relative to its distribution. Foodservice distribution has direct fuel cost pass-through exposure — WTI at $106.88 with no resolution creates persistent margin headwind. Sell near-term call at or just above $74, buy longer-dated put 3–5% below. The 87th IV percentile justifies a net-short-vega structure; bear lean adds directional alpha if oil remains elevated.</p>
+</div>
+
+<div class="sub-header">Secondary Discovery List</div>
+<table>
+  <thead><tr><th>Ticker</th><th>Screener</th><th>Price</th><th>IVR</th><th>IVP</th><th>ExpMove</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>VIAV</strong></td><td><span class="badge badge-grey">BPS/BCS</span></td><td>$45.53</td><td>100%</td><td>100%</td><td>$8.90</td><td>Post-earnings IV crush underway; monitor for residual short-dated premium</td></tr>
+    <tr><td><strong>LSCC</strong></td><td><span class="badge badge-grey">BPS</span></td><td>$115.67</td><td>—</td><td>—</td><td>—</td><td>Semiconductor sector; MCHP-correlated; watch for follow-through</td></tr>
+    <tr><td><strong>TTMI</strong></td><td><span class="badge badge-grey">BCS</span></td><td>$137.50</td><td>—</td><td>—</td><td>—</td><td>Elevated IV; await catalyst confirmation before entry</td></tr>
+    <tr><td><strong>EAT</strong></td><td><span class="badge badge-grey">Bullish Diag</span></td><td>$147.80</td><td>38.89%</td><td>51%</td><td>$11.44</td><td>Modest beat + raised guidance; RelVol 3.09x; moderate IV — secondary watchlist</td></tr>
+    <tr><td><strong>AMT</strong></td><td><span class="badge badge-grey">Iron Condor</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>REIT; rate-sensitive; condor feasible if yield stabilizes</td></tr>
+    <tr><td><strong>BMY</strong></td><td><span class="badge badge-grey">Naked Put</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>Defensive dividend payer; naked put requires capital allocation review</td></tr>
+  </tbody>
+</table>
+
+<!-- ==================== SECTION 4: PORTFOLIO RISK ==================== -->
+<div class="section-header">Section 4 — Portfolio Risk Carry Forward</div>
+
+<div class="sub-header">Greeks Profile — Market Environment</div>
+<table>
+  <thead><tr><th>Greek</th><th>Environment</th><th>Premium-Seller Read</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Theta</strong></td><td>Constructive — VIX 18.80, above-average decay rates</td><td class="pos">Favorable — credit structures decaying at elevated rates</td></tr>
+    <tr><td><strong>Gamma</strong></td><td>Elevated — Mag-7 gap-open risk Thursday</td><td class="neg">Caution — review near-term (0-7 DTE) positions in MSFT, META, AMZN, GOOGL</td></tr>
+    <tr><td><strong>Vega</strong></td><td>VIX expanded 5.45% today; partial reversal expected</td><td class="neu">Short-vega positions recover on VIX compression; long-vega benefited today</td></tr>
+    <tr><td><strong>Rho</strong></td><td>Elevated — Fed hold + 10-yr yield backup</td><td class="neg">Rate-sensitive longs face headwind; short-rate-sensitive names have relative tailwind</td></tr>
+  </tbody>
+</table>
+
+<div class="sub-header">Earnings Exposure Map</div>
+<table>
+  <thead><tr><th>Name</th><th>Earnings Date</th><th>Days Out</th><th>Status</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr><td><strong>MCHP</strong></td><td>May 7, 2026</td><td>8</td><td><span class="badge badge-red">Pre-Earnings</span></td><td>Entry window open — BPS setup active</td></tr>
+    <tr><td><strong>AAPL</strong></td><td>May 1, 2026</td><td>2</td><td><span class="badge badge-gold">Approaching</span></td><td>Watch IV build; potential pre-earnings entry Thursday</td></tr>
+    <tr><td><strong>VIAV</strong></td><td>Reported Apr 29</td><td>0</td><td><span class="badge badge-green">Post-Earnings</span></td><td>IV compressing; assess any open positions for close/roll</td></tr>
+    <tr><td><strong>PHM</strong></td><td>Reported Apr 29</td><td>0</td><td><span class="badge badge-green">Post-Earnings</span></td><td>Condor entry post-earnings; buyback support limits downside</td></tr>
+    <tr><td><strong>META</strong></td><td>Reported Apr 29</td><td>0</td><td><span class="badge badge-green">Post-Earnings</span></td><td>−7% AH; short puts well below price are fine; directional longs at risk</td></tr>
+    <tr><td><strong>AMZN</strong></td><td>Reported Apr 29</td><td>0</td><td><span class="badge badge-green">Post-Earnings</span></td><td>−2-3% AH on FCF concern; review strike proximity</td></tr>
+    <tr><td><strong>GOOGL</strong></td><td>Reported Apr 29</td><td>0</td><td><span class="badge badge-green">Post-Earnings</span></td><td>+4% AH — blowout; long exposure intact</td></tr>
+  </tbody>
+</table>
+
+<div class="sub-header">Stress Scenarios</div>
+<table>
+  <thead><tr><th>Scenario</th><th>Probability</th><th>Impact</th><th>Portfolio Response</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Mag-7 recovery, Iran stalemate</strong></td>
+      <td><span class="prob-high">40%</span></td>
+      <td>Low-moderate</td>
+      <td>VIX pulls back to 17–17.5. Premium selling conditions improve. Short-vega positions recover mark-to-market.</td>
+    </tr>
+    <tr>
+      <td><strong>META/AMZN capex contagion, NQ weakness</strong></td>
+      <td><span class="prob-med">30%</span></td>
+      <td>Moderate</td>
+      <td>NQ opens −0.8-1.5%. VIX to 20-21. Review tech-adjacent credit spreads for breach risk. No new positions.</td>
+    </tr>
+    <tr>
+      <td><strong>Iran escalation, oil above $110</strong></td>
+      <td><span class="prob-med">20%</span></td>
+      <td>High</td>
+      <td>Inflation reset. VIX to 22-25. Review all spreads for breach. Energy short calls at risk. Size down across portfolio.</td>
+    </tr>
+    <tr>
+      <td><strong>Iran diplomatic breakthrough, oil reversal</strong></td>
+      <td><span class="prob-low">10%</span></td>
+      <td>High (upside)</td>
+      <td>Risk-on. Small caps and growth rally. Energy positions give back gains. Bullish diagonal and BPS benefit.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="sub-header">Next Session Priorities</div>
+<ol style="padding-left:18px; color:#c9d1d9; line-height:1.9; font-size:13px;">
+  <li>Review all Mag-7-adjacent positions for Thursday gap-open exposure — especially near-term (0-7 DTE) credit spreads.</li>
+  <li>Assess IWM strike proximity for any small-cap positions given ongoing −1%+ trend.</li>
+  <li>Confirm MCHP BPS entry — IVR at max, no pre-earnings news; size and execute Thursday morning.</li>
+  <li>Monitor WTI crude open — above $110 is a risk-off flag; consolidation below $108 is constructive.</li>
+  <li>Watch Apple (AAPL) IV building for potential pre-earnings entry on Thursday.</li>
+  <li>Rate-sensitive positions: confirm 10-year yield before any new additions.</li>
+</ol>
+
+<div class="posture-block" style="margin-top:16px;">
+  <div class="posture-label">Risk Posture for Tomorrow</div>
+  <div class="posture-value">Selective Offense</div>
+  <div class="posture-desc">The market did not break today — it drifted. VIX at 18.80 is elevated but not crisis territory. Mag-7 beat on fundamentals (three of four beat revenue and EPS). Post-earnings IV compression on resolved names frees bandwidth for the next catalyst cluster (MCHP, AAPL). Primary risk: oil-side contagion if WTI pushes above $110. Maintain defined-risk structures, size conservatively, and resist adding directional exposure until AH reactions settle in premarket.</div>
+</div>
+
+<!-- ==================== SECTION 5: TOMORROW GAME PLAN ==================== -->
+<div class="section-header">Section 5 — Tomorrow Game Plan (Thursday, April 30)</div>
+
+<div class="callout callout-gold">
+  <div class="callout-label">Opening Backdrop</div>
+  <strong>Fragile but not broken.</strong> Four Mag-7 reports, a Fed hold, and a 7% oil spike absorbed without an index break. GOOGL blowout and MSFT beat create a constructive NQ premarket narrative. META −7% and AMZN capex/FCF are the offsets. Net: modestly positive for NQ futures with tail risk if capex anxiety builds into a broader narrative.
+</div>
+
+<div class="sub-header">Primary Themes to Watch</div>
+<table>
+  <thead><tr><th>Theme</th><th>Why It Matters</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge badge-gold">1</span> Mag-7 AH reaction translation</td><td>GOOGL +4% vs META −7% vs MSFT −1-2% vs AMZN −2-3%. Premarket NQ direction is the first-hour tone setter.</td></tr>
+    <tr><td><span class="badge badge-gold">2</span> Oil / Iran headline risk</td><td>WTI at $106.88, no diplomatic resolution. Any overnight Iran/Hormuz development is a session-defining catalyst.</td></tr>
+    <tr><td><span class="badge badge-gold">3</span> 10-year Treasury yield follow-through</td><td>Continued backup = small-cap and REIT pressure. Reversal = mild tailwind for rate-sensitive sectors.</td></tr>
+    <tr><td><span class="badge badge-gold">4</span> MCHP entry window (May 7 earnings, 8 days)</td><td>IVR/IVP at 100%. BPS entry best executed early Thursday before any IV compression from constructive premarket.</td></tr>
+    <tr><td><span class="badge badge-gold">5</span> AAPL earnings approach (May 1)</td><td>Two sessions away. IV building. Pre-earnings BPS setup may open Thursday depending on IV expansion.</td></tr>
+  </tbody>
+</table>
+
+<div class="sub-header">Opportunity Areas</div>
+<div class="callout callout-green">
+  <div class="callout-label">Where the Setup Lives</div>
+  <strong>Defined-risk pre-earnings premium selling</strong> (MCHP) is the highest-confidence category — maximum IV, clear earnings date, defined expected move. <strong>Post-earnings mean reversion</strong> on PHM (iron condor, bounded range with buyback support) and VIAV (IV crush monitoring). Energy sector remains the macro-driven theme but not a primary premium-selling vehicle — context only.
+</div>
+
+<div class="sub-header">Risk Areas</div>
+<div class="callout callout-red">
+  <div class="callout-label">Greatest Risks for Tomorrow</div>
+  <strong>Mag-7 capex narrative metastasizing:</strong> If META's −7% becomes the framing story for AI spend profitability, it could pressure the entire AI infrastructure complex — semiconductors, cloud, hyperscalers — and weaken MCHP's underlying price. Sizing discipline is critical.<br><br>
+  <strong>Oil above $110:</strong> Any Iran escalation overnight would reset the inflation narrative. Rate-sensitive positions would face renewed pressure. Energy short calls at risk of breach.<br><br>
+  <strong>Rate-sensitive sector extension:</strong> If 10-year yields spike further, small-cap and homebuilder positions extend declines. PHM condor short put could come under pressure if sector re-rates lower.
+</div>
+
+<div class="sub-header">Priority Watchlist</div>
+<div class="watchlist-grid">
+  <div class="watchlist-card">
+    <div class="watchlist-card-title">Active Execution</div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">MCHP</span>
+      <span class="wl-note">BPS · May expiry · $85/$80 target · IVR 100%</span>
+    </div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">PHM</span>
+      <span class="wl-note">Iron Condor · outside $5.57 expected move · post-earnings</span>
+    </div>
+  </div>
+  <div class="watchlist-card">
+    <div class="watchlist-card-title">Active Monitor</div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">VIAV</span>
+      <span class="wl-note">IV crush in progress · residual premium check</span>
+    </div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">SYY</span>
+      <span class="wl-note">Bearish diagonal · confirm IVP &gt;80%</span>
+    </div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">AAPL</span>
+      <span class="wl-note">Pre-earnings IV build · May 1 · entry window may open Thursday</span>
+    </div>
+  </div>
+  <div class="watchlist-card">
+    <div class="watchlist-card-title">Session Tone Signals</div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">WTI Crude</span>
+      <span class="wl-note">&gt;$110 = risk-off flag · &lt;$108 = constructive</span>
+    </div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">NQ Premarket</span>
+      <span class="wl-note">Direction and level sets first-hour character</span>
+    </div>
+    <div class="watchlist-item">
+      <span class="wl-ticker">10-Year Yield</span>
+      <span class="wl-note">Stability = green flag · continued rise = reduce rate-sensitive</span>
+    </div>
+  </div>
+</div>
+
+<!-- CLOSING DESK NOTE -->
+<div class="closing-note">
+  <h3>Closing Desk Note</h3>
+  <p><strong>Posture: Selective Offense.</strong> Today's session was a controlled drift through maximum event concentration — Fed, oil shock, and four Mag-7 prints resolved without an index break. That is a constructive outcome. The tape is not trending against premium sellers. VIX at 18.80 provides above-average premium, and the next catalyst window (MCHP May 7, AAPL May 1) is exactly the type of structured event-risk opportunity this desk targets.</p>
+  <p><strong>Tomorrow's top focus:</strong> MCHP BPS entry. Maximum IV, clear earnings date, defined expected move, AI infrastructure narrative intact. Second focus: PHM iron condor — post-earnings, bounded range, buyback support. AAPL IV is building and may open a pre-earnings entry window on Thursday as well.</p>
+  <p><strong>Mindset:</strong> Patient and precise. The Mag-7 capex fear story will either resolve as digested noise or extend into a broader derating. Do not anticipate the outcome — wait for premarket evidence. Execute only where the setup is clean. Watch the oil tape above everything else.</p>
+</div>
+
+</div><!-- /container -->
+
+<!-- DISCLAIMER 1467D -->
+<div class="disclaimer" style="margin-top:0;">
+  <div class="disclaimer-label">1467D — Options and Market Commentary Disclosure</div>
+  Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+</div>
+
+<footer>
+  CJ Desk PM Market Rundown · April 29, 2026 · Generated end-of-day
+</footer>
+
+</body>
+</html>
