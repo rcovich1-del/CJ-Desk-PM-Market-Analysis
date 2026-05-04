@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Market Rundown — May 3, 2026</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --bg3: #21262d;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text-muted: #8b949e;
+    --gold: #c9a84c;
+    --gold-dim: #9a7c38;
+    --green: #3fb950;
+    --red: #f85149;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #f78166;
+    --teal: #39d353;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* MASTHEAD */
+  .masthead {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 28px 0 20px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .masthead h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .masthead .sub {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #0a0e14;
+    border-left: 3px solid var(--gold-dim);
+    padding: 12px 18px;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .disclaimer.top { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+  .disclaimer.bottom { margin-top: 40px; border-top: 1px solid var(--border); }
+  .disclaimer strong { color: var(--gold-dim); }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 36px;
+  }
+  .section-header {
+    background: var(--bg3);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 16px;
+    margin-bottom: 18px;
+  }
+  .section-header h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* STAT BOXES */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 700px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  .stat-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .stat-box .ticker {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .stat-box .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+  }
+  .stat-box .change {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .neutral { color: var(--text-muted); }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin-bottom: 20px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th {
+    background: var(--bg3);
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .center { text-align: center; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+    border-left: 4px solid;
+  }
+  .callout-gold { background: rgba(201,168,76,0.08); border-color: var(--gold); }
+  .callout-red { background: rgba(248,81,73,0.08); border-color: var(--red); }
+  .callout-green { background: rgba(63,185,80,0.08); border-color: var(--green); }
+  .callout-blue { background: rgba(88,166,255,0.08); border-color: var(--blue); }
+  .callout-purple { background: rgba(188,140,255,0.08); border-color: var(--purple); }
+  .callout h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .callout-gold h4 { color: var(--gold); }
+  .callout-red h4 { color: var(--red); }
+  .callout-green h4 { color: var(--green); }
+  .callout-blue h4 { color: var(--blue); }
+  .callout-purple h4 { color: var(--purple); }
+  .callout p { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+  /* BADGES / TAGS */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+  .badge-gold { background: rgba(201,168,76,0.2); color: var(--gold); border: 1px solid var(--gold-dim); }
+  .badge-green { background: rgba(63,185,80,0.2); color: var(--green); border: 1px solid #2a7a3a; }
+  .badge-red { background: rgba(248,81,73,0.2); color: var(--red); border: 1px solid #8a3530; }
+  .badge-blue { background: rgba(88,166,255,0.15); color: var(--blue); border: 1px solid #2a5080; }
+  .badge-purple { background: rgba(188,140,255,0.15); color: var(--purple); border: 1px solid #5a3a80; }
+  .badge-orange { background: rgba(247,129,102,0.2); color: var(--orange); border: 1px solid #80402a; }
+
+  /* CANDIDATE CARDS */
+  .candidate-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .candidate-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .candidate-card .ticker-name { }
+  .candidate-card .ticker-name .cticker {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .candidate-card .ticker-name .cname {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .candidate-card .card-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+  .candidate-card .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .metric-cell {
+    background: var(--bg3);
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .metric-cell .mlabel { font-size: 10px; color: var(--text-muted); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 2px; }
+  .metric-cell .mval { font-size: 15px; font-weight: 700; color: var(--text); }
+  .candidate-card .rationale { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+  /* POSTURE BOX */
+  .posture-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 22px 24px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .posture-box .posture-label { font-size: 11px; color: var(--gold-dim); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .posture-box .posture-value { font-size: 26px; font-weight: 700; color: var(--gold); letter-spacing: 1px; }
+  .posture-box .posture-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+  /* TWO-COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* WATCHLIST */
+  .watchlist-group { margin-bottom: 16px; }
+  .watchlist-group .wg-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .watchlist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(48,54,61,0.5);
+  }
+  .watchlist-item .wi-ticker { font-weight: 700; color: var(--gold); min-width: 60px; font-size: 14px; }
+  .watchlist-item .wi-note { font-size: 12px; color: var(--text-muted); }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+
+  /* SCENARIO */
+  .scenario {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .scenario-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+  .scenario-title { font-size: 13px; font-weight: 700; color: var(--text); }
+  .scenario-prob { font-size: 12px; color: var(--text-muted); }
+  .scenario-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  p { margin-bottom: 10px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 4px; }
+  strong { color: var(--text); }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="container">
+    <h1>CJ Desk — PM Market Rundown</h1>
+    <div class="sub">Session: Friday, May 1, 2026 &nbsp;|&nbsp; Report: May 3, 2026 &nbsp;|&nbsp; Options Premium-Selling Focus</div>
+  </div>
+</div>
+
+<!-- DISCLAIMER TOP (1467C) -->
+<div class="disclaimer top container">
+  <strong>IMPORTANT DISCLOSURE:</strong> This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+</div>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 1 — PM MARKET RECAP
+══════════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header"><h2>Section 1 — PM Market Recap</h2></div>
+
+  <!-- STAT BOXES -->
+  <div class="stat-grid">
+    <div class="stat-box">
+      <div class="ticker">SPY</div>
+      <div class="price">$720.65</div>
+      <div class="change pos">+0.28%</div>
+    </div>
+    <div class="stat-box">
+      <div class="ticker">QQQ</div>
+      <div class="price">$474.15</div>
+      <div class="change pos">+0.94%</div>
+    </div>
+    <div class="stat-box">
+      <div class="ticker">IWM</div>
+      <div class="price">$279.43</div>
+      <div class="change pos">+0.46%</div>
+    </div>
+    <div class="stat-box">
+      <div class="ticker">DIA</div>
+      <div class="price">~$493</div>
+      <div class="change neg">-0.31%</div>
+    </div>
+    <div class="stat-box">
+      <div class="ticker">VIX</div>
+      <div class="price">16.99</div>
+      <div class="change neutral">+0.59%</div>
+    </div>
+  </div>
+
+  <div class="callout callout-gold">
+    <h4>Market Tone</h4>
+    <p>Narrow-breadth record close. S&amp;P 500 and Nasdaq Composite both hit all-time closing records on the back of Apple's Q2 earnings beat. Seven of eleven S&amp;P 500 sectors closed in the red. The tape looks stronger than it is — the move was powered by Apple and a handful of mega-caps, not broad participation. VIX barely budged at 16.99 despite the record print.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <p style="font-size:11px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Leading Sectors</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Sector</th><th>ETF</th><th>Chg</th></tr></thead>
+          <tbody>
+            <tr><td>Communication Services</td><td>XLC</td><td class="pos">+4.0%</td></tr>
+            <tr><td>Industrials</td><td>XLI</td><td class="pos">+2.8%</td></tr>
+            <tr><td>Utilities</td><td>XLU</td><td class="pos">+2.6%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:11px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Lagging Sectors</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Sector</th><th>ETF</th><th>Driver</th></tr></thead>
+          <tbody>
+            <tr><td>Technology</td><td>XLK</td><td class="neg">-0.6% — non-Apple semis</td></tr>
+            <tr><td>Energy</td><td>XLE</td><td class="neg">Iran crude sell-off</td></tr>
+            <tr><td>Broad (7 of 11)</td><td>—</td><td class="neg">Red despite index records</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;"><strong style="color:var(--text);">Volatility Environment:</strong> VIX at 16.99 is near 2-month lows. Premium is sellable — IV is neither crushed nor elevated at the index level. Theta is working at a steady pace. The divergence: VIX barely moved on a record close, suggesting the market is not pricing this rally as risk-free. Vega exposure is manageable at current levels.</p>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:6px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Key Session Drivers</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Catalyst</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>Apple Q2 Earnings Beat</strong> — Revenue, EPS, and Q3 guidance all above estimates</td><td class="pos">AAPL +3%+; dragged XLC and Nasdaq to records</td></tr>
+        <tr><td>2</td><td><strong>All-Time Index Closes</strong> — Nasdaq 100 gained ~16% in April (best month since Oct 2002)</td><td class="pos">S&amp;P 500 at 7,230.12; Nasdaq Composite at 25,114.44</td></tr>
+        <tr><td>3</td><td><strong>Iran Peace Proposal</strong> — Diplomatic reports drove crude oil sharply lower</td><td class="neg">XLE under pressure; consumer names benefited</td></tr>
+        <tr><td>4</td><td><strong>Earnings Season Quality</strong> — 84% beat rate, ~15% YoY profit growth</td><td class="pos">Broad fundamental backdrop remains strong</td></tr>
+        <tr><td>5</td><td><strong>Fed on Hold</strong> — FOMC concluded prior week; tariff inflation is the concern</td><td class="neutral">Jobs data this week is the next macro catalyst</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col" style="margin-top:16px;">
+    <div class="callout callout-green">
+      <h4>Risk-On Scenario</h4>
+      <p>LSCC and PLTR beat Monday after close. AI semi narrative extends; QQQ pushes toward new highs Tuesday. Premium sellers capture the IV crush and add to the book. Buyers step in on any early Monday weakness.</p>
+    </div>
+    <div class="callout callout-red">
+      <h4>Risk-Off Scenario</h4>
+      <p>Narrow breadth exposed. LSCC or PLTR disappoints. VIX spikes from 17 toward 20+. ShadowTrader's "topping" framework triggers rotation. XLK weakness bleeds everything — it is 35% of the SPX.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 2 — NEWS & CATALYST REVIEW
+══════════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header"><h2>Section 2 — News &amp; Catalyst Review</h2></div>
+
+  <div class="callout callout-blue">
+    <h4>Macro Overview</h4>
+    <p>FOMC concluded the prior week with no rate change; tariff-driven inflation is the key concern. The Iran peace proposal drove crude lower Friday — weekend follow-through will determine Monday's energy open. April NFP (jobs data) is the week's macro anchor. A strong print locks in "no cut needed"; a miss revives recession concerns and reprices risk broadly.</p>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Earnings — This Session</p>
+  <div class="table-wrap" style="margin-bottom:20px;">
+    <table>
+      <thead><tr><th>Name</th><th>Ticker</th><th>Result</th><th>Reaction</th><th>Takeaway</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Apple</strong></td>
+          <td><span class="badge badge-gold">AAPL</span></td>
+          <td>Q2 beat: Revenue, EPS, guidance all above estimates. iPhone revenue missed for 2nd consecutive quarter.</td>
+          <td class="pos">+3%+</td>
+          <td>Services/AI narrative carries the stock. Dragged Nasdaq and XLC to all-time records.</td>
+        </tr>
+        <tr>
+          <td><strong>MaxLinear</strong></td>
+          <td><span class="badge badge-orange">MXL</span></td>
+          <td>Q1 2026 beat: Revenue +43% YoY; adj. EPS turned profitable; optical data center guidance raised.</td>
+          <td class="pos">+76-80% on April 24</td>
+          <td>AI data center optical ramp. Stock at $77.18 May 1. Residual IV at 139% — post-earnings crush trade open.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Earnings — Week of May 4</p>
+  <div class="table-wrap" style="margin-bottom:20px;">
+    <table>
+      <thead><tr><th>Company</th><th>Ticker</th><th>Date</th><th>Key Watch</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Lattice Semiconductor</strong></td>
+          <td><span class="badge badge-red">LSCC</span></td>
+          <td>May 4 after close</td>
+          <td>Revenue expected +37.3% YoY. IVR/IVP at 100%. ExpMove ±17.14%. FPGA/AI edge read.</td>
+        </tr>
+        <tr>
+          <td><strong>Palantir Technologies</strong></td>
+          <td><span class="badge badge-purple">PLTR</span></td>
+          <td>May 4 after close</td>
+          <td>AI government and commercial contracts. Reaction will set AI infrastructure tone for the week.</td>
+        </tr>
+        <tr>
+          <td><strong>AMD</strong></td>
+          <td><span class="badge badge-blue">AMD</span></td>
+          <td>May 5 after close</td>
+          <td>Data center GPU/CPU vs. Nvidia narrative. Upside surprise could lift QQQ materially Tuesday.</td>
+        </tr>
+        <tr>
+          <td><strong>Uber Technologies</strong></td>
+          <td><span class="badge badge-green">UBER</span></td>
+          <td>May 6</td>
+          <td>Rideshare/delivery profitability. Consumer spending proxy for the week.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">What Carries Forward</p>
+  <div class="table-wrap" style="margin-bottom:16px;">
+    <table>
+      <thead><tr><th>Theme</th><th>Classification</th></tr></thead>
+      <tbody>
+        <tr><td>Apple beat → Nasdaq record → AMD/PLTR narrative</td><td><span class="badge badge-gold">Carry-Forward</span></td></tr>
+        <tr><td>Iran crude decline → energy gap risk Monday open</td><td><span class="badge badge-gold">Carry-Forward</span></td></tr>
+        <tr><td>LSCC / PLTR binary events — IV crush post-print</td><td><span class="badge badge-gold">Carry-Forward</span></td></tr>
+        <tr><td>Narrow breadth (7 of 11 red) — hidden vulnerability</td><td><span class="badge badge-gold">Carry-Forward</span></td></tr>
+        <tr><td>MXL residual IV at 139% — crush window open</td><td><span class="badge badge-gold">Carry-Forward</span></td></tr>
+        <tr><td>VIX barely moved on a record close</td><td><span class="badge badge-gold">Carry-Forward</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 3 — TRADE DISCOVERY LAYER
+══════════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header"><h2>Section 3 — Trade Discovery Layer</h2></div>
+
+  <div class="callout callout-purple">
+    <h4>ShadowTrader Bias Overlay — May 1</h4>
+    <p>Both SPX and NDX cleared channel resistance as expected. Posture: cautiously analyzing whether this is a top. XLK = 35% of SPX = the key variable going forward. Implied bias: <strong>prefer defined-risk, rangebound structures over naked directional bets. Selective Offense.</strong></p>
+  </div>
+
+  <!-- CANDIDATE 1 -->
+  <div class="candidate-card">
+    <div class="card-header">
+      <div class="ticker-name">
+        <div class="cticker">LSCC</div>
+        <div class="cname">Lattice Semiconductor Corp.</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-red">IVR 100%</span>
+        <span class="badge badge-red">IVP 100%</span>
+        <span class="badge badge-gold">BPS Pre-Earnings</span>
+        <span class="badge badge-orange">Earnings May 4</span>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric-cell"><div class="mlabel">Price</div><div class="mval">$120.96</div></div>
+      <div class="metric-cell"><div class="mlabel">IV Rank</div><div class="mval" style="color:var(--red);">100%</div></div>
+      <div class="metric-cell"><div class="mlabel">IV Pctl</div><div class="mval" style="color:var(--red);">100%</div></div>
+      <div class="metric-cell"><div class="mlabel">Exp Move</div><div class="mval">±17.14%</div></div>
+      <div class="metric-cell"><div class="mlabel">~$Move</div><div class="mval">±$20.73</div></div>
+      <div class="metric-cell"><div class="mlabel">Earnings</div><div class="mval">May 4 AC</div></div>
+    </div>
+    <div class="rationale">
+      <strong>Why:</strong> Maximum IVR and IVP heading into a Monday binary catalyst. Revenue expected +37.3% YoY after consecutive beats ($145.79M vs. $143.29M estimate last quarter). The 1-SD post-earnings range is approximately $100.22–$141.70. A BPS with the short put near $100 and long put at $90 is placed outside the expected move — probability of profit ~68-72%. Premium collection at max IVR pricing is the best available setup of the week. Sell the spread before Monday's close; the IV crush happens overnight.<br><br>
+      <strong>Structure:</strong> Sell $100 put / Buy $90 put — nearest Friday post-earnings expiry. Collect maximum pre-earnings credit. Exit or hold through based on clearance from expected move range.
+    </div>
+  </div>
+
+  <!-- CANDIDATE 2 -->
+  <div class="candidate-card">
+    <div class="card-header">
+      <div class="ticker-name">
+        <div class="cticker">MXL</div>
+        <div class="cname">MaxLinear Inc.</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-red">IVR 100%</span>
+        <span class="badge badge-red">IVP 100%</span>
+        <span class="badge badge-gold">BPS IV Crush</span>
+        <span class="badge badge-blue">Post-Earnings</span>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric-cell"><div class="mlabel">Price</div><div class="mval">$77.18</div></div>
+      <div class="metric-cell"><div class="mlabel">IV Rank</div><div class="mval" style="color:var(--red);">100%</div></div>
+      <div class="metric-cell"><div class="mlabel">IV Pctl</div><div class="mval" style="color:var(--red);">100%</div></div>
+      <div class="metric-cell"><div class="mlabel">Imp Vol</div><div class="mval" style="color:var(--red);">139.54%</div></div>
+      <div class="metric-cell"><div class="mlabel">Exp Move</div><div class="mval">±14.72%</div></div>
+      <div class="metric-cell"><div class="mlabel">Opts Vol</div><div class="mval">12,031</div></div>
+      <div class="metric-cell"><div class="mlabel">3M RelVol</div><div class="mval">3.0×</div></div>
+    </div>
+    <div class="rationale">
+      <strong>Why:</strong> MXL surged 76-80% on April 24 after a blowout Q1 print (revenue +43% YoY, optical data center guidance raised). By May 1, IV remains at 139.54% — one of the highest IV levels available post-event. The earnings catalyst has passed but the volatility premium hasn't normalized. Options volume running 3× normal confirms two-sided active positioning. The trade is a volatility normalization play with a bullish fundamental backdrop: the optical data center ramp is real, making BPS the structure of choice.<br><br>
+      <strong>Structure:</strong> Sell $65 put / Buy $55 put — 30-45 DTE. The 1-SD downside is ~$65.82. Strikes placed below the expected move boundary. Real return driver is IV contracting from 139% toward historical mean (sub-60%). Enter any time this week.
+    </div>
+  </div>
+
+  <!-- CANDIDATE 3 -->
+  <div class="candidate-card">
+    <div class="card-header">
+      <div class="ticker-name">
+        <div class="cticker">SCHW</div>
+        <div class="cname">Charles Schwab Corp.</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-green">IVR 49.60%</span>
+        <span class="badge badge-green">IVP 56%</span>
+        <span class="badge badge-gold">Iron Condor</span>
+        <span class="badge badge-blue">No Near-Term Earnings</span>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric-cell"><div class="mlabel">Price</div><div class="mval">$91.54</div></div>
+      <div class="metric-cell"><div class="mlabel">IV Rank</div><div class="mval" style="color:var(--green);">49.60%</div></div>
+      <div class="metric-cell"><div class="mlabel">IV Pctl</div><div class="mval" style="color:var(--green);">56%</div></div>
+      <div class="metric-cell"><div class="mlabel">Imp Vol</div><div class="mval">28.57%</div></div>
+      <div class="metric-cell"><div class="mlabel">Exp Move</div><div class="mval">±$2.01</div></div>
+      <div class="metric-cell"><div class="mlabel">Opts Vol</div><div class="mval">50,942</div></div>
+    </div>
+    <div class="rationale">
+      <strong>Why:</strong> Cleanest IC candidate from Friday's screeners. IVR in the upper half of its range — good zone to sell premium with room for IV mean reversion. The $2.01 expected move is tight. Heavy absolute options volume (50,942) means clean bid/ask for IC execution. No near-term binary catalyst removes the event risk problem. ShadowTrader's cautionary posture supports rangebound IC structures over directional bets this week.<br><br>
+      <strong>Structure:</strong> Sell $93.50 call / Buy $95.50 call. Sell $89.50 put / Buy $87.50 put. 30-45 DTE. Target 50% profit at 15-20 DTE.
+    </div>
+  </div>
+
+  <!-- SECONDARY LIST -->
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Secondary Discovery List</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ticker</th><th>Strategy</th><th>IVR</th><th>IVP</th><th>ExpMove</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td><strong>EW</strong></td><td><span class="badge badge-green">Bullish Diagonal</span></td><td>39.02%</td><td>59%</td><td>$3.06</td><td>Healthcare; verify earnings date before entry</td></tr>
+        <tr><td><strong>CRWV</strong></td><td><span class="badge badge-green">Bullish Diagonal</span></td><td>—</td><td>—</td><td>—</td><td>Post-IPO AI infrastructure; directional conviction required</td></tr>
+        <tr><td><strong>AMSC</strong></td><td><span class="badge badge-gold">BPS</span></td><td>High</td><td>High</td><td>—</td><td>Small cap; verify liquidity before entry</td></tr>
+        <tr><td><strong>GTES</strong></td><td><span class="badge badge-red">Bearish Diagonal</span></td><td>38.78%</td><td>62%</td><td>$2.42</td><td>Verify earnings date</td></tr>
+        <tr><td><strong>SLB</strong></td><td><span class="badge badge-blue">Monitor</span></td><td>—</td><td>—</td><td>—</td><td>Block bull call spread — contrarian vs. energy weakness</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 4 — PORTFOLIO RISK CARRY FORWARD
+══════════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header"><h2>Section 4 — Portfolio Risk Carry Forward</h2></div>
+
+  <div class="callout callout-gold">
+    <h4>Greeks Profile Summary</h4>
+    <p><strong>Theta:</strong> Positive and productive at VIX 16.99 in a 30-45 DTE structure. <strong>Gamma:</strong> Monitor at-the-money exposures at record index levels — any news-driven move creates sharp intraday gamma spikes. <strong>Vega:</strong> The primary risk this week. The earnings cluster will spike then crush local IV rapidly. Pre-earnings short vega wins in the crush; holding short vega into the print is the risk. <strong>Rho:</strong> Jobs data Friday is the rate-shock vector — do not over-accumulate risk heading into the number.</p>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Gamma / Earnings Exposure Map</p>
+  <div class="table-wrap" style="margin-bottom:24px;">
+    <table>
+      <thead><tr><th>Name</th><th>Earnings Date</th><th>Days Out</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><strong>LSCC</strong></td><td>May 4 after close</td><td>1</td><td><span class="badge badge-red">Active — enter BPS before Monday close</span></td></tr>
+        <tr><td><strong>PLTR</strong></td><td>May 4 after close</td><td>1</td><td><span class="badge badge-orange">Monitor — post-print IV crush opportunity</span></td></tr>
+        <tr><td><strong>AMD</strong></td><td>May 5 after close</td><td>2</td><td><span class="badge badge-blue">Hold off — wait for post-earnings setup</span></td></tr>
+        <tr><td><strong>UBER</strong></td><td>May 6</td><td>3</td><td><span class="badge badge-blue">Watch — IC/BPS setup post-print</span></td></tr>
+        <tr><td><strong>MXL</strong></td><td>Past (Apr 24)</td><td>Post-event</td><td><span class="badge badge-gold">Active — enter BPS this week; IV crush trade</span></td></tr>
+        <tr><td><strong>SCHW</strong></td><td>No near-term</td><td>—</td><td><span class="badge badge-green">Clean IC entry this week</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Stress Scenarios</p>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-title">✓ Both LSCC / PLTR Beat</div>
+      <div class="scenario-prob"><span class="badge badge-green">55% Probability</span> &nbsp; Impact: Moderate Positive</div>
+    </div>
+    <div class="scenario-desc">AI semi narrative extends; QQQ continues higher Tuesday. Premium sellers benefit from IV crush and spread appreciation. Risk: melt-up pace squeezes call spread wings near current record levels.</div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-title">↔ One Beat, One Miss</div>
+      <div class="scenario-prob"><span class="badge badge-orange">30% Probability</span> &nbsp; Impact: Mixed / Choppy</div>
+    </div>
+    <div class="scenario-desc">Bifurcated tape. VIX spikes 1-2 points. IC structures tested on one wing. Highest-probability messy outcome — size conservatively into Monday prints and plan to manage one-sided pressure.</div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-title">↓ Iran Deal Advances — Crude Drops</div>
+      <div class="scenario-prob"><span class="badge badge-blue">25% Probability</span> &nbsp; Impact: Energy Sector Negative</div>
+    </div>
+    <div class="scenario-desc">Crude drops another 2-4% at Monday open. XLE gaps down. Energy-sector premium positions face gap risk. Broad market opens constructively — supports continued premium selling in non-energy names.</div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-title">⚠ Jobs Data Shock — Friday NFP</div>
+      <div class="scenario-prob"><span class="badge badge-red">15% Probability</span> &nbsp; Impact: High / Portfolio-Wide</div>
+    </div>
+    <div class="scenario-desc">VIX spikes from 17 toward 22-25. All short-premium positions face simultaneous pressure. Maintain defined risk exclusively and do not allow open risk to accumulate heading into Friday's number.</div>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin:20px 0 10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Next Session Priorities</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Priority</th><th>Urgency</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>LSCC pre-earnings BPS — execute before Monday close</td><td><span class="badge badge-red">High — Time-Sensitive</span></td></tr>
+        <tr><td>2</td><td>MXL post-earnings IV crush BPS — enter early this week</td><td><span class="badge badge-orange">Medium — Any Day This Week</span></td></tr>
+        <tr><td>3</td><td>SCHW Iron Condor — enter early for theta positioning</td><td><span class="badge badge-orange">Medium — Any Day This Week</span></td></tr>
+        <tr><td>4</td><td>PLTR — monitor for post-print IV crush setup Tuesday</td><td><span class="badge badge-blue">Monitor</span></td></tr>
+        <tr><td>5</td><td>AMD / UBER — wait for post-earnings structure opportunities</td><td><span class="badge badge-blue">Wait</span></td></tr>
+        <tr><td>6</td><td>Review existing call spread strikes vs. record SPY at $720</td><td><span class="badge badge-orange">Check Monday Morning</span></td></tr>
+        <tr><td>7</td><td>Iran / crude alert — energy sector gap risk at Monday open</td><td><span class="badge badge-gold">Weekend Monitor</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 5 — TOMORROW GAME PLAN
+══════════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header"><h2>Section 5 — Tomorrow Game Plan (Monday, May 4)</h2></div>
+
+  <div class="posture-box">
+    <div class="posture-label">Execution Posture</div>
+    <div class="posture-value">SELECTIVE OFFENSE</div>
+    <div class="posture-sub">Execute highest-conviction setups at conservative size. Wait for LSCC/PLTR clarity before adding to the book. Stay defined-risk. Do not chase the record close.</div>
+  </div>
+
+  <div class="callout callout-gold">
+    <h4>Opening Backdrop — Constructive with Underlying Fragility</h4>
+    <p>Monday opens at all-time record territory with two key binary events after the close (LSCC, PLTR). The morning session will likely be measured and range-bound as positioning is established. Any Iran/crude weekend development could gap the energy tape in either direction at the open. Watch XLK in the first 30 minutes — it is 35% of the SPX and sets the day's direction.</p>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Primary Themes to Watch (Monday)</p>
+  <div class="table-wrap" style="margin-bottom:20px;">
+    <table>
+      <thead><tr><th>#</th><th>Theme</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>LSCC / PLTR earnings after Monday close — the week's defining binary events</td><td><span class="badge badge-red">Critical</span></td></tr>
+        <tr><td>2</td><td>ShadowTrader topping framework — XLK direction is the index gatekeeper</td><td><span class="badge badge-orange">High</span></td></tr>
+        <tr><td>3</td><td>Iran / crude follow-through — directional energy signal at the open</td><td><span class="badge badge-orange">High</span></td></tr>
+        <tr><td>4</td><td>Nasdaq record extension sustainability — breadth needs to expand</td><td><span class="badge badge-blue">Monitor</span></td></tr>
+        <tr><td>5</td><td>Jobs data positioning — do not over-lever before Friday's NFP</td><td><span class="badge badge-blue">Background</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="callout callout-green">
+        <h4>Opportunity Areas</h4>
+        <p><strong>LSCC:</strong> Pre-earnings BPS before Monday close.<br>
+        <strong>MXL:</strong> Post-earnings IV crush BPS — enter early in the week.<br>
+        <strong>SCHW:</strong> IC entry — clean execution environment.<br>
+        <strong>PLTR:</strong> Post-print IV crush Tuesday (if reporting in line with expectations).</p>
+      </div>
+    </div>
+    <div>
+      <div class="callout callout-red">
+        <h4>Risk Areas</h4>
+        <p><strong>Binary event risk:</strong> LSCC + PLTR both after Monday close — size conservatively.<br>
+        <strong>Record-level call wings:</strong> Check existing spreads vs. SPY $720+.<br>
+        <strong>Energy gap risk:</strong> Iran story — any position in energy carries weekend gap exposure.<br>
+        <strong>Jobs data:</strong> NFP Friday is the macro wildcard — do not over-accumulate.</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Priority Watchlist</p>
+
+  <div class="watchlist-group">
+    <div class="wg-label"><span class="badge badge-red">Active Execution</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">LSCC</span><span class="wi-note">Pre-earnings BPS — execute before Monday close. IVR/IVP 100%, ExpMove ±17.14%.</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">MXL</span><span class="wi-note">Post-earnings IV crush BPS — enter early this week. IV 139.54%, IVR 100%.</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">SCHW</span><span class="wi-note">Iron Condor — enter early for theta positioning. IVR 49.60%, IC structure, clean liquidity.</span></div>
+  </div>
+  <div class="watchlist-group" style="margin-top:14px;">
+    <div class="wg-label"><span class="badge badge-orange">Active Monitor</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">PLTR</span><span class="wi-note">Post-print IV crush opportunity Tuesday. Monitor Monday close print.</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">EW</span><span class="wi-note">Bullish diagonal candidate — verify earnings date before entry.</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">AMD</span><span class="wi-note">Do not enter before Tuesday print. Setup opens post-close Tuesday.</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">SLB</span><span class="wi-note">Contrarian energy — block bull call spread flagged. Monitor vs. crude direction.</span></div>
+  </div>
+  <div class="watchlist-group" style="margin-top:14px;">
+    <div class="wg-label"><span class="badge badge-blue">Session Tone Signals</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">SPY</span><span class="wi-note">Hold $720 at open = constructive. Below $715 = cautious. Check call wing strikes.</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">VIX</span><span class="wi-note">Spike above 19 = reduce new entries immediately.</span></div>
+    <div class="watchlist-item"><span class="wi-ticker">XLK</span><span class="wi-note">Direction in first 30 minutes = the day's roadmap. 35% of SPX.</span></div>
+  </div>
+
+  <div class="callout callout-gold" style="margin-top:24px;">
+    <h4>Tomorrow Game Plan Summary</h4>
+    <p>Monday, May 4 opens at all-time records with a deceptive setup — headline strength masking narrow breadth and dense binary catalyst risk ahead. The morning session will likely be measured and range-bound as LSCC and PLTR positioning is established into the close. Execute the three priority trades (LSCC BPS, MXL BPS, SCHW IC) at conservative sizing, protect existing structures at record-level strikes, and let the earnings wave settle Monday evening before adding to the book Tuesday. The ShadowTrader topping framework is the discipline check this week — the breakout is confirmed, but sustainability remains the open question. Size conservatively, maintain defined risk, and let theta work through Friday's jobs data.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CLOSING DESK NOTE -->
+<div class="callout callout-gold">
+  <h4>Closing Desk Note</h4>
+  <p><strong>Posture: Selective Offense.</strong> Records were set on narrow breadth. The earnings calendar is loaded. Macro tail risk is Friday's jobs data. Execute three highest-conviction setups: LSCC pre-earnings BPS (Monday close), MXL IV crush BPS (early week), SCHW IC (early week). Protect existing structures at record-level strikes. Let Monday evening's binary prints clear before adding aggressively. Top focus: LSCC pre-earnings premium capture — the cleanest high-IVR setup of the week. Stay defined-risk. Let theta work.</p>
+</div>
+
+</div><!-- /container -->
+
+<!-- DISCLAIMER BOTTOM (1467D) -->
+<div class="disclaimer bottom container">
+  <strong>OPTIONS AND TRADING DISCLOSURE:</strong> Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+</div>
+
+<div class="footer">
+  <p>CJ Desk PM Market Rundown &nbsp;|&nbsp; Session: May 1, 2026 &nbsp;|&nbsp; Generated: May 3, 2026</p>
+</div>
+
+</body>
+</html>
