@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Market Rundown — May 6, 2026</title>
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 15px; }
+  body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.65;
+    padding: 0 0 40px;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+
+  /* ===== MASTHEAD ===== */
+  .masthead {
+    background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+    border-bottom: 2px solid #c9a84c;
+    padding: 28px 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .masthead-title { font-size: 1.65rem; font-weight: 700; color: #c9a84c; letter-spacing: 0.02em; }
+  .masthead-sub { font-size: 0.85rem; color: #8b949e; margin-top: 4px; }
+  .masthead-date { font-size: 0.9rem; color: #8b949e; text-align: right; }
+
+  /* ===== CONTAINER ===== */
+  .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== DISCLAIMER ===== */
+  .disclaimer {
+    background: #161b22;
+    border-left: 3px solid #6e7681;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 0.78rem;
+    color: #8b949e;
+    line-height: 1.55;
+    margin: 20px 0;
+  }
+  .disclaimer-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #6e7681;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section {
+    margin: 36px 0 24px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #21262d;
+  }
+  .section-number {
+    background: #c9a84c;
+    color: #0d1117;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 3px;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #e6edf3;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ===== SUBSECTION ===== */
+  .subsection { margin: 22px 0 14px; }
+  .subsection-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #c9a84c;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 10px;
+  }
+
+  /* ===== STAT BOXES ===== */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .stat-box {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .stat-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e6edf3;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-change {
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-top: 3px;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-record {
+    font-size: 0.68rem;
+    color: #c9a84c;
+    font-weight: 700;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .up { color: #3fb950; }
+  .down { color: #f85149; }
+  .neutral { color: #8b949e; }
+
+  /* ===== TABLES ===== */
+  .table-wrap { overflow-x: auto; margin: 10px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  th {
+    background: #161b22;
+    color: #8b949e;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 9px 12px;
+    text-align: left;
+    border-bottom: 1px solid #30363d;
+    white-space: nowrap;
+  }
+  td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #21262d;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* ===== TAGS / BADGES ===== */
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 1px 2px;
+  }
+  .tag-bps { background: #1a3a1a; color: #3fb950; border: 1px solid #238636; }
+  .tag-bcs { background: #3a1a1a; color: #f85149; border: 1px solid #6e1e1e; }
+  .tag-ic { background: #1a2a3a; color: #58a6ff; border: 1px solid #1f4e79; }
+  .tag-diag { background: #2a1a3a; color: #bc8cff; border: 1px solid #5a2d82; }
+  .tag-crush { background: #3a2a10; color: #c9a84c; border: 1px solid #9e7c2e; }
+  .tag-monitor { background: #21262d; color: #8b949e; border: 1px solid #30363d; }
+  .tag-active { background: #1a3a1a; color: #3fb950; border: 1px solid #238636; }
+  .tag-caution { background: #3a2a10; color: #c9a84c; border: 1px solid #9e7c2e; }
+  .tag-avoid { background: #3a1a1a; color: #f85149; border: 1px solid #6e1e1e; }
+  .tag-record { background: #1a2a1a; color: #3fb950; border: 1px solid #238636; font-size: 0.62rem; }
+
+  /* ===== CALLOUT BOXES ===== */
+  .callout {
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 0.88rem;
+  }
+  .callout-posture {
+    background: #1a2a10;
+    border-left: 4px solid #3fb950;
+  }
+  .callout-risk {
+    background: #2a1010;
+    border-left: 4px solid #f85149;
+  }
+  .callout-opportunity {
+    background: #10202a;
+    border-left: 4px solid #58a6ff;
+  }
+  .callout-neutral {
+    background: #161b22;
+    border-left: 4px solid #c9a84c;
+  }
+  .callout-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    opacity: 0.75;
+  }
+  .callout-posture .callout-label { color: #3fb950; }
+  .callout-risk .callout-label { color: #f85149; }
+  .callout-opportunity .callout-label { color: #58a6ff; }
+  .callout-neutral .callout-label { color: #c9a84c; }
+
+  /* ===== SCENARIO BOXES ===== */
+  .scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .scenario-box {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .scenario-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #e6edf3;
+    margin-bottom: 6px;
+  }
+  .scenario-prob {
+    font-size: 0.7rem;
+    color: #8b949e;
+    margin-bottom: 8px;
+  }
+  .scenario-impact {
+    font-size: 0.82rem;
+    color: #c9d1d9;
+  }
+  .prob-high { color: #3fb950; }
+  .prob-medium { color: #c9a84c; }
+  .prob-low { color: #f85149; }
+
+  /* ===== TRADE CANDIDATE CARDS ===== */
+  .trade-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 12px 0;
+  }
+  .trade-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .trade-ticker {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #c9a84c;
+    letter-spacing: 0.02em;
+  }
+  .trade-name {
+    font-size: 0.8rem;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+  .trade-rank {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #0d1117;
+    background: #c9a84c;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .trade-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+    margin: 12px 0;
+    padding: 12px 0;
+    border-top: 1px solid #21262d;
+    border-bottom: 1px solid #21262d;
+  }
+  .metric-item { }
+  .metric-label {
+    font-size: 0.65rem;
+    color: #6e7681;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+  }
+  .metric-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #e6edf3;
+    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric-high { color: #f85149; }
+
+  /* ===== PROSE ===== */
+  p { margin: 8px 0; font-size: 0.9rem; }
+  .prose { font-size: 0.9rem; line-height: 1.7; }
+  .prose + .prose { margin-top: 8px; }
+
+  /* ===== WATCHLIST TABLE ===== */
+  .watchlist-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .wb-exec { background: #1a3a1a; color: #3fb950; }
+  .wb-monitor { background: #21262d; color: #8b949e; }
+  .wb-signal { background: #3a2a10; color: #c9a84c; }
+
+  /* ===== DIVIDER ===== */
+  .divider { border: none; border-top: 1px solid #21262d; margin: 28px 0; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: #161b22;
+    border-top: 1px solid #21262d;
+    padding: 24px 40px;
+    margin-top: 40px;
+    font-size: 0.75rem;
+    color: #6e7681;
+    text-align: center;
+  }
+  .footer strong { color: #8b949e; }
+
+  /* ===== CLOSING NOTE ===== */
+  .closing-note {
+    background: linear-gradient(135deg, #161b22, #0d1117);
+    border: 1px solid #c9a84c;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .closing-note-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #c9a84c;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+  .closing-note-body {
+    font-size: 0.92rem;
+    color: #c9d1d9;
+    line-height: 1.7;
+  }
+
+  /* ===== TWOBOX ===== */
+  .twobox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  @media (max-width: 640px) { .twobox { grid-template-columns: 1fr; } }
+
+  /* ===== VIX BOX ===== */
+  .vix-stat {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div>
+    <div class="masthead-title">CJ Desk PM Market Rundown</div>
+    <div class="masthead-sub">End-of-Day Options Trading Desk Report</div>
+  </div>
+  <div class="masthead-date">
+    <strong>Wednesday, May 6, 2026</strong><br>
+    Post-Market Close
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- DISCLAIMER 1467C -->
+  <div class="disclaimer">
+    <div class="disclaimer-label">Disclosure</div>
+    This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+  </div>
+
+  <!-- ===== SECTION 1: PM MARKET RECAP ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">PM Market Recap</span>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Index Summary</div>
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-label">S&P 500</div>
+          <div class="stat-price">7,365.12</div>
+          <div class="stat-change up">+105.94 &nbsp;+1.46%</div>
+          <div class="stat-record">★ ALL-TIME HIGH</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Nasdaq Comp.</div>
+          <div class="stat-price">25,838.94</div>
+          <div class="stat-change up">+512.81 &nbsp;+2.02%</div>
+          <div class="stat-record">★ ALL-TIME HIGH</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Dow Jones</div>
+          <div class="stat-price">49,910.59</div>
+          <div class="stat-change up">+612.34 &nbsp;+1.24%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">QQQ</div>
+          <div class="stat-price">~688.52</div>
+          <div class="stat-change up">+~6.91 &nbsp;+~1.01%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">IWM (Russell)</div>
+          <div class="stat-price">~288.80</div>
+          <div class="stat-change up">+est. &nbsp;+~0.9%</div>
+          <div class="stat-record">★ ALL-TIME HIGH</div>
+        </div>
+        <div class="vix-stat">
+          <div class="stat-label">VIX</div>
+          <div class="stat-price">17.38</div>
+          <div class="stat-change down">−0.91 &nbsp;−4.98%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-neutral">
+      <div class="callout-label">Overnight Futures</div>
+      ES and NQ futures rallying post-close. Pattern is constructive heading into Thursday, but ShadowTrader flagged the move as potentially testing: "ES Futures Rally Ahead of Jobless Claims — Bullish or Trap?" Market needs the claims data to confirm.
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Market Tone</div>
+      <p class="prose"><strong>Risk-on with record conviction.</strong> S&P 500, Nasdaq Composite, and Russell 2000 all closed at simultaneous all-time highs. Breadth confirmed the move at 1.7:1 advancers-to-decliners. Ten of eleven sectors closed positive. This was broad, not narrow — a technically significant session.</p>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Sector Leadership &amp; Weakness</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Sector</th><th>ETF</th><th>Change</th><th>Key Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Technology</strong></td>
+              <td>XLK</td>
+              <td class="up"><strong>+2.2%</strong></td>
+              <td>AMD earnings beat drove semis and cloud complex broadly; Morgan Stanley raised AMD PT</td>
+            </tr>
+            <tr>
+              <td><strong>Materials</strong></td>
+              <td>XLB</td>
+              <td class="up"><strong>+1.7%</strong></td>
+              <td>Commodity rotation; soft dollar on Iran resolution; geopolitical de-escalation bid</td>
+            </tr>
+            <tr>
+              <td><strong>Industrials</strong></td>
+              <td>XLI</td>
+              <td class="up"><strong>+0.8%</strong></td>
+              <td>Defense and industrial names caught bid on geopolitical de-escalation</td>
+            </tr>
+            <tr>
+              <td><strong>Comm. Services</strong></td>
+              <td>XLC</td>
+              <td class="up">Positive</td>
+              <td>Big tech tailwind; AMZN bullish session activity noted</td>
+            </tr>
+            <tr>
+              <td><strong>Energy</strong></td>
+              <td>XLE</td>
+              <td class="down">Laggard</td>
+              <td>Iran peace deal compresses crude oil risk premium directly; one of eleven sectors red</td>
+            </tr>
+            <tr>
+              <td><strong>Utilities / Staples</strong></td>
+              <td>XLU/XLP</td>
+              <td class="down">Lagged</td>
+              <td>Classic risk-on rotation away from defensive sectors</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Volatility Environment</div>
+      <p class="prose">VIX closed at <strong>17.38</strong>, down nearly 5%. This continues the compression trend as geopolitical risk (Iran war) prices out and the earnings season has been broadly constructive. Conditions remain favorable for existing short premium positions. Incremental short-vega entries at VIX 17 carry asymmetric risk — the floor for further contraction is closer than the ceiling for a spike. Focus premium-selling deployment on names with stock-specific IV elevation rather than broad market vol.</p>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Key Session Drivers</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Driver</th><th>Details</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>AMD Q1 2026 Beat</strong></td>
+              <td>Revenue $10.25B (+38% YoY) vs. $9.89B est. Data Center +57% YoY. Q2 guide $11.2B above consensus. Entire semiconductor complex benefited.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>US-Iran Peace Deal Progress</strong></td>
+              <td>Rubio: war "over." Trump paused Strait of Hormuz action. Iran reviewing US proposal; formal reply expected Thursday. Largest macro tail risk of 2026 pricing out.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>Record Triple Index Close</strong></td>
+              <td>S&P 500, Nasdaq, and Russell 2000 simultaneously at all-time highs. Breadth confirmed by 1.7:1 ratio. Technically significant signal.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>JOLTS Data (May 5)</strong></td>
+              <td>Job openings fell to 6.866M in March. Softening labor market, consistent with Fed on hold. Benign for rates trajectory.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><strong>PENG Post-Earnings Volatility</strong></td>
+              <td>Penguin Solutions Q2 EPS $0.52 vs. $0.37 (+41%), raised FY guidance to 12% net sales growth. Intraday range $36–$41.90, closed $38.99. IV elevated; crush window open.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="twobox">
+      <div class="callout callout-posture">
+        <div class="callout-label">Scenario 1 — Risk-On Continues</div>
+        Claims benign, Iran deal holds, DDOG beats. Tape extends records. Deploy post-earnings crush setups. DELL BPS entry window opens Thursday afternoon.
+      </div>
+      <div class="callout callout-risk">
+        <div class="callout-label">Scenario 2 — Reversal Risk</div>
+        Claims spike &gt;240K or Iran deal falters. Gap-fade off records, VIX toward 20+. Flatten aggressive deltas, stand aside from new entries, let vol come to you.
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ===== SECTION 2: NEWS & CATALYST REVIEW ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">News &amp; Catalyst Review</span>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Macro Catalysts</div>
+      <p class="prose"><strong>US-Iran War / Ceasefire (Primary Mover):</strong> Secretary Rubio stated the war was "over." Trump paused Project Freedom. Iran is reviewing the US ceasefire proposal and expected to respond Thursday. China called for a "comprehensive ceasefire." Both sides appear to be converging. The market's reaction was unambiguous: risk assets up, crude oil risk premium out, equities broadly higher. Tail risk: deal collapse restores all the geopolitical risk premium that priced out today.</p>
+      <p class="prose"><strong>JOLTS Labor Data (May 5):</strong> US job openings fell to 6.866M in March — modestly dovish, not alarming. Consistent with a Fed on hold through June. No urgency in either direction from this print.</p>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Earnings Catalysts</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Ticker</th><th>Result</th><th>Reaction</th><th>Takeaway</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Advanced Micro Devices</strong></td>
+              <td>AMD</td>
+              <td>EPS $1.37 vs $1.28 est<br>Rev $10.25B vs $9.89B est<br>Data Center +57% YoY<br>Q2 guide $11.2B</td>
+              <td class="up">Strong gap-up; XLK +2.2%</td>
+              <td>AI chip demand robust; data center accelerating; Morgan Stanley raised PT</td>
+            </tr>
+            <tr>
+              <td><strong>Penguin Solutions</strong></td>
+              <td>PENG</td>
+              <td>Q2 EPS $0.52 vs $0.37 (+41%)<br>Raised FY guidance to 12% net sales growth</td>
+              <td>Range $36–$41.90<br>Closed $38.99<br>Vol 3.19M (avg 2.07M)</td>
+              <td><span class="tag tag-crush">IV Crush</span> Post-earnings crush setup; IVR 100%, IV 91.26%</td>
+            </tr>
+            <tr>
+              <td><strong>Regal Rexnord</strong></td>
+              <td>RRX</td>
+              <td>Q1 Rev +4.3% YoY, +3% vs consensus<br>EPS $2.17, +2.7% vs est</td>
+              <td>After-hours; earnings call May 7 10am ET</td>
+              <td><span class="tag tag-crush">IV Crush</span> Modest beat; crush window opens post-call</td>
+            </tr>
+            <tr>
+              <td><strong>Super Micro</strong></td>
+              <td>SMCI</td>
+              <td>Beat Q1 expectations</td>
+              <td class="up">Positive sympathy</td>
+              <td>AI server build theme intact</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">What Still Matters Tomorrow</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Theme</th><th>Carry-Forward?</th><th>One-Day Noise?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Iran ceasefire formalization</td><td class="up">Yes — formal reply due Thursday</td><td>Today's specific Rubio statement</td></tr>
+            <tr><td>AMD / tech momentum</td><td class="up">Yes — DDOG is the next read Thursday</td><td>AMD's individual session gap</td></tr>
+            <tr><td>PENG post-earnings IV</td><td class="up">Yes — crush window is open</td><td>Today's specific intraday range</td></tr>
+            <tr><td>DELL sympathy IV</td><td class="neutral">Monitor — no DELL-specific near-term catalyst</td><td>Today's individual spike</td></tr>
+            <tr><td>S&P / Nasdaq records</td><td class="up">Yes — breakout confirmation in progress</td><td>Single-session close</td></tr>
+            <tr><td>MCD same-store sales</td><td class="up">Tomorrow — consumer health read</td><td>Pre-earnings speculation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout callout-opportunity">
+      <div class="callout-label">Trader Relevance</div>
+      Thursday is a pivotal data session. The jobless claims print at 8:30am sets the tone — a benign number keeps the goldilocks narrative intact. DDOG earnings after close are the next AI/cloud sentiment indicator. If Datadog confirms AI workload expansion, the tech sector has fresh fundamental support heading into the weekend. A DDOG miss reverses many of today's beneficiaries. VST is a wildcard with a prior miss pattern — a fourth miss hits the energy/power infrastructure theme broadly.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ===== SECTION 3: TRADE DISCOVERY ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">Trade Discovery Layer</span>
+    </div>
+
+    <div class="callout callout-neutral">
+      <div class="callout-label">ShadowTrader Bias Overlay</div>
+      <strong>Selective Offense / Bullish Lean — Watchful.</strong> Peter Reznicek traded AMZN calls long during the session (bullish). Evening commentary questioned the ES rally ahead of claims. Apply tactically bullish but cautious posture across all setups. BPS structures preferred over BCS given directional lean.
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Top 3 Candidates</div>
+    </div>
+
+    <!-- PENG -->
+    <div class="trade-card">
+      <div class="trade-card-header">
+        <div>
+          <div class="trade-ticker">PENG</div>
+          <div class="trade-name">Penguin Solutions, Inc.</div>
+          <div style="margin-top:6px;">
+            <span class="tag tag-crush">IV Crush</span>
+            <span class="tag tag-bps">BPS</span>
+          </div>
+        </div>
+        <div class="trade-rank">#1 Priority</div>
+      </div>
+      <div class="trade-metrics">
+        <div class="metric-item"><div class="metric-label">Price</div><div class="metric-value">$38.99</div></div>
+        <div class="metric-item"><div class="metric-label">IVR</div><div class="metric-value metric-high">100%</div></div>
+        <div class="metric-item"><div class="metric-label">IVP</div><div class="metric-value metric-high">100%</div></div>
+        <div class="metric-item"><div class="metric-label">Imp. Vol</div><div class="metric-value metric-high">91.26%</div></div>
+        <div class="metric-item"><div class="metric-label">Exp. Move</div><div class="metric-value">$4.61</div></div>
+        <div class="metric-item"><div class="metric-label">Options Vol</div><div class="metric-value">27,471</div></div>
+        <div class="metric-item"><div class="metric-label">3M Rel Vol</div><div class="metric-value metric-high">3.89×</div></div>
+        <div class="metric-item"><div class="metric-label">Earnings</div><div class="metric-value">05/06 ✓</div></div>
+        <div class="metric-item"><div class="metric-label">Session Range</div><div class="metric-value">$36–$41.90</div></div>
+      </div>
+      <p class="prose">Post-earnings IV crush is the highest-conviction setup in today's screeners. PENG beat Q2 EPS by 41% and raised full-year guidance to 12% net sales growth on enterprise/government AI factory demand. The stock experienced a 16.4% intraday range and settled mid-range — a stabilizing post-event anchor. Both CJ_BPS and CJ_BCS screeners flagged simultaneously (IVR 100% / IVP 100% in both), confirming maximum relative premium. The binary event has cleared; now IV normalizes. <strong>Structure:</strong> Bull Put Spread below the $36 session low. Short put $34–$35, long put $31–$32, 21–30 DTE. Target credit $0.50–$0.80 on a $3-wide spread. Aligns with ShadowTrader bullish bias.</p>
+    </div>
+
+    <!-- DELL -->
+    <div class="trade-card">
+      <div class="trade-card-header">
+        <div>
+          <div class="trade-ticker">DELL</div>
+          <div class="trade-name">Dell Technologies Inc.</div>
+          <div style="margin-top:6px;">
+            <span class="tag tag-bps">BPS</span>
+            <span class="tag tag-crush">Premium Collect</span>
+          </div>
+        </div>
+        <div class="trade-rank">#2 Priority</div>
+      </div>
+      <div class="trade-metrics">
+        <div class="metric-item"><div class="metric-label">Price</div><div class="metric-value">$238.80</div></div>
+        <div class="metric-item"><div class="metric-label">IVR</div><div class="metric-value metric-high">100%</div></div>
+        <div class="metric-item"><div class="metric-label">IVP</div><div class="metric-value metric-high">100%</div></div>
+        <div class="metric-item"><div class="metric-label">Imp. Vol</div><div class="metric-value metric-high">67.58%</div></div>
+        <div class="metric-item"><div class="metric-label">Exp. Move</div><div class="metric-value">$9.27</div></div>
+        <div class="metric-item"><div class="metric-label">Options Vol</div><div class="metric-value">107,913</div></div>
+        <div class="metric-item"><div class="metric-label">3M Rel Vol</div><div class="metric-value">1.12×</div></div>
+        <div class="metric-item"><div class="metric-label">Earnings</div><div class="metric-value">~May 28</div></div>
+      </div>
+      <p class="prose">IV spiked to IVR 100% / IVP 100% on AMD sympathy — DELL is a primary AI server beneficiary ($64B in AI server orders). No DELL-specific earnings until ~May 28, which means IV elevated by narrative, not a binary event. Gradual compression favors the premium seller over the next 1–2 weeks regardless of whether it's AMD-specific excitement. <strong>Structure:</strong> Bull Put Spread — short put $215, long put $205, 30–45 DTE. Best entered Thursday afternoon after the claims print confirms market direction. Do not enter before the 8:30am data.</p>
+    </div>
+
+    <!-- GILD -->
+    <div class="trade-card">
+      <div class="trade-card-header">
+        <div>
+          <div class="trade-ticker">GILD</div>
+          <div class="trade-name">Gilead Sciences, Inc.</div>
+          <div style="margin-top:6px;">
+            <span class="tag tag-ic">Iron Condor</span>
+          </div>
+        </div>
+        <div class="trade-rank">#3 Priority</div>
+      </div>
+      <div class="trade-metrics">
+        <div class="metric-item"><div class="metric-label">Price</div><div class="metric-value">$136.30</div></div>
+        <div class="metric-item"><div class="metric-label">IVR</div><div class="metric-value">49.11%</div></div>
+        <div class="metric-item"><div class="metric-label">IVP</div><div class="metric-value">65%</div></div>
+        <div class="metric-item"><div class="metric-label">Imp. Vol</div><div class="metric-value">32.32%</div></div>
+        <div class="metric-item"><div class="metric-label">Exp. Move</div><div class="metric-value">$5.41</div></div>
+        <div class="metric-item"><div class="metric-label">Options Vol</div><div class="metric-value">8,580</div></div>
+        <div class="metric-item"><div class="metric-label">3M Rel Vol</div><div class="metric-value">0.98×</div></div>
+        <div class="metric-item"><div class="metric-label">Screener</div><div class="metric-value">CJ_Iron_Condor</div></div>
+      </div>
+      <p class="prose">Clean Iron Condor candidate. Healthcare trades independently of today's macro narratives — not an AI name, not geopolitically sensitive to Iran. IVP at 65% provides above-average premium relative to historical norms. Near-neutral relative volume confirms no pending catalyst. <strong>Structure:</strong> Short call $143–$145 / long call $147–$148; short put $130–$131 / long put $127–$128. 30–45 DTE. Target credit $1.00–$1.40 on $3-wide spreads. Session-independent — this trade is valid regardless of tomorrow's claims outcome.</p>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Secondary Discovery List</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Ticker</th><th>Screener</th><th>Price</th><th>IVR</th><th>IVP</th><th>IV%</th><th>Strategy</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>RRX</strong></td>
+              <td>CJ_BPS_EARNINGS</td>
+              <td>$231.37</td>
+              <td class="up">100%</td>
+              <td class="up">100%</td>
+              <td>High</td>
+              <td><span class="tag tag-crush">Post-Earnings</span></td>
+              <td>Earnings call May 7 10am ET; crush window opens after call</td>
+            </tr>
+            <tr>
+              <td><strong>LSCC</strong></td>
+              <td>CJ_Bullish_Diagonal</td>
+              <td>$125.19</td>
+              <td>38.16%</td>
+              <td>73%</td>
+              <td>62.40%</td>
+              <td><span class="tag tag-diag">Bullish Diagonal</span></td>
+              <td>Semiconductor; AI beneficiary; earnings date TBD</td>
+            </tr>
+            <tr>
+              <td><strong>BA</strong></td>
+              <td>CJ_Iron_Condor</td>
+              <td>$229.93</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="tag tag-ic">Iron Condor</span></td>
+              <td>Iran resolution removes aerospace geopolitical risk; range-bound</td>
+            </tr>
+            <tr>
+              <td><strong>SONY</strong></td>
+              <td>CJ_Bearish_Diagonal</td>
+              <td>$20.73</td>
+              <td>23.48%</td>
+              <td>86%</td>
+              <td>39.09%</td>
+              <td><span class="tag tag-diag">Bearish Diagonal</span></td>
+              <td>IVP 86% notable; low IVR limits premium quality on short leg</td>
+            </tr>
+            <tr>
+              <td><strong>IBM</strong></td>
+              <td>CJ_Bearish_Diagonal_Earnings</td>
+              <td>$225.74</td>
+              <td>37.68%</td>
+              <td>51%</td>
+              <td>—</td>
+              <td><span class="tag tag-diag">Diagonal</span></td>
+              <td>Below entry threshold; watchlist only</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ===== SECTION 4: PORTFOLIO RISK ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">Portfolio Risk Carry Forward</span>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Greeks Profile</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Greek</th><th>Current Environment</th><th>Implication</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Theta</strong></td>
+              <td>Favorable</td>
+              <td>Primary earner at VIX 17. Focus on 21–45 DTE where theta accelerates.</td>
+            </tr>
+            <tr>
+              <td><strong>Gamma</strong></td>
+              <td>Elevated at ATH</td>
+              <td>Market near potential short-term resistance. Reduce gamma risk in near-expiration ATM positions.</td>
+            </tr>
+            <tr>
+              <td><strong>Vega</strong></td>
+              <td class="up">Short vega working</td>
+              <td>VIX -5% today. <strong>Caution:</strong> at VIX 17, floor is closer than ceiling. Existing short vega profitable; new entries require higher stock-specific IV justification.</td>
+            </tr>
+            <tr>
+              <td><strong>Rho</strong></td>
+              <td>Minimal impact</td>
+              <td>Rates stable, no FOMC urgency. No near-term rho concern.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Gamma / Earnings Exposure Map</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Earnings Status</th><th>IV Status</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>PENG</strong></td>
+              <td>Post-event ✓</td>
+              <td class="up">IVR 100% — crush in progress</td>
+              <td><span class="tag tag-active">Deploy</span> Evaluate BPS at Thursday open</td>
+            </tr>
+            <tr>
+              <td><strong>RRX</strong></td>
+              <td>Post-event + call May 7</td>
+              <td class="up">IVR 100% — crush opening</td>
+              <td><span class="tag tag-monitor">Monitor</span> Wait for 10am ET call; enter after</td>
+            </tr>
+            <tr>
+              <td><strong>DDOG</strong></td>
+              <td>AH Thursday — pre-event</td>
+              <td class="neutral">Elevated pre-event IV</td>
+              <td><span class="tag tag-avoid">Stand Aside</span> Do not short vol into report</td>
+            </tr>
+            <tr>
+              <td><strong>MCD</strong></td>
+              <td>BMO Thursday</td>
+              <td class="neutral">3.5% expected move priced</td>
+              <td><span class="tag tag-avoid">Stand Aside</span> Enter crush post-report</td>
+            </tr>
+            <tr>
+              <td><strong>VST</strong></td>
+              <td>AH Thursday</td>
+              <td class="neutral">Prior miss history</td>
+              <td><span class="tag tag-avoid">Avoid Pre-Event</span> High uncertainty</td>
+            </tr>
+            <tr>
+              <td><strong>DELL</strong></td>
+              <td>~May 28 (~22 days)</td>
+              <td class="up">IVR 100% — narrative IV</td>
+              <td><span class="tag tag-monitor">Monitor</span> Premium window open; enter Thu PM if claims confirm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Stress Scenarios</div>
+      <div class="scenario-grid">
+        <div class="scenario-box">
+          <div class="scenario-title">Claims Benign + DDOG Beat</div>
+          <div class="scenario-prob"><span class="prob-high">Probability: 35%</span></div>
+          <div class="scenario-impact">Records extend. Existing short puts deeper OTM. Short calls (if any) feel pressure. Net positive for premium portfolio.</div>
+        </div>
+        <div class="scenario-box">
+          <div class="scenario-title">Claims Miss, Tech Holds</div>
+          <div class="scenario-prob"><span class="prob-medium">Probability: 20%</span></div>
+          <div class="scenario-impact">Brief morning VIX spike, intraday recovery. Minor mark-to-market negative. Likely recovers same session.</div>
+        </div>
+        <div class="scenario-box">
+          <div class="scenario-title">Iran Deal Collapses</div>
+          <div class="scenario-prob"><span class="prob-medium">Probability: 15%</span></div>
+          <div class="scenario-impact">Oil spike 5%+. Market -1.5–2%. VIX to 20–22. Tests short puts. Energy positions most at risk.</div>
+        </div>
+        <div class="scenario-box">
+          <div class="scenario-title">Multiple Adverse Events</div>
+          <div class="scenario-prob"><span class="prob-low">Probability: 5%</span></div>
+          <div class="scenario-impact">3–4% selloff. VIX to 24+. Defined risk contains damage. Do not panic-leg out of spreads.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Next Session Priorities</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Priority Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Review call wings on any tech iron condors — XLK +2.2% may have pushed upper strikes into range. Verify short calls are ≥5–7% above current levels.</td></tr>
+            <tr><td>2</td><td>Evaluate PENG BPS entry at Thursday open. Post-earnings IV crush window is active.</td></tr>
+            <tr><td>3</td><td>Stand aside on DDOG, MCD, and VST until post-event. Fresh crush opportunities develop Thursday night.</td></tr>
+            <tr><td>4</td><td>Check energy sector exposure — Iran deal formalization will pressure oil and energy names further.</td></tr>
+            <tr><td>5</td><td>Verify net delta neutrality — excessive positive delta at ATH is a concentration risk into Thursday's data.</td></tr>
+            <tr><td>6</td><td>DELL BPS entry evaluation — if claims benign and tech holds through Thursday afternoon, enter the defined-risk structure.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout callout-neutral">
+      <div class="callout-label">Risk Posture for Tomorrow</div>
+      Patient and selective. Existing positions are in strong mark-to-market shape after today's rally. The next priority is deploying post-earnings crush setups (PENG, RRX) while standing aside from the pre-event IV in DDOG, MCD, and VST. Do not chase broad market premium at VIX 17 without specific stock-level elevation to justify the entry. The next risk-premium opportunity arrives either from a claims-driven vol spike or from individual earnings events that create fresh crush windows — both are better entered on confirmation than in advance.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ===== SECTION 5: TOMORROW GAME PLAN ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">Tomorrow Game Plan &mdash; Thursday, May 7</span>
+    </div>
+
+    <div class="callout callout-posture">
+      <div class="callout-label">Execution Posture</div>
+      <strong>SELECTIVE OFFENSE</strong> — Deploy on confirmed post-earnings crush setups (PENG, RRX) and the session-independent GILD IC. Hold capacity for DDOG and MCD crush setups that develop Thursday after close. Do not add broad market exposure at ATH ahead of unresolved catalysts.
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Primary Themes to Watch</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Theme</th><th>Time</th><th>Relevance</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Weekly Jobless Claims</strong></td><td>8:30am ET</td><td>Single most important macro print of the day. Sets the opening tone for all other setups.</td></tr>
+            <tr><td><strong>Iran Ceasefire Formalization</strong></td><td>Overnight / AM</td><td>Iran expected to hand formal reply to mediators. Confirmation = incremental positive; reversal = tail risk.</td></tr>
+            <tr><td><strong>DDOG Earnings (After Close)</strong></td><td>AH Thursday</td><td>Next AI/cloud sentiment read. Net retention, AI workload commentary, and Q2 guide are the key metrics.</td></tr>
+            <tr><td><strong>MCD Earnings (Before Open)</strong></td><td>BMO Thursday</td><td>Consumer health read. Options pricing 3.5% expected move. Same-store sales are the number.</td></tr>
+            <tr><td><strong>VST Earnings (After Close)</strong></td><td>AH Thursday</td><td>Execution risk — three of four prior quarters missed revenue. Power/energy infrastructure theme at stake.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="twobox">
+      <div class="callout callout-opportunity">
+        <div class="callout-label">Opportunity Areas</div>
+        Post-earnings crush: PENG, RRX (after 10am call). Session-independent: GILD Iron Condor. Opportunistic: DELL BPS Thursday PM if claims confirm. Thursday night: DDOG and MCD crush setups after events clear.
+      </div>
+      <div class="callout callout-risk">
+        <div class="callout-label">Risk Areas</div>
+        Jobless claims surprise (&gt;240K) reprices soft-landing assumption. Iran deal reversal sends VIX from 17 to 22+. DDOG guidance miss cascades into AMD/DELL/LSCC sympathy reversals. VST fourth consecutive revenue miss hits power/energy theme.
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Priority Watchlist</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Ticker</th><th>Priority Level</th><th>Setup</th><th>Trigger / Wait For</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>PENG</strong></td>
+              <td><span class="watchlist-badge wb-exec">Active Execution</span></td>
+              <td><span class="tag tag-bps">BPS</span> Post-earnings crush</td>
+              <td>Thursday open; confirm no gap below $35</td>
+            </tr>
+            <tr>
+              <td><strong>GILD</strong></td>
+              <td><span class="watchlist-badge wb-exec">Active Execution</span></td>
+              <td><span class="tag tag-ic">Iron Condor</span></td>
+              <td>Any time during Thursday session</td>
+            </tr>
+            <tr>
+              <td><strong>RRX</strong></td>
+              <td><span class="watchlist-badge wb-exec">Active Execution</span></td>
+              <td><span class="tag tag-crush">Post-Earnings Crush</span></td>
+              <td>After 10am ET earnings call; watch IV re-spike then entry</td>
+            </tr>
+            <tr>
+              <td><strong>DELL</strong></td>
+              <td><span class="watchlist-badge wb-monitor">Active Monitor</span></td>
+              <td><span class="tag tag-bps">BPS</span></td>
+              <td>Benign claims + tech holds through Thursday PM</td>
+            </tr>
+            <tr>
+              <td><strong>LSCC</strong></td>
+              <td><span class="watchlist-badge wb-monitor">Active Monitor</span></td>
+              <td><span class="tag tag-diag">Bullish Diagonal</span></td>
+              <td>Tech sector confirmation; earnings date clarity needed</td>
+            </tr>
+            <tr>
+              <td><strong>DDOG</strong></td>
+              <td><span class="watchlist-badge wb-monitor">Active Monitor</span></td>
+              <td><span class="tag tag-crush">Post-Event Crush</span></td>
+              <td>After AH report — do NOT enter before</td>
+            </tr>
+            <tr>
+              <td><strong>VIX</strong></td>
+              <td><span class="watchlist-badge wb-signal">Session Signal</span></td>
+              <td>Market temperature gauge</td>
+              <td>&lt;16.5 = full offense; &gt;19 = stand aside</td>
+            </tr>
+            <tr>
+              <td><strong>Claims Print</strong></td>
+              <td><span class="watchlist-badge wb-signal">Session Signal</span></td>
+              <td>Opens/closes entry door</td>
+              <td>&lt;220K = all setups active; &gt;240K = defensive posture</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CLOSING DESK NOTE -->
+  <div class="closing-note">
+    <div class="closing-note-title">Closing Desk Note</div>
+    <div class="closing-note-body">
+      The tape earned a strong close. Records on S&P 500, Nasdaq, and Russell 2000 with broad participation, a declining VIX, and the largest geopolitical tail risk of 2026 actively pricing out. For Thursday: <strong>Selective Offense.</strong> Deploy on PENG and GILD where the setup is clear and the event risk has passed. Stand aside on anything reporting Thursday until after the event. Top area of focus: post-earnings IV crush in PENG and the post-close DDOG/MCD crush windows that Thursday will deliver. Watch claims first. Trade second. The market has earned a pause — give it room to tell you what comes next before committing new capital.
+    </div>
+  </div>
+
+  <!-- DISCLAIMER 1467D -->
+  <div class="disclaimer" style="margin-top: 32px;">
+    <div class="disclaimer-label">Important Disclosures</div>
+    Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>CJ Desk PM Market Rundown</strong> &mdash; Wednesday, May 6, 2026 &mdash; Post-Market Close<br>
+  <span style="margin-top:6px; display:inline-block;">For general market commentary, education, and discussion purposes only. Not financial advice.</span>
+</div>
+
+</body>
+</html>
