@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Market Rundown — May 8, 2026</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-card: #1c2128;
+    --bg-callout: #21262d;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text-muted: #8b949e;
+    --gold: #c9a84c;
+    --gold-dim: #8a6f2e;
+    --green: #3fb950;
+    --red: #f85149;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #f0883e;
+    --yellow: #e3b341;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  a { color: var(--blue); text-decoration: none; }
+
+  /* MASTHEAD */
+  .masthead {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 28px 40px 20px;
+  }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; }
+  .masthead h1 {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .masthead .meta {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+  .masthead .meta span { color: var(--gold-dim); margin: 0 6px; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #12161c;
+    border-left: 3px solid var(--gold-dim);
+    padding: 12px 40px;
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .disclaimer-inner { max-width: 1100px; margin: 0 auto; }
+  .disclaimer strong { color: #6e7681; }
+
+  /* MAIN */
+  .main { max-width: 1100px; margin: 0 auto; padding: 28px 40px 60px; }
+
+  /* STAT BOXES */
+  .stat-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .stat-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 20px;
+    min-width: 130px;
+    flex: 1;
+  }
+  .stat-box .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .stat-box .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+  .stat-box .change {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .flat { color: var(--text-muted); }
+  .vix-box .price { color: var(--yellow); }
+
+  /* SECTION */
+  .section { margin-bottom: 40px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-num {
+    background: var(--gold);
+    color: #0d1117;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+  .section-title {
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .section-date {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-left: auto;
+  }
+
+  /* TONE BADGE */
+  .tone-bar {
+    background: var(--bg-callout);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--yellow);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    font-size: 13px;
+  }
+  .tone-bar strong { color: var(--yellow); }
+
+  /* SUBSECTION */
+  .subsection-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold-dim);
+    font-weight: 700;
+    margin: 20px 0 8px;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  th {
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1c2128; }
+  .ticker { font-weight: 700; color: var(--blue); font-family: monospace; }
+
+  /* TAGS */
+  .tag {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 4px;
+  }
+  .tag-bcs { background: #1f3a5f; color: #58a6ff; }
+  .tag-bps { background: #1f3b2a; color: #3fb950; }
+  .tag-ic  { background: #3b2a1f; color: #f0883e; }
+  .tag-np  { background: #2e1f3b; color: #bc8cff; }
+  .tag-watch { background: #2e2920; color: #e3b341; }
+  .tag-active { background: #1a3024; color: #3fb950; }
+  .tag-exec { background: #1f3a5f; color: #58a6ff; }
+
+  /* PRIORITY BADGES */
+  .priority-1 { color: var(--red); font-weight: 700; }
+  .priority-2 { color: var(--orange); font-weight: 700; }
+  .priority-3 { color: var(--yellow); font-weight: 700; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    background: var(--bg-callout);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .callout.caution { border-left: 4px solid var(--yellow); }
+  .callout.risk    { border-left: 4px solid var(--red); }
+  .callout.opport  { border-left: 4px solid var(--green); }
+  .callout.info    { border-left: 4px solid var(--blue); }
+  .callout.gold    { border-left: 4px solid var(--gold); }
+  .callout p { margin-bottom: 6px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .callout.caution .callout-label { color: var(--yellow); }
+  .callout.risk    .callout-label { color: var(--red); }
+  .callout.opport  .callout-label { color: var(--green); }
+  .callout.info    .callout-label { color: var(--blue); }
+  .callout.gold    .callout-label { color: var(--gold); }
+
+  /* POSTURE BANNER */
+  .posture-banner {
+    background: linear-gradient(135deg, #1a2a1a, #1c2128);
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .posture-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .posture-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .posture-rationale {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  /* SECTOR GRID */
+  .sector-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+  .sector-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 12px;
+    min-width: 120px;
+    flex: 1;
+  }
+  .sector-name { font-weight: 600; color: var(--text-muted); font-size: 11px; }
+  .sector-change { font-size: 16px; font-weight: 700; margin-top: 2px; }
+
+  /* TRADE CARD */
+  .trade-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .trade-card-header {
+    background: var(--bg-secondary);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .trade-rank {
+    background: var(--gold);
+    color: #0d1117;
+    font-weight: 800;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .trade-ticker-name { flex: 1; }
+  .trade-ticker-name .t { font-size: 16px; font-weight: 800; color: var(--blue); font-family: monospace; }
+  .trade-ticker-name .n { font-size: 11px; color: var(--text-muted); }
+  .trade-card-body { padding: 14px 18px; }
+  .trade-metrics {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .trade-metric { text-align: center; }
+  .trade-metric .tm-val { font-size: 18px; font-weight: 700; color: var(--text); }
+  .trade-metric .tm-lbl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+  .trade-why { font-size: 12px; color: var(--text); line-height: 1.6; }
+
+  /* FUTURES ROW */
+  .futures-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .futures-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 16px;
+    flex: 1;
+    min-width: 100px;
+  }
+  .futures-box .fl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; }
+  .futures-box .fv { font-size: 15px; font-weight: 700; }
+
+  /* CLOSING NOTE */
+  .closing-note {
+    background: linear-gradient(135deg, #0d1a0d, #0d1117);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin-top: 32px;
+  }
+  .closing-note h2 {
+    color: var(--gold);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+  .closing-note p { font-size: 13px; line-height: 1.7; }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+
+  /* HR */
+  hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+
+  /* PROSE */
+  p { margin-bottom: 10px; font-size: 13px; line-height: 1.65; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ORDERED LIST */
+  ol { padding-left: 20px; }
+  ol li { margin-bottom: 6px; font-size: 13px; line-height: 1.6; }
+
+  @media (max-width: 700px) {
+    .masthead, .main, .footer { padding-left: 16px; padding-right: 16px; }
+    .disclaimer { padding-left: 16px; padding-right: 16px; }
+    .stat-box { min-width: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-inner">
+    <h1>CJ Desk — PM Market Rundown</h1>
+    <div class="meta">
+      Session: Friday, May 8, 2026
+      <span>|</span>
+      Filed: Monday, May 11, 2026
+      <span>|</span>
+      Monday Session Prep
+    </div>
+  </div>
+</div>
+
+<!-- DISCLAIMER 1467C -->
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <strong>DISCLOSURE:</strong> This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- ===== SECTION 1: MARKET RECAP ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">PM Market Recap</span>
+      <span class="section-date">Friday, May 8, 2026</span>
+    </div>
+
+    <!-- INDEX STAT BOXES -->
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="label">SPY</div>
+        <div class="price">$537.62</div>
+        <div class="change pos">+0.84%</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">QQQ</div>
+        <div class="price">$711.23</div>
+        <div class="change pos">+2.34%</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">IWM</div>
+        <div class="price">~$282</div>
+        <div class="change flat">Flat / -0.3%</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">DIA</div>
+        <div class="price">~$488</div>
+        <div class="change pos">+0.02%</div>
+      </div>
+      <div class="stat-box vix-box">
+        <div class="label">VIX</div>
+        <div class="price">17.08</div>
+        <div class="change pos">-1.78%</div>
+      </div>
+    </div>
+
+    <!-- MARKET TONE -->
+    <div class="tone-bar">
+      <strong>Market Tone:</strong> Split-tape tech melt-up. Nasdaq Composite crossed 26,000 for the first time in history while nine of eleven S&amp;P 500 sectors closed red. Decliners outnumbered advancers 1.8-to-1. The headline index gains mask what was a broadly defensive session underneath mega-cap cap-weight leadership.
+    </div>
+
+    <!-- OVERNIGHT FUTURES -->
+    <div class="subsection-title">Overnight Futures — Into Monday Open</div>
+    <div class="futures-row">
+      <div class="futures-box">
+        <div class="fl">ES (S&amp;P)</div>
+        <div class="fv pos">Bid +</div>
+      </div>
+      <div class="futures-box">
+        <div class="fl">NQ (Nasdaq)</div>
+        <div class="fv pos">29,332 +2.27%</div>
+      </div>
+      <div class="futures-box">
+        <div class="fl">ER2 (Russell)</div>
+        <div class="fv flat">Lagging</div>
+      </div>
+    </div>
+
+    <!-- SECTOR PERFORMANCE -->
+    <div class="subsection-title">Sector Performance</div>
+    <div class="sector-grid">
+      <div class="sector-item">
+        <div class="sector-name">Technology</div>
+        <div class="sector-change pos">Leader</div>
+      </div>
+      <div class="sector-item">
+        <div class="sector-name">Comm Services</div>
+        <div class="sector-change pos">Leader</div>
+      </div>
+      <div class="sector-item">
+        <div class="sector-name">Materials (XLB)</div>
+        <div class="sector-change neg">-1.9%</div>
+      </div>
+      <div class="sector-item">
+        <div class="sector-name">Energy (XLE)</div>
+        <div class="sector-change neg">-1.8%</div>
+      </div>
+      <div class="sector-item">
+        <div class="sector-name">Industrials (XLI)</div>
+        <div class="sector-change neg">-1.6%</div>
+      </div>
+      <div class="sector-item">
+        <div class="sector-name">Other 6 Sectors</div>
+        <div class="sector-change neg">Red</div>
+      </div>
+    </div>
+
+    <!-- VOLATILITY -->
+    <div class="subsection-title">Volatility Environment</div>
+    <div class="callout info">
+      <div class="callout-label">VIX Read</div>
+      <p>VIX closed at <strong>17.08</strong>, down 1.78%. The productive premium-selling environment continues. At 17, the vol surface is thinning on an index level — edge is concentrated in single-name situations: CSCO pre-earnings IV buildup, QCOM post-earnings residual. A VIX break below 16 would signal maximum vol compression and widen the premium-selling window further.</p>
+    </div>
+
+    <!-- SESSION DRIVERS -->
+    <div class="subsection-title">Key Session Drivers</div>
+    <ol>
+      <li><strong>US-China Tariff Truce</strong> — Chinese import duties cut from 41% to 31%; China suspends retaliatory measures through Dec 31, 2026. S&amp;P surged 3%, NDX +4% on announcement day. Friday was digestion — the truce is now largely in the price.</li>
+      <li><strong>Nasdaq 26,000 Milestone</strong> — Historic first, driven by NVDA (+2.80%), AAPL (+2.22%), CSCO (+3.26%). Momentum and growth remain the clear leadership regime.</li>
+      <li><strong>Earnings Season Near-Record</strong> — 84% of S&amp;P 500 reporters beat EPS (5-yr avg 78%); record 13.4% net margins; FY2026 EPS growth projected +24%.</li>
+      <li><strong>Iran Peace Deal Uncertainty</strong> — Negotiations created mid-week volatility; fresh Gulf military activity tempered any follow-through; oil under pressure.</li>
+      <li><strong>Single-Name Extremes</strong> — RKLB +34%, DDOG +31% on beats; PLNT -30%, SHAK -30% on guidance cuts; NET -14% on AI-driven headcount reduction.</li>
+    </ol>
+
+    <!-- TRADER TAKEAWAY -->
+    <div class="subsection-title">Trader Takeaway for Monday</div>
+    <div class="callout caution">
+      <div class="callout-label">Two Scenarios</div>
+      <p><strong>Risk-on:</strong> Futures gap higher, tech extends, VIX compresses below 16. Best premium-selling window of the week opens. Stay selective — CSCO and QCOM are the plays.</p>
+      <p><strong>Risk-off:</strong> Narrow tech leadership stalls, broad market weight asserts, VIX bounces to 18+. Iran/China headlines flip sentiment. The ShadowTrader "nosebleed territory" thesis plays out quietly.</p>
+      <p><strong>What to watch:</strong> CSCO earnings Wednesday May 13 AH. Futures gap hold/fail at 10:30 AM ET. VIX direction. NVDA as the session's bellwether.</p>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2: NEWS & CATALYST ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">News &amp; Catalyst Review</span>
+      <span class="section-date">Friday, May 8, 2026</span>
+    </div>
+
+    <div class="subsection-title">Macro Catalysts</div>
+    <div class="callout info">
+      <div class="callout-label">US-China Tariff Truce</div>
+      <p>US reduced tariffs on Chinese imports from 41% to 31%; fentanyl-related duties cut from 20% to 10%. China suspends all retaliatory measures through Dec 31, 2026. The deal is in the price. Follow-on headlines now carry tail risk in both directions.</p>
+    </div>
+    <div class="callout caution">
+      <div class="callout-label">Iran Peace Deal — Unresolved</div>
+      <p>US-Iran negotiations reported mid-week; fresh Persian Gulf military activity as of Friday. The oscillation between peace-deal hope and escalation is the dominant macro wildcard heading into the week. Oil and defensive sectors remain reactive.</p>
+    </div>
+
+    <div class="subsection-title">Earnings Catalysts</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Result</th>
+          <th>Reaction</th>
+          <th>Takeaway</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ticker">CSCO</span></td>
+          <td>Q3 FY2026 due <strong>May 13 AH</strong></td>
+          <td class="pos">+3.26% Friday (pre-earnings bid; Dow leader)</td>
+          <td>Primary event play for the week — IV building</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">QCOM</span></td>
+          <td>Q2 beat Apr 29; record auto revenue; buyback + Snap AR</td>
+          <td class="pos">+15% earnings day; +8% catalyst stack May 7</td>
+          <td>IVR 100% persists post-event; BCS of interest</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">DDOG</span></td>
+          <td>Q1 EPS/revenue beat; raised guidance</td>
+          <td class="pos">+31%</td>
+          <td>Residual IV likely compressing fast</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">RKLB</span></td>
+          <td>Revenue beat; record quarter</td>
+          <td class="pos">+34% (best day ever)</td>
+          <td>Vol normalization underway — event passed</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">NET</span></td>
+          <td>1,100 layoffs citing AI automation</td>
+          <td class="neg">-14%</td>
+          <td>Event passed; oversold watch</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">PLNT</span></td>
+          <td>Slashed guidance</td>
+          <td class="neg">-30%</td>
+          <td>Broken story — avoid</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">SHAK</span></td>
+          <td>Reported operating loss</td>
+          <td class="neg">-30%</td>
+          <td>Consumer discretionary warning signal</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout info">
+      <div class="callout-label">Earnings Season Scorecard</div>
+      <p>89% of S&amp;P 500 reported. <strong>84% EPS beat rate</strong> (vs. 78% 5-yr average). Record 13.4% net margins. FY2026 EPS growth on track for <strong>+24%</strong>. Goldman Sachs: 40% of incremental earnings growth attributed to AI-related capex.</p>
+    </div>
+
+    <div class="subsection-title">What Still Matters Monday</div>
+    <table>
+      <thead>
+        <tr><th>Carry-Forward Theme</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>US-China trade truce</td><td>In the price; follow-on is tail risk</td></tr>
+        <tr><td>Iran peace deal</td><td>Unresolved — oil / defensives reactive</td></tr>
+        <tr><td>CSCO earnings May 13 AH</td><td><strong class="pos">Primary event play — entry window open now</strong></td></tr>
+        <tr><td>Mega-cap tech / AI leadership</td><td>Intact but breadth deteriorating</td></tr>
+        <tr><td>VIX compression below 17</td><td>Ongoing — favorable for premium sellers</td></tr>
+        <tr><td>Nasdaq 26,000 milestone</td><td>One-session narrative — less relevant Monday</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== SECTION 3: TRADE DISCOVERY ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Trade Discovery Layer</span>
+      <span class="section-date">Friday, May 8, 2026 Screeners</span>
+    </div>
+
+    <div class="callout caution">
+      <div class="callout-label">ShadowTrader Overlay — Weekend Edition May 8</div>
+      <p>"Majors are now in nosebleed territory FAR above their respective channels." Posture: <strong>CAUTIOUS.</strong> Favor BCS, IC, and defined-risk short-vol structures. Reduce BPS sizing on extended names. Do not chase. The setup that "will work very well soon" per ShadowTrader is a fade or mean-reversion structure — align premium selling with that thesis.</p>
+    </div>
+
+    <div class="subsection-title">Top 3 Candidates</div>
+
+    <!-- TRADE CARD 1 - CSCO -->
+    <div class="trade-card">
+      <div class="trade-card-header">
+        <div class="trade-rank">1</div>
+        <div class="trade-ticker-name">
+          <div class="t">CSCO</div>
+          <div class="n">Cisco Systems — Pre-Earnings Event Play</div>
+        </div>
+        <span class="tag tag-bcs">BCS</span>
+        <span class="tag tag-ic">IC</span>
+      </div>
+      <div class="trade-card-body">
+        <div class="trade-metrics">
+          <div class="trade-metric">
+            <div class="tm-val">$96.57</div>
+            <div class="tm-lbl">Price</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">CJ_BCS</div>
+            <div class="tm-lbl">Screener</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val pos">Elevated</div>
+            <div class="tm-lbl">IVR (building)</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">~$4.50</div>
+            <div class="tm-lbl">Est. Exp Move</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val pos">May 13 AH</div>
+            <div class="tm-lbl">Earnings Date</div>
+          </div>
+        </div>
+        <div class="trade-why">
+          <strong>Why:</strong> CSCO is the Dow leader into its May 13 earnings announcement, meaning IV is being actively bid. Q2 FY2026 delivered record $15.3B revenue (+10% YoY). The AI and security infrastructure narrative drives the re-rate. Entering a BCS ($101/$104 call spread) or IC ($92 put / $89 put, $101 call / $104 call) by Tuesday close captures the vol crush post-announcement. The ShadowTrader overlay aligns — selling upside premium into an extended name with a defined catalyst. Entry window: Monday open through Tuesday close.
+        </div>
+      </div>
+    </div>
+
+    <!-- TRADE CARD 2 - QCOM -->
+    <div class="trade-card">
+      <div class="trade-card-header">
+        <div class="trade-rank">2</div>
+        <div class="trade-ticker-name">
+          <div class="t">QCOM</div>
+          <div class="n">Qualcomm — Post-Earnings IV Compression</div>
+        </div>
+        <span class="tag tag-bcs">BCS</span>
+        <span class="tag tag-ic">IC</span>
+      </div>
+      <div class="trade-card-body">
+        <div class="trade-metrics">
+          <div class="trade-metric">
+            <div class="tm-val">$219.09</div>
+            <div class="tm-lbl">Price</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">100%</div>
+            <div class="tm-lbl">IVR</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">100%</div>
+            <div class="tm-lbl">IVP</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">71.83%</div>
+            <div class="tm-lbl">IV</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">$17.68</div>
+            <div class="tm-lbl">Exp Move</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">2.46x</div>
+            <div class="tm-lbl">RelVol</div>
+          </div>
+        </div>
+        <div class="trade-why">
+          <strong>Why:</strong> Post-earnings residual IVR 100% with no immediate catalyst — classic premium compression setup. 1-sigma upper = $236.77. BCS: sell $240/$245 call spread at 30–45 DTE. IV at 71.83% provides material OTM premium. Target 50% profit; stop at 200% of credit. Mechanical trade — not directional. The ShadowTrader caution overlay reinforces BCS over BPS here.
+        </div>
+      </div>
+    </div>
+
+    <!-- TRADE CARD 3 - VSH -->
+    <div class="trade-card">
+      <div class="trade-card-header">
+        <div class="trade-rank">3</div>
+        <div class="trade-ticker-name">
+          <div class="t">VSH</div>
+          <div class="n">Vishay Intertechnology — Event IV Play</div>
+        </div>
+        <span class="tag tag-ic">IC</span>
+        <span class="tag tag-bps">BPS</span>
+      </div>
+      <div class="trade-card-body">
+        <div class="trade-metrics">
+          <div class="trade-metric">
+            <div class="tm-val">$34.26</div>
+            <div class="tm-lbl">Price</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">100%</div>
+            <div class="tm-lbl">IVR</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">90.44%</div>
+            <div class="tm-lbl">IV</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">$4.58</div>
+            <div class="tm-lbl">Exp Move</div>
+          </div>
+          <div class="trade-metric">
+            <div class="tm-val">1.83x</div>
+            <div class="tm-lbl">RelVol</div>
+          </div>
+        </div>
+        <div class="trade-why">
+          <strong>Why:</strong> Extreme IV spike (90.44%) on a $34 stock signals a near-term binary event. $4.58 expected move = 13.4% range, consistent with earnings. IC: $30 put / $27 put, $39 call / $42 call. Size at 50% of normal given thin liquidity (7,883 options volume). <strong>Verify earnings date before entry — do not initiate without confirming the catalyst.</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECONDARY WATCHLIST -->
+    <div class="subsection-title">Secondary Discovery List</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Screener</th>
+          <th>Price</th>
+          <th>Strategy</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ticker">RH</span></td>
+          <td>CJ_Iron_Condor</td>
+          <td>$133.89</td>
+          <td><span class="tag tag-ic">IC</span></td>
+          <td>IVR 49.87% / IV 76.65% / Exp Move $8.20 — solid IC candidate; verify catalyst</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">EMR</span></td>
+          <td>CJ_Iron_Condor</td>
+          <td>$141.31</td>
+          <td><span class="tag tag-ic">IC</span></td>
+          <td>Industrials headwind; verify IVR before entry</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">MXL</span></td>
+          <td>CJ_BPS</td>
+          <td>$99.83</td>
+          <td><span class="tag tag-bps">BPS</span></td>
+          <td>IVR 100% — catalyst unknown; confirm before entry</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">COP</span></td>
+          <td>Naked Put</td>
+          <td>~$62</td>
+          <td><span class="tag tag-np">Naked Put</span></td>
+          <td>Div 2.82%; XLE -1.8% Friday; enter only if energy stabilizes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout gold">
+      <div class="callout-label">Trader Takeaway</div>
+      <p>The best opportunity for the week is the <strong>CSCO pre-earnings vol play (May 13 AH)</strong> — defined risk, concrete catalyst, tight timeframe. Entry window: Monday open through Tuesday close. <strong>QCOM</strong> is the secondary priority — a mechanical premium compression trade against IVR 100%. <strong>VSH</strong> is speculative until the catalyst is verified. Apply ShadowTrader "nosebleed territory" filter: size 50% normal on bullish bias, prefer IC over BPS, no new BPS on extended names.</p>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4: PORTFOLIO RISK ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">Portfolio Risk Carry Forward</span>
+      <span class="section-date">Into Monday, May 11, 2026</span>
+    </div>
+
+    <div class="subsection-title">Greeks Environment</div>
+    <table>
+      <thead>
+        <tr><th>Greek</th><th>Environment</th><th>Implication</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Theta</td><td>Favorable — VIX 17, DTE decay active</td><td>Continue collecting; monitor acceleration at 21 DTE</td></tr>
+        <tr><td>Gamma</td><td>Risk if short near-the-money</td><td>Keep short strikes wide; do not gamma-chase in extended market</td></tr>
+        <tr><td>Vega</td><td>Compressing — VIX trending down</td><td>Short-vega positions marking well; close into further compression</td></tr>
+        <tr><td>Rho</td><td>Stable rates — low priority</td><td>Minimal impact on near-term structures</td></tr>
+      </tbody>
+    </table>
+
+    <div class="subsection-title">Gamma / Earnings Exposure Map</div>
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Earnings Date</th><th>Days Out</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ticker">CSCO</span></td>
+          <td>May 13 AH</td>
+          <td><span class="priority-1">2 days</span></td>
+          <td>Primary event — actively manage; enter structure by Tuesday close</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">VSH</span></td>
+          <td>TBD</td>
+          <td><span class="priority-2">Unknown</span></td>
+          <td>Verify catalyst before entry</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">QCOM</span></td>
+          <td>Jun 24 (Investor Day)</td>
+          <td><span class="priority-3">~44 days</span></td>
+          <td>Enter BCS; monitor for vol compression</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">RH</span></td>
+          <td>TBD</td>
+          <td>—</td>
+          <td>Low urgency; verify</td>
+        </tr>
+        <tr>
+          <td><span class="ticker">MXL</span></td>
+          <td>TBD — IVR 100% suggests near-term</td>
+          <td>—</td>
+          <td>Do not enter until confirmed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="subsection-title">Stress Scenarios</div>
+    <div class="callout opport">
+      <div class="callout-label">Scenario A — Moderate-High Probability</div>
+      <p>Futures gap higher Monday; CSCO beats Wednesday. Tech extends, VIX compresses below 16. <strong>Impact: Positive.</strong> Short-vega positions mark favorably; CSCO IC profits on vol crush. Execute the plan.</p>
+    </div>
+    <div class="callout risk">
+      <div class="callout-label">Scenario B — Low-Moderate Probability</div>
+      <p>Iran escalation hits Monday open. Oil spikes, VIX bounces above 19. <strong>Impact: Negative.</strong> Vega expansion, gap risk on near-term structures. Reduce size on any positions held through the event.</p>
+    </div>
+    <div class="callout caution">
+      <div class="callout-label">Scenario C — Low Probability</div>
+      <p>US-China deal optimism fades on implementation friction. Moderate negative for broad market delta exposure. Not a vega event unless VIX spikes above 21.</p>
+    </div>
+    <div class="callout risk">
+      <div class="callout-label">Scenario D — Low Probability</div>
+      <p>CSCO earnings miss Wednesday — stock gaps 8–10% lower. Negative for IC positions held through the event. Reason to close the IC before Wednesday close if uncomfortable with event risk.</p>
+    </div>
+
+    <div class="subsection-title">Next Session Priorities</div>
+    <ol>
+      <li><strong>CSCO:</strong> Enter IC or BCS by Tuesday close. Confirm strike placement vs. ~$4.50 expected move.</li>
+      <li><strong>QCOM:</strong> Enter BCS (30–45 DTE). Verify IVR has not compressed significantly over weekend.</li>
+      <li><strong>VSH:</strong> Confirm earnings date. If near-term, evaluate IC at 50% normal size.</li>
+      <li><strong>Existing BPS on extended tech:</strong> Flag any bull put spreads near the money on names above 20-day channels. Review short put delta.</li>
+      <li><strong>XLE / XLB exposure:</strong> Check for Iran/OPEC gap risk from weekend developments.</li>
+      <li><strong>Portfolio net-delta:</strong> Run a delta check across the full book. Target neutral-to-slightly-negative for Monday.</li>
+    </ol>
+  </div>
+
+  <!-- ===== SECTION 5: GAME PLAN ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <span class="section-title">Monday Game Plan</span>
+      <span class="section-date">May 11, 2026</span>
+    </div>
+
+    <div class="posture-banner">
+      <div>
+        <div class="posture-label">Execution Posture</div>
+        <div class="posture-value">Selective Offense</div>
+      </div>
+      <div class="posture-rationale">
+        The vol environment supports premium selling and CSCO is a clean defined-risk event. Size 50–75% of normal across all new entries until CSCO clears Wednesday. Do not force trades in a breadth-challenged tape.
+      </div>
+    </div>
+
+    <div class="subsection-title">Primary Themes to Watch</div>
+    <ol>
+      <li><strong>CSCO earnings setup (May 13 AH)</strong> — Entry window is Monday open to Tuesday close. Primary focus.</li>
+      <li><strong>Mega-cap tech vs. breadth divergence</strong> — Nine sectors red Friday; Monday breadth is the tell for whether the market can sustain the run.</li>
+      <li><strong>Iran / geopolitical headline risk</strong> — Weekend developments into Monday open. Oil and defensives reactive in both directions.</li>
+      <li><strong>VIX direction</strong> — Sub-16 = more offense; 18+ = step back and widen cushions.</li>
+      <li><strong>Futures gap sustainability past 10:30 AM ET</strong> — Gap holds = trend confirmed; gap reversal = ShadowTrader thesis confirmed.</li>
+    </ol>
+
+    <div class="subsection-title">Priority Watchlist</div>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Name</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-exec">Active Execution</span></td>
+          <td><span class="ticker">CSCO</span></td>
+          <td>Pre-earnings IC or BCS — enter Monday open through Tuesday close</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-exec">Active Execution</span></td>
+          <td><span class="ticker">QCOM</span></td>
+          <td>BCS (30–45 DTE) — verify IVR, then enter</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-watch">Active Monitor</span></td>
+          <td><span class="ticker">VSH</span></td>
+          <td>Confirm catalyst before entry; IC if confirmed</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-watch">Active Monitor</span></td>
+          <td><span class="ticker">RH</span></td>
+          <td>IC candidate; wait for market tone to settle Monday</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-watch">Active Monitor</span></td>
+          <td><span class="ticker">MXL</span></td>
+          <td>IVR 100% — do not enter until catalyst confirmed</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-active">Tone Signal</span></td>
+          <td><span class="ticker">NVDA</span></td>
+          <td>Week's bellwether — directional read for the session</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-active">Tone Signal</span></td>
+          <td>VIX + Breadth</td>
+          <td>VIX &lt;16 = offense; &gt;18 = caution. Breadth at 11 AM = market health check.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout gold">
+      <div class="callout-label">Monday Game Plan Summary</div>
+      <p>Monday opens in a constructive futures-led environment against a market that is extended on every meaningful measure. The week's most important event — CSCO earnings Wednesday AH — is the session's organizing focus. Enter the CSCO structure early; enter QCOM mechanically; monitor the rest without forcing trades in what has become a narrow, breadth-challenged tape. If Monday gaps up and stalls, treat the reversal as confirmation of the ShadowTrader thesis — not a catalyst to sell everything, but a signal to widen cushions and tighten sizing. Keep powder dry for Wednesday's CSCO resolution.</p>
+    </div>
+  </div>
+
+  <!-- CLOSING NOTE -->
+  <div class="closing-note">
+    <h2>Closing Desk Note</h2>
+    <p>Posture for the week of May 11: <strong>Selective Offense, leaning toward patience.</strong> The market is in a historic run — Nasdaq 26,000, 84% earnings beat rate, US-China deal in place — but breadth is broken and ShadowTrader reads "nosebleed territory far above channels." These conditions do not call for going short or stepping away. They call for selling premium with discipline: take the CSCO event play, take the QCOM compression trade, size conservatively, and leave the rest for sessions with more confirmation. Top area of focus this week: <strong>CSCO earnings, May 13.</strong> Everything else is secondary until Wednesday's close.</p>
+  </div>
+
+</div><!-- /main -->
+
+<!-- DISCLAIMER 1467D -->
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <strong>ADDITIONAL DISCLOSURE:</strong> Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    CJ Desk PM Market Rundown &nbsp;|&nbsp; Session: May 8, 2026 &nbsp;|&nbsp; Filed: May 11, 2026 &nbsp;|&nbsp; For internal use only
+  </div>
+</div>
+
+</body>
+</html>
