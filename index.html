@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Rundown — May 12, 2026</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --gold: #c9a84c;
+    --gold-dim: #9a7a2e;
+    --green: #3fb950;
+    --red: #f85149;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #e3b341;
+    --teal: #39d353;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; line-height: 1.6; }
+  .masthead { background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #0d1117 100%); border-bottom: 2px solid var(--gold); padding: 20px 32px 16px; display: flex; justify-content: space-between; align-items: center; }
+  .masthead-left h1 { font-size: 22px; color: var(--gold); letter-spacing: 2px; font-weight: 700; text-transform: uppercase; }
+  .masthead-left .subtitle { color: var(--muted); font-size: 11px; letter-spacing: 1px; margin-top: 2px; }
+  .masthead-right { text-align: right; }
+  .masthead-right .date { color: var(--gold); font-size: 13px; font-weight: 600; }
+  .masthead-right .session { color: var(--muted); font-size: 11px; }
+  .disclaimer-top { background: #1a1a0e; border: 1px solid var(--gold-dim); border-left: 3px solid var(--gold); padding: 10px 16px; margin: 12px 16px; font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .disclaimer-top strong { color: var(--gold); }
+  .container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  .stat-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+  .stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; min-width: 130px; flex: 1; }
+  .stat-box .label { font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+  .stat-box .value { font-size: 18px; font-weight: 700; color: var(--text); }
+  .stat-box .change { font-size: 12px; margin-top: 2px; font-weight: 600; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .neu { color: var(--muted); }
+  .vix-box .value { color: var(--orange); }
+  .vix-box .change { color: var(--red); }
+  .section { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+  .section-header { background: var(--surface2); border-bottom: 1px solid var(--border); padding: 12px 16px; display: flex; align-items: center; gap: 10px; }
+  .section-header h2 { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; }
+  .section-header .num { background: var(--gold); color: #0d1117; border-radius: 3px; padding: 1px 7px; font-size: 11px; font-weight: 800; }
+  .section-body { padding: 16px; }
+  .tone-badge { display: inline-block; background: #1f2d1f; border: 1px solid #3fb950; color: var(--green); padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 1px; margin-bottom: 12px; }
+  .tone-badge.warn { background: #2d1f0e; border-color: var(--orange); color: var(--orange); }
+  .tone-badge.caution { background: #2d2400; border-color: var(--gold); color: var(--gold); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: var(--surface2); color: var(--muted); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+  td { padding: 7px 10px; border-bottom: 1px solid #21262d; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1c2128; }
+  .tag { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+  .tag-bps { background: #1f2d1f; color: var(--green); border: 1px solid #3fb950; }
+  .tag-bcs { background: #2d1515; color: var(--red); border: 1px solid #f85149; }
+  .tag-ic { background: #1a1f2d; color: var(--blue); border: 1px solid #58a6ff; }
+  .tag-diag { background: #271a2d; color: var(--purple); border: 1px solid #bc8cff; }
+  .tag-earn { background: #2d2400; color: var(--gold); border: 1px solid var(--gold); }
+  .tag-hot { background: #2d1515; color: var(--red); border: 1px solid #f85149; }
+  .tag-watch { background: #1c2128; color: var(--muted); border: 1px solid var(--border); }
+  .callout { border-radius: 6px; padding: 12px 14px; margin: 10px 0; font-size: 13px; line-height: 1.6; }
+  .callout-bull { background: #1a2d1a; border-left: 3px solid var(--green); }
+  .callout-bear { background: #2d1a1a; border-left: 3px solid var(--red); }
+  .callout-warn { background: #2d2400; border-left: 3px solid var(--gold); }
+  .callout-info { background: #1a1f2d; border-left: 3px solid var(--blue); }
+  .callout strong { color: var(--gold); }
+  .posture-banner { background: linear-gradient(90deg, #1a1f2d, #1c2128); border: 1px solid var(--blue); border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; }
+  .posture-banner .posture-label { font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .posture-banner .posture-value { font-size: 18px; font-weight: 800; color: var(--blue); margin: 4px 0; }
+  .posture-banner .posture-rationale { font-size: 12px; color: var(--text); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .scenario-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 12px; }
+  .scenario-box .s-label { font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+  .scenario-box .s-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .scenario-box .s-title.bull { color: var(--green); }
+  .scenario-box .s-title.bear { color: var(--red); }
+  .scenario-box p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .watchlist-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 12px; }
+  .watchlist-col { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 12px; }
+  .watchlist-col h4 { font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .watchlist-item { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #21262d; display: flex; align-items: center; gap: 8px; }
+  .watchlist-item:last-child { border-bottom: none; }
+  .ticker { font-weight: 700; color: var(--gold); font-size: 13px; min-width: 50px; }
+  .closing-note { background: linear-gradient(135deg, #1a1f2d 0%, #161b22 100%); border: 1px solid var(--gold); border-radius: 8px; padding: 18px; margin: 16px 0; }
+  .closing-note h3 { color: var(--gold); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .closing-note p { font-size: 13px; line-height: 1.7; color: var(--text); }
+  .disclaimer-bottom { background: #0a0a0a; border: 1px solid var(--gold-dim); border-left: 3px solid var(--gold); padding: 10px 16px; margin: 12px 16px; font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .disclaimer-bottom strong { color: var(--gold); }
+  .footer { text-align: center; padding: 12px; color: var(--muted); font-size: 10px; letter-spacing: 1px; border-top: 1px solid var(--border); margin-top: 8px; }
+  .sub-section { margin-bottom: 16px; }
+  .sub-section h3 { color: var(--text); font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; color: var(--muted); }
+  p { margin-bottom: 8px; font-size: 13px; }
+  ul { padding-left: 18px; margin-bottom: 8px; }
+  li { font-size: 13px; margin-bottom: 4px; }
+  @media (max-width: 700px) {
+    .two-col, .watchlist-row { grid-template-columns: 1fr; }
+    .stat-row .stat-box { min-width: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-left">
+    <h1>CJ Desk PM Rundown</h1>
+    <div class="subtitle">OPTIONS TRADING DESK &nbsp;|&nbsp; PREMIUM SELLING STRATEGIES</div>
+  </div>
+  <div class="masthead-right">
+    <div class="date">Tuesday, May 12, 2026</div>
+    <div class="session">Most Recent Session: Monday, May 11, 2026</div>
+  </div>
+</div>
+
+<!-- DISCLAIMER 1467C — TOP -->
+<div class="disclaimer-top">
+  <strong>1467C —</strong> This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+</div>
+
+<div class="container">
+
+  <!-- INDEX STAT BOXES -->
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="label">S&amp;P 500</div>
+      <div class="value">7,412</div>
+      <div class="change pos">+0.19% ▲ Record</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Nasdaq Comp.</div>
+      <div class="value">26,274</div>
+      <div class="change pos">+0.10% ▲ Record</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Dow Jones</div>
+      <div class="value">49,704</div>
+      <div class="change pos">+0.19% ▲</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Russell 2000</div>
+      <div class="value">Record</div>
+      <div class="change pos">+0.79% ▲</div>
+    </div>
+    <div class="stat-box vix-box">
+      <div class="label">VIX</div>
+      <div class="value">18.41</div>
+      <div class="change">+7.1% (+1.22 pts)</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: MARKET RECAP -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">1</span>
+      <h2>PM Market Recap — Mon May 11, 2026</h2>
+    </div>
+    <div class="section-body">
+      <span class="tone-badge caution">CAUTIOUSLY CONSTRUCTIVE AT ALTITUDE</span>
+      <p>Indexes printed fresh all-time intraday highs on Monday before reversing in the final hour. Net gains were thin (sub-0.20%) on a session that briefly looked like more. The late-day fade was pre-CPI profit-taking, not a structural breakdown. The VIX expanding +7.1% on a green day is the tell — professionals are hedging at record prices, not celebrating.</p>
+
+      <div class="sub-section">
+        <h3>Sector Leadership</h3>
+        <table>
+          <tr><th>Sector</th><th>Move</th><th>Driver</th></tr>
+          <tr><td>Energy (XLE)</td><td class="pos">+1.77%</td><td>Iran ceasefire "on life support"; Brent $94–103/bbl</td></tr>
+          <tr><td>Materials (XLB)</td><td class="pos">+1.09%</td><td>Copper record close at $6.4605/lb; +13% YTD</td></tr>
+          <tr><td>Technology (XLK)</td><td class="pos">+0.97%</td><td>Micron, Nvidia AI leadership; late-day fade off intraday highs</td></tr>
+          <tr><td>Consumer Discretionary (XLY)</td><td class="neg">-1.38%</td><td>HIMS -7% post-Q1 miss; gas prices pressuring consumer</td></tr>
+          <tr><td>Consumer Staples (XLP)</td><td class="neg">-1.04%</td><td>Defensive rotation unwinding in risk-on sessions</td></tr>
+          <tr><td>Communications (XLC)</td><td class="neg">-0.70%</td><td>No specific catalyst; relative underperformance</td></tr>
+        </table>
+      </div>
+
+      <div class="sub-section" style="margin-top:14px;">
+        <h3>Key Session Drivers</h3>
+        <table>
+          <tr><th>#</th><th>Driver</th><th>Impact</th></tr>
+          <tr><td>1</td><td>AI / Semiconductor Leadership (Micron, Nvidia)</td><td>Intraday ATH on S&amp;P and Nasdaq</td></tr>
+          <tr><td>2</td><td>Iran War — Trump rejected ceasefire terms</td><td>Oil higher; Energy +1.77%</td></tr>
+          <tr><td>3</td><td>Rising bond yields (10-yr at 4.39%, +3 bps)</td><td>Rate-sensitive sectors lagged</td></tr>
+          <tr><td>4</td><td>Copper at record high ($6.4605/lb)</td><td>Materials outperformance; inflation signal</td></tr>
+          <tr><td>5</td><td>Late-day reversal from intraday highs</td><td>Pre-CPI caution; VIX expansion</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-warn" style="margin-top:14px;">
+        <strong>Volatility Environment:</strong> VIX at 18.41 — elevated relative to record equity prices. The divergence signals real event risk being priced: CPI today, Cisco/TSEM earnings Wednesday, AMAT Thursday, and the ongoing Iran conflict. This is a <em>selective</em> premium-selling environment, not a blitz environment.
+      </div>
+
+      <div class="two-col" style="margin-top:14px;">
+        <div class="callout callout-bull">
+          <strong>Scenario 1 — Risk-On (CPI in-line):</strong> Gap-up continuation; tech and rate-sensitive names lead. VIX compresses toward 17. Premium sellers: wait for post-CPI settlement, then add IC/BPS in stable names in the afternoon session.
+        </div>
+        <div class="callout callout-bear">
+          <strong>Scenario 2 — Risk-Off (Hot CPI):</strong> Brief selloff; VIX to 22–25. Hold existing book; no new entries until Wednesday PM post-Cisco earnings confirm direction.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: NEWS & CATALYSTS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">2</span>
+      <h2>News &amp; Catalyst Review</h2>
+    </div>
+    <div class="section-body">
+
+      <div class="sub-section">
+        <h3>Macro Catalysts</h3>
+        <div class="callout callout-warn">
+          <strong>Iran War / Strait of Hormuz Crisis:</strong> The defining macro overlay of 2026. Brent crude $94–103/bbl. Gas up $1.16/gallon since conflict began; jet fuel +95% YTD. Trump rejected Iran's latest peace terms; diplomacy stalled. This is the engine behind energy's +22% YTD sector run and persistent CPI pressure.
+        </div>
+        <div class="callout callout-info" style="margin-top:8px;">
+          <strong>April CPI (Released May 12, 8:30 AM ET):</strong> The dominant event of the week. March printed +0.9% MoM / +3.3% YoY (gasoline +21.2% MoM). April consensus: +0.6% MoM / +3.7% YoY; core +0.3% / +2.7%. The actual print catalyzed a brief opening sell-off before buyers re-engaged. VIX's 7.1% expansion reflects absorption, not relief.
+        </div>
+        <div class="callout callout-info" style="margin-top:8px;">
+          <strong>Fed / Rates:</strong> Powell-to-Warsh transition underway. Markets pricing zero cuts in 2026; re-tightening risk discussed. Higher-for-longer is entrenched. 10-year bond auction post-CPI was a secondary watch item.
+        </div>
+      </div>
+
+      <div class="sub-section" style="margin-top:14px;">
+        <h3>Earnings Catalysts</h3>
+        <table>
+          <tr><th>Name</th><th>Result</th><th>Reaction</th><th>Takeaway</th></tr>
+          <tr><td><strong>MNDY</strong> (Monday.com)</td><td>EPS + Rev beat; +24% YoY to $351M</td><td class="pos">+26%</td><td>SaaS demand resilient; enterprise software holding</td></tr>
+          <tr><td><strong>TTD</strong> (Trade Desk)</td><td>EPS miss; Q2 guidance soft</td><td class="neg">-9%</td><td>Digital ad softening; ad-tech isolated risk</td></tr>
+          <tr><td><strong>LITE</strong> (Lumentum)</td><td>Nasdaq-100 index addition announced</td><td class="pos">+7.7%</td><td>Optical/photonic AI data center; passive flow benefit</td></tr>
+          <tr><td><strong>TSEM</strong> (Tower Semi)</td><td><span class="tag tag-earn">Reports May 13</span></td><td>Pending</td><td>IVR/IVP 100%; ExpMove $29.20 (12.7%); extreme binary</td></tr>
+          <tr><td><strong>CSCO</strong> (Cisco)</td><td><span class="tag tag-earn">Reports Wed May 13 PM</span></td><td>Pending</td><td>AI capex proxy; up 62% in 12 months; key tech bellwether</td></tr>
+          <tr><td><strong>AMAT</strong> (Applied Materials)</td><td><span class="tag tag-earn">Reports Thu May 14</span></td><td>Pending</td><td>ExpMove ±8.7%; semiconductor equipment bellwether</td></tr>
+        </table>
+      </div>
+
+      <div class="sub-section" style="margin-top:14px;">
+        <h3>What Still Matters Tomorrow</h3>
+        <table>
+          <tr><th>Theme</th><th>Status</th><th>Why It Matters</th></tr>
+          <tr><td>Iran / Hormuz</td><td><span class="tag tag-earn">Carry-Forward</span></td><td>Oil, inflation, energy sector leadership</td></tr>
+          <tr><td>CPI trajectory</td><td><span class="tag tag-earn">Carry-Forward</span></td><td>Fed path, rate-sensitive positioning</td></tr>
+          <tr><td>Cisco earnings (Wed PM)</td><td><span class="tag tag-hot">Next 24 hrs</span></td><td>AI capex signal — market-moving for tech broadly</td></tr>
+          <tr><td>VIX elevation</td><td><span class="tag tag-watch">Watch</span></td><td>If VIX fails to compress, risk repricing is durable</td></tr>
+          <tr><td>TSEM earnings (Wed AM)</td><td><span class="tag tag-hot">Next 12 hrs</span></td><td>Binary; IV crush will be significant post-print</td></tr>
+          <tr><td>Trump-Xi Summit</td><td><span class="tag tag-earn">Carry-Forward</span></td><td>Could move multinationals and semis meaningfully</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: TRADE DISCOVERY -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">3</span>
+      <h2>Trade Discovery Layer</h2>
+    </div>
+    <div class="section-body">
+      <div class="callout callout-info" style="margin-bottom:14px;">
+        <strong>Desk Posture Overlay — Neutral-to-Cautious Selective Offense:</strong> Based on market structure (record closes, VIX expansion, CPI event risk, Iran backdrop, late-day reversal), new premium sales are viable in names with distance from near-term catalysts and sufficient liquidity. Avoid new structures directly adjacent to Cisco, TSEM, and AMAT earnings without an explicit event-play thesis.
+      </div>
+
+      <div class="sub-section">
+        <h3>Top 3 Candidates</h3>
+        <table>
+          <tr><th>Rank</th><th>Ticker</th><th>Screener</th><th>IVR</th><th>IVP</th><th>IV%</th><th>Exp Move</th><th>Earnings</th><th>Strategy</th></tr>
+          <tr>
+            <td><strong>1</strong></td>
+            <td><span class="ticker">MXL</span></td>
+            <td>CJ_BPS + CJ_BCS</td>
+            <td class="pos"><strong>100%</strong></td>
+            <td class="pos"><strong>100%</strong></td>
+            <td>Elevated</td>
+            <td>~$5–6</td>
+            <td>None imminent</td>
+            <td><span class="tag tag-ic">Iron Condor</span></td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td><span class="ticker">PG</span></td>
+            <td>CJ_Iron_Condor</td>
+            <td>49.87%</td>
+            <td>63%</td>
+            <td>21.04%</td>
+            <td>$2.47</td>
+            <td>Post-earnings</td>
+            <td><span class="tag tag-ic">Iron Condor</span></td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td><span class="ticker">TSEM</span></td>
+            <td>CJ_BPS_EARNINGS</td>
+            <td class="pos"><strong>100%</strong></td>
+            <td class="pos"><strong>100%</strong></td>
+            <td>Extreme</td>
+            <td>$29.20</td>
+            <td><span class="tag tag-earn">May 13</span></td>
+            <td><span class="tag tag-bps">BPS (Small)</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:14px;">
+        <div class="callout callout-info">
+          <strong>MXL — Iron Condor:</strong> Dual-screener appearance (BPS + BCS) with IVR 100% and no clear directional bias is the textbook IC setup. MaxLinear is an AI-infrastructure semiconductor name. No imminent earnings (confirm). Target strikes 5–7% OTM each side, 30–45 DTE. IVR at a 52-week extreme is the primary selling edge.
+        </div>
+        <div class="callout callout-info">
+          <strong>PG — Iron Condor:</strong> Post-earnings, stable consumer staples. $2.47 expected move on $143 stock. IVR 49.87% — sufficient for premium collection. Low event risk. A defensive portfolio anchor. Target strikes 3–4% OTM, 30–45 DTE. Low-delta, consistent theta harvest.
+        </div>
+        <div class="callout callout-warn">
+          <strong>TSEM — Pre-Earnings BPS:</strong> ExpMove $29.20 (12.7%). Sell the $195/$185 BPS — outside the expected move. IV crush post-print is the reward. <em>CAUTION:</em> Earnings May 13. Fully binary. Size at ½ or ¼ normal. Only if the event-play structure is the explicit thesis.
+        </div>
+      </div>
+
+      <div class="sub-section" style="margin-top:16px;">
+        <h3>Secondary Discovery List</h3>
+        <table>
+          <tr><th>Ticker</th><th>Screener</th><th>IVR</th><th>IVP</th><th>IV%</th><th>Notable</th></tr>
+          <tr><td><span class="ticker">P</span></td><td>CJ_BCS</td><td class="pos">100%</td><td class="pos">94%</td><td>86.58%</td><td>OptVol 43,551 (3.59x relVol) — institutional flow signal; confirm catalyst before trading</td></tr>
+          <tr><td><span class="ticker">NXT</span></td><td>CJ_BPS</td><td class="pos">100%</td><td class="pos">100%</td><td>93.59%</td><td>Nextracker (solar tracking); ExpMove $16.09; extreme IV — confirm no binary event</td></tr>
+          <tr><td><span class="ticker">MRK</span></td><td>CJ_Iron_Condor</td><td>—</td><td>—</td><td>—</td><td>Merck on IC screener alongside PG; post-earnings range play candidate</td></tr>
+          <tr><td><span class="ticker">WGS</span></td><td>CJ_Bearish_Diagonal</td><td>30.72%</td><td>57%</td><td>78.15%</td><td>Biotech/genomics; IV elevated in absolute terms; diagonal structure fits</td></tr>
+          <tr><td><span class="ticker">IBM</span></td><td>CJ_Bearish_Diagonal_Earnings</td><td>39.17%</td><td>53%</td><td>—</td><td>Earnings nearby; bearish diagonal thesis at $223.55; confirm earnings date</td></tr>
+          <tr><td><span class="ticker">BP</span></td><td>Naked Put Candidate</td><td>—</td><td>—</td><td>—</td><td>4.52% dividend yield; Buy signal; oil-sector tailwind from Iran backdrop</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: PORTFOLIO RISK -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">4</span>
+      <h2>Portfolio Risk Carry Forward</h2>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-section">
+            <h3>Greeks Profile</h3>
+            <table>
+              <tr><th>Greek</th><th>Status</th><th>Notes</th></tr>
+              <tr><td>Theta (Θ)</td><td class="pos">Positive</td><td>Accruing normally at VIX 18.41; mid-week is peak decay window</td></tr>
+              <tr><td>Gamma (Γ)</td><td class="neg">Elevated risk</td><td>Short-dated positions (&lt;21 DTE) at risk with earnings this week</td></tr>
+              <tr><td>Vega (V)</td><td class="neg">Negative</td><td>Manageable below VIX 22; monitor if VIX trends to 20+</td></tr>
+              <tr><td>Rho (ρ)</td><td class="neu">Secondary</td><td>Higher-for-longer rate path persistent; monitor 10-yr yield</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="sub-section">
+            <h3>Gamma / Earnings Exposure Map</h3>
+            <table>
+              <tr><th>Name</th><th>Earnings</th><th>Days Out</th><th>Action</th></tr>
+              <tr><td><strong>TSEM</strong></td><td>May 13</td><td>1</td><td>Close/reduce; strikes outside $29.20 ExpMove</td></tr>
+              <tr><td><strong>CSCO</strong></td><td>May 13 PM</td><td>1</td><td>Review tech-adjacent BPS; have adjustment plan ready</td></tr>
+              <tr><td><strong>AMAT</strong></td><td>May 14</td><td>2</td><td>Reduce or avoid new entries until post-print</td></tr>
+              <tr><td><strong>IBM</strong></td><td>Near-term</td><td>1–5 est.</td><td>Confirm exact date; monitor bearish diagonal</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section" style="margin-top:14px;">
+        <h3>Stress Scenarios</h3>
+        <div class="two-col">
+          <div class="scenario-box">
+            <div class="s-label">Scenario 1 — Moderate Probability</div>
+            <div class="s-title bear">Hot CPI + VIX to 22–25</div>
+            <p>Short-vega book pressured. Tighten risk on positions &lt;15 DTE. Monitor BPS adjustment levels. Energy outperforms; defensive ICs (PG-type) hold.</p>
+          </div>
+          <div class="scenario-box">
+            <div class="s-label">Scenario 2 — Low-Moderate Probability</div>
+            <div class="s-title bear">Cisco Miss (Wed PM)</div>
+            <p>QQQ opens lower Thursday. Tech BPS short puts at risk. Have adjustment plans ready for any tech BPS with short puts within 5% of current price.</p>
+          </div>
+          <div class="scenario-box">
+            <div class="s-label">Scenario 3 — Low-Moderate Probability</div>
+            <div class="s-title bear">Oil Breaks Above $105</div>
+            <p>Iran escalation; inflation expectations reprice sharply. Broad market selloff in rate-sensitive sectors; energy outperforms. Reduce tech BPS; let energy structures run.</p>
+          </div>
+          <div class="scenario-box">
+            <div class="s-label">Scenario 4 — Moderate-High Probability</div>
+            <div class="s-title bull">CPI In-Line + Cisco Beats</div>
+            <p>Bull tape extends; VIX compresses toward 17; entire short-premium book benefits. Add IC positions in stable names on vol compression. Green light for broader selling.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-info" style="margin-top:14px;">
+        <strong>Risk Posture:</strong> Selective Offense. Hold existing book, actively manage earnings risk, enter new IC/BPS structures selectively in Wednesday's afternoon window. Patience before offense — the event concentration in the next 48 hours demands discipline.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: TOMORROW GAME PLAN -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">5</span>
+      <h2>Tomorrow Game Plan — Wednesday, May 13, 2026</h2>
+    </div>
+    <div class="section-body">
+      <div class="posture-banner">
+        <div class="posture-label">Execution Posture</div>
+        <div class="posture-value">SELECTIVE OFFENSE</div>
+        <div class="posture-rationale">Hold existing book; manage earnings adjacency; target IC entries in Wednesday PM window. No new structures before 10:30 AM ET — let the morning establish its tone after TSEM opens.</div>
+      </div>
+
+      <div class="sub-section">
+        <h3>Primary Themes to Watch</h3>
+        <table>
+          <tr><th>#</th><th>Theme</th><th>Why It Matters</th></tr>
+          <tr><td>1</td><td><strong>Cisco Earnings (Wed PM)</strong> <span class="tag tag-hot">DOMINANT</span></td><td>AI capex signal; near ATH; any guidance softness cascades into broad tech selling</td></tr>
+          <tr><td>2</td><td><strong>TSEM Earnings (Wed AM)</strong> <span class="tag tag-earn">BINARY</span></td><td>ExpMove $29.20 (12.7%); IV crush post-print; semiconductor foundry read</td></tr>
+          <tr><td>3</td><td><strong>VIX Resolution</strong></td><td>Does Tuesday's 7.1% expansion continue or reverse? 18–20 is the decision zone</td></tr>
+          <tr><td>4</td><td><strong>Iran / Oil Overnight</strong></td><td>Any escalation to $105+ alters the inflation and market risk calculus</td></tr>
+          <tr><td>5</td><td><strong>10-Year Yield at 4.39%</strong></td><td>Approaches or breaks 4.50%? Sets tone for rate-sensitive sectors all session</td></tr>
+        </table>
+      </div>
+
+      <div class="watchlist-row" style="margin-top:14px;">
+        <div class="watchlist-col">
+          <h4>🟢 Active Execution (Wed Afternoon)</h4>
+          <div class="watchlist-item"><span class="ticker">MXL</span> Iron Condor — IVR 100%; post-TSEM entry window</div>
+          <div class="watchlist-item"><span class="ticker">PG</span> Iron Condor — Stable anchor; IVR ~50%; low event risk</div>
+        </div>
+        <div class="watchlist-col">
+          <h4>🟡 Active Monitor</h4>
+          <div class="watchlist-item"><span class="ticker">TSEM</span> Post-earnings IV crush; monitor actual vs. expected move</div>
+          <div class="watchlist-item"><span class="ticker">P</span> Institutional flow 3.59x relVol; understand catalyst</div>
+          <div class="watchlist-item"><span class="ticker">IBM</span> Bearish diagonal; confirm earnings date</div>
+          <div class="watchlist-item"><span class="ticker">NXT</span> IVR 100%, IV 93.59%; solar name; check binary events</div>
+        </div>
+        <div class="watchlist-col">
+          <h4>📊 Session Tone Signals</h4>
+          <div class="watchlist-item"><span class="ticker">VIX&gt;20</span> Defensive — reduce size, no new entries</div>
+          <div class="watchlist-item"><span class="ticker">VIX&lt;17.5</span> Constructive — normal premium selling</div>
+          <div class="watchlist-item"><span class="ticker">CSCO+5%</span> Tech leadership confirmed; BPS Thursday</div>
+          <div class="watchlist-item"><span class="ticker">CSCO-5%</span> Active management day Thursday</div>
+          <div class="watchlist-item"><span class="ticker">OIL&gt;$105</span> Reduce tech BPS; energy posture shift</div>
+        </div>
+      </div>
+
+      <div class="callout callout-warn" style="margin-top:14px;">
+        <strong>Wednesday Summary:</strong> Patience first, execution second. Hold the book. Manage TSEM/CSCO/AMAT earnings adjacency. The afternoon window — after TSEM prints and before Cisco reports — is the primary entry opportunity. Cisco is the linchpin. If it beats, Thursday opens the green light for broader premium selling. If it disappoints, Thursday is adjustment and defense. Plan both. Execute neither before the data arrives.
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING DESK NOTE -->
+  <div class="closing-note">
+    <h3>⬛ Closing Desk Note</h3>
+    <p><strong>Posture: Selective Offense → Potential Balanced shift pending Cisco print.</strong> Wednesday is one of the most event-dense sessions of the current cycle. TSEM opens the day; Cisco closes it. Between them, there is a CPI aftermath, a VIX that has not compressed, and an Iran-energy backdrop with no resolution in sight. The record-level tape is real and constructive — don't fight it. But the next two sessions will separate the setups that hold from those that need adjustment. Focus on MXL and PG as the IC entries for the week if conditions confirm Wednesday afternoon. Keep position size disciplined through Thursday. Return to normal cadence after AMAT prints Thursday evening.</p>
+  </div>
+
+</div><!-- /container -->
+
+<!-- DISCLAIMER 1467D — BOTTOM -->
+<div class="disclaimer-bottom">
+  <strong>1467D —</strong> Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+</div>
+
+<div class="footer">
+  CJ DESK PM RUNDOWN &nbsp;|&nbsp; MAY 12, 2026 &nbsp;|&nbsp; OPTIONS TRADING — EDUCATIONAL USE ONLY
+</div>
+
+</body>
+</html>
