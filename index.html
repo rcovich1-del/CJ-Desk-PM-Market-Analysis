@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Market Rundown — May 13, 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --bg3: #21262d;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text-muted: #8b949e;
+    --gold: #c9a84c;
+    --gold-dim: #7d6530;
+    --green: #3fb950;
+    --red: #f85149;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #e3b341;
+    --teal: #39d353;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px 48px 16px;
+  }
+  /* MASTHEAD */
+  .masthead {
+    border-bottom: 2px solid var(--gold);
+    padding: 28px 0 18px 0;
+    margin-bottom: 0;
+  }
+  .masthead-inner { display: flex; justify-content: space-between; align-items: flex-end; }
+  .desk-title { font-size: 22px; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; }
+  .desk-sub { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+  .desk-date { font-size: 13px; color: var(--text-muted); text-align: right; }
+  .desk-date strong { color: var(--text); }
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #12161c;
+    border: 1px solid var(--gold-dim);
+    border-left: 3px solid var(--gold-dim);
+    padding: 10px 14px;
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .disclaimer-label { color: var(--gold-dim); font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  /* STAT BOXES */
+  .stat-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0; }
+  .stat-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    flex: 1 1 140px;
+    min-width: 120px;
+  }
+  .stat-box .ticker { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; }
+  .stat-box .price { font-size: 20px; font-weight: 700; color: var(--text); margin: 2px 0; }
+  .stat-box .chg { font-size: 13px; font-weight: 600; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .flat { color: var(--text-muted); }
+  .stat-box .label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  /* SECTION */
+  .section { margin-top: 32px; }
+  .section-header {
+    display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .section-num {
+    background: var(--gold);
+    color: #0d1117;
+    font-weight: 800;
+    font-size: 11px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-title { font-size: 16px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.5px; }
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th {
+    background: var(--bg3);
+    color: var(--gold);
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 1px solid var(--border);
+  }
+  td { padding: 7px 10px; border-bottom: 1px solid #1c2128; color: var(--text); vertical-align: top; }
+  tr:hover td { background: #161b22; }
+  tr:last-child td { border-bottom: none; }
+  /* CALLOUT BOXES */
+  .callout {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 14px 0;
+  }
+  .callout.risk { border-left-color: var(--red); }
+  .callout.green { border-left-color: var(--green); }
+  .callout.blue { border-left-color: var(--blue); }
+  .callout.purple { border-left-color: var(--purple); }
+  .callout-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gold); margin-bottom: 6px; }
+  .callout.risk .callout-label { color: var(--red); }
+  .callout.green .callout-label { color: var(--green); }
+  .callout.blue .callout-label { color: var(--blue); }
+  .callout.purple .callout-label { color: var(--purple); }
+  .callout p, .callout li { font-size: 13px; line-height: 1.6; }
+  /* BADGE */
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-right: 4px;
+  }
+  .badge-ic { background: #1a3a4a; color: #58a6ff; border: 1px solid #1d4a60; }
+  .badge-diagonal { background: #1a3a2a; color: #3fb950; border: 1px solid #1d4a2d; }
+  .badge-bps { background: #2a2a1a; color: #e3b341; border: 1px solid #3d3a1a; }
+  .badge-bearish { background: #3a1a1a; color: #f85149; border: 1px solid #4a1d1d; }
+  .badge-active { background: #1a3a1a; color: #3fb950; border: 1px solid #1d4a1d; }
+  .badge-monitor { background: #1a2a3a; color: #58a6ff; border: 1px solid #1d3050; }
+  .badge-signal { background: #3a2a1a; color: #e3b341; border: 1px solid #4a3a1a; }
+  /* POSTURE BOX */
+  .posture-box {
+    background: linear-gradient(135deg, #1a2a1a, #12161c);
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: center;
+    margin: 14px 0;
+  }
+  .posture-label { font-size: 10px; color: var(--green); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+  .posture-value { font-size: 22px; font-weight: 800; color: var(--green); margin: 4px 0; }
+  .posture-rationale { font-size: 12px; color: var(--text-muted); }
+  /* MARKET TONE */
+  .tone-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text);
+    margin: 12px 0;
+  }
+  /* SCENARIO GRID */
+  .scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .scenario-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .scenario-card.scenario-a { border-top: 2px solid var(--green); }
+  .scenario-card.scenario-b { border-top: 2px solid var(--red); }
+  .scenario-card.scenario-c { border-top: 2px solid var(--orange); }
+  .scenario-card.scenario-d { border-top: 2px solid var(--purple); }
+  .scenario-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .scenario-a .scenario-label { color: var(--green); }
+  .scenario-b .scenario-label { color: var(--red); }
+  .scenario-c .scenario-label { color: var(--orange); }
+  .scenario-d .scenario-label { color: var(--purple); }
+  .scenario-prob { font-size: 18px; font-weight: 800; }
+  .scenario-a .scenario-prob { color: var(--green); }
+  .scenario-b .scenario-prob { color: var(--red); }
+  .scenario-c .scenario-prob { color: var(--orange); }
+  .scenario-d .scenario-prob { color: var(--purple); }
+  .scenario-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+  /* CANDIDATE CARD */
+  .candidate-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+  }
+  .candidate-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .candidate-ticker { font-size: 20px; font-weight: 800; color: var(--gold); }
+  .candidate-name { font-size: 13px; color: var(--text-muted); }
+  .candidate-stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+  .stat-chip {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+  .stat-chip .chip-label { color: var(--text-muted); font-size: 10px; display: block; }
+  .stat-chip .chip-val { color: var(--text); font-weight: 600; }
+  /* WATCHLIST */
+  .watchlist-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+  .watchlist-item {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .watchlist-item .wl-ticker { font-weight: 700; color: var(--gold); }
+  /* CLOSING NOTE */
+  .closing-note {
+    background: linear-gradient(135deg, #12161c, #1a1505);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin: 24px 0;
+  }
+  .closing-note .cn-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 8px; }
+  .closing-note p { font-size: 14px; line-height: 1.7; color: var(--text); }
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+    padding-top: 16px;
+    font-size: 11px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+  }
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+  p { margin-bottom: 8px; }
+  h4 { color: var(--gold); font-size: 13px; margin: 12px 0 6px 0; font-weight: 600; }
+  ul { margin: 6px 0 6px 18px; }
+  ul li { margin-bottom: 3px; font-size: 13px; }
+  @media (max-width: 600px) {
+    .masthead-inner { flex-direction: column; gap: 8px; }
+    .scenario-grid { grid-template-columns: 1fr; }
+    .stat-box { flex: 1 1 100px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="desk-title">CJ Desk · PM Market Rundown</div>
+      <div class="desk-sub">Defined-Risk Premium Selling · Options Trading Desk</div>
+    </div>
+    <div class="desk-date"><strong>Wednesday, May 13, 2026</strong><br>End of Session</div>
+  </div>
+</div>
+
+<!-- DISCLAIMER 1467C -->
+<div class="disclaimer" style="margin-top:0; border-top:none; border-radius:0 0 4px 4px;">
+  <div class="disclaimer-label">1467C — General Disclosure</div>
+  This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+</div>
+
+<!-- INDEX STAT BOXES -->
+<div class="stat-row">
+  <div class="stat-box">
+    <div class="label">S&amp;P 500 ETF</div>
+    <div class="ticker">SPY</div>
+    <div class="price">$740.28</div>
+    <div class="chg up">+$2.79 &nbsp;+0.38%</div>
+  </div>
+  <div class="stat-box">
+    <div class="label">Nasdaq-100 ETF</div>
+    <div class="ticker">QQQ</div>
+    <div class="price">$712.92</div>
+    <div class="chg up">+$5.68 &nbsp;+0.80%</div>
+  </div>
+  <div class="stat-box">
+    <div class="label">Russell 2000 ETF</div>
+    <div class="ticker">IWM</div>
+    <div class="price">$282.26</div>
+    <div class="chg down">−$4.54 &nbsp;−1.58%</div>
+  </div>
+  <div class="stat-box">
+    <div class="label">Dow Jones ETF</div>
+    <div class="ticker">DIA</div>
+    <div class="price">~$497.50</div>
+    <div class="chg flat">~flat &nbsp;~+0.05%</div>
+  </div>
+  <div class="stat-box" style="border-color:#e3b341;">
+    <div class="label">Volatility Index</div>
+    <div class="ticker" style="color:#e3b341;">VIX</div>
+    <div class="price" style="color:#e3b341;">18.11</div>
+    <div class="chg" style="color:#e3b341;">+0.12 &nbsp;+0.67%</div>
+  </div>
+</div>
+
+<!-- MARKET TONE -->
+<div class="tone-box">
+  <strong style="color:var(--gold);">Market Tone:</strong> Bifurcated quality bid — large-cap defensives at 52-week highs while small caps shed 1.6%. Healthcare and consumer staples led; technology and small caps under pressure.
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <div class="section-title">PM Market Recap</div>
+  </div>
+
+  <h4>Sector Leadership &amp; Weakness</h4>
+  <table>
+    <thead>
+      <tr><th>Sector</th><th>Direction</th><th>Est. Move</th><th>Context</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Healthcare</td><td class="up">▲ Leading</td><td class="up">+0.99%</td><td>Defensive rotation; managed care, pharma benefiting from rate/inflation hedge</td></tr>
+      <tr><td>Energy</td><td class="up">▲ Leading</td><td class="up">+0.32%</td><td>Oil sustained above $102; Iran war premium intact</td></tr>
+      <tr><td>Consumer Staples</td><td class="up">▲ Leading</td><td class="up">~+0.40%</td><td>Quality dividend names; KMB, PG, BMY benefiting from defensive flows</td></tr>
+      <tr><td>Technology</td><td class="down">▼ Lagging</td><td class="down">−1.46%</td><td>CPI hangover from 3.8% April print; semiconductor complex under pressure</td></tr>
+      <tr><td>Small Caps (IWM)</td><td class="down">▼ Lagging</td><td class="down">−1.58%</td><td>Rate sensitivity; Russell 2000 at 2,839.63 (−47 pts)</td></tr>
+      <tr><td>Consumer Discretionary</td><td class="down">▼ Lagging</td><td class="down">~−0.50%</td><td>Rate pressure and softening consumer confidence</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Key Session Drivers</h4>
+  <table>
+    <thead><tr><th>#</th><th>Driver</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>CPI Hangover — April CPI 3.8%, three-year high</td><td>BofA pushed rate cuts to mid-2027; growth multiples under pressure</td></tr>
+      <tr><td>2</td><td>Trump-Xi Summit Positioning (Thursday, Beijing)</td><td>Buy-the-rumor phase underway; large-cap multinationals supported</td></tr>
+      <tr><td>3</td><td>VSH &amp; ALMU Earnings Resolved</td><td>Both names post-print today; IV crushed on both</td></tr>
+      <tr><td>4</td><td>Oil Sustained Above $100 (WTI $102.18)</td><td>Inflationary; limits Fed flexibility; energy sector supportive</td></tr>
+      <tr><td>5</td><td>Large Cap / Small Cap Divergence</td><td>SPY near all-time high; IWM −1.58%; quality rotation deepening</td></tr>
+    </tbody>
+  </table>
+
+  <div class="scenario-grid">
+    <div class="scenario-card scenario-a">
+      <div class="scenario-label">Scenario A — Risk-On (Summit Positive)</div>
+      <p style="font-size:13px; color:var(--text-muted);">Gap-up open; semis, tech, industrials lead. QQQ retest $720+. VIX drops toward 15–16. Defensive names give back gains.</p>
+    </div>
+    <div class="scenario-card scenario-b">
+      <div class="scenario-label">Scenario B — Risk-Off (Summit Disappoints)</div>
+      <p style="font-size:13px; color:var(--text-muted);">SPY re-test $733–$736. IWM accelerates lower. Healthcare and staples outperform. VIX spikes to 21–23.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <div class="section-title">News &amp; Catalyst Review</div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Primary Macro Themes</div>
+    <p><strong>April CPI: 3.8%</strong> — three-year high. BofA moved first Fed cut to mid-2027. No cuts priced for all of 2026. 10-year yield sustained in 4.5–4.7% range.</p>
+    <p style="margin-top:6px;"><strong>Trump-Xi Summit (Thursday, Beijing):</strong> Semiconductor export licenses, tariff frameworks, and technology licensing are focal agenda items. Market in buy-the-rumor mode.</p>
+    <p style="margin-top:6px;"><strong>Oil at $102.18/barrel:</strong> Iran war premium intact. Stagflationary if sustained.</p>
+  </div>
+
+  <h4>Earnings Results — May 13, 2026</h4>
+  <table>
+    <thead>
+      <tr><th>Ticker</th><th>Name</th><th>Report</th><th>Reaction</th><th>Takeaway</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong style="color:var(--gold);">VSH</strong></td>
+        <td>Vishay Intertechnology</td>
+        <td>Q1 2026 — BMO today</td>
+        <td>Strong pre-print run (+53% in 1 month); post-print IV crushed</td>
+        <td>Earnings cycle complete. Remove from active screens.</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold);">ALMU</strong></td>
+        <td>Aeluma Inc.</td>
+        <td>Q3 FY2026 — today</td>
+        <td>Small-cap micro; minimal market impact</td>
+        <td>IV normalized. Remove from active screens.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>What Still Matters Tomorrow</h4>
+  <table>
+    <thead><tr><th>Theme</th><th>Carry Forward?</th><th>Why It Matters</th></tr></thead>
+    <tbody>
+      <tr><td>Trump-Xi Summit Outcome</td><td><span class="badge badge-signal">Yes — Primary</span></td><td>Binary event; shapes session direction</td></tr>
+      <tr><td>CPI / Rate Cut Repricing</td><td><span class="badge badge-signal">Yes — Persistent</span></td><td>Higher-for-longer through 2026 now baseline</td></tr>
+      <tr><td>Oil Above $100</td><td><span class="badge badge-signal">Yes — Ongoing</span></td><td>Inflationary; limits Fed room</td></tr>
+      <tr><td>IWM vs. SPY Divergence</td><td><span class="badge badge-monitor">Monitor</span></td><td>Quality rotation signal; watch for continuation</td></tr>
+      <tr><td>Healthcare Sector Leadership</td><td><span class="badge badge-active">Yes — Tactical</span></td><td>Macro-supported; durable in rate-elevated regime</td></tr>
+      <tr><td>Semiconductor Weakness</td><td><span class="badge badge-signal">Yes — Risk</span></td><td>QCOM −13%, INTC −8% Tuesday; sector fragile</td></tr>
+      <tr><td>VSH / ALMU Earnings</td><td>No — Resolved</td><td>Post-print; IV crushed; exits active discovery</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <div class="section-title">Trade Discovery Layer</div>
+  </div>
+
+  <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">Screener data from end-of-day Tuesday, May 12, 2026. VSH and ALMU are post-earnings as of today's open and are excluded from actionable candidates.</p>
+
+  <!-- KMB -->
+  <div class="candidate-card">
+    <div class="candidate-header">
+      <div class="candidate-ticker">KMB</div>
+      <div>
+        <div style="font-weight:600; color:var(--text);">Kimberly-Clark Corp.</div>
+        <div class="candidate-name">Consumer Staples &nbsp;|&nbsp; <span class="badge badge-ic">Iron Condor</span> <span class="badge badge-active">Top Pick</span></div>
+      </div>
+    </div>
+    <div class="candidate-stats">
+      <div class="stat-chip"><span class="chip-label">Price</span><span class="chip-val">$97.34</span></div>
+      <div class="stat-chip"><span class="chip-label">IV Rank</span><span class="chip-val">49.81%</span></div>
+      <div class="stat-chip"><span class="chip-label">IV Percentile</span><span class="chip-val">63%</span></div>
+      <div class="stat-chip"><span class="chip-label">Expected Move</span><span class="chip-val">$1.66</span></div>
+      <div class="stat-chip"><span class="chip-label">Implied Vol</span><span class="chip-val">26.21%</span></div>
+      <div class="stat-chip"><span class="chip-label">Options Vol</span><span class="chip-val">7,220</span></div>
+      <div class="stat-chip"><span class="chip-label">Rel. Volume</span><span class="chip-val">1.10x</span></div>
+      <div class="stat-chip"><span class="chip-label">Earnings</span><span class="chip-val" style="color:var(--green);">Complete (April)</span></div>
+    </div>
+    <p style="font-size:13px; color:var(--text-muted);">Post-earnings in a confirmed defensive sector environment. IVR near 50% and IVP at 63% provide elevated-but-sustainable premium. Expected move of $1.66 allows meaningful wing separation. Structure: sell OTM call spread near $99–$100, OTM put spread near $95–$96, 21–30 DTE. Target ~1/3 credit-to-width entry; exit at 50% max profit.</p>
+  </div>
+
+  <!-- HUM -->
+  <div class="candidate-card">
+    <div class="candidate-header">
+      <div class="candidate-ticker">HUM</div>
+      <div>
+        <div style="font-weight:600; color:var(--text);">Humana Inc.</div>
+        <div class="candidate-name">Healthcare &nbsp;|&nbsp; <span class="badge badge-diagonal">Bullish Diagonal</span> <span class="badge badge-active">Top Pick</span></div>
+      </div>
+    </div>
+    <div class="candidate-stats">
+      <div class="stat-chip"><span class="chip-label">Price</span><span class="chip-val">$295.35</span></div>
+      <div class="stat-chip"><span class="chip-label">IV Rank</span><span class="chip-val">40.00%</span></div>
+      <div class="stat-chip"><span class="chip-label">IV Percentile</span><span class="chip-val">54%</span></div>
+      <div class="stat-chip"><span class="chip-label">Expected Move</span><span class="chip-val">$10.79</span></div>
+      <div class="stat-chip"><span class="chip-label">Implied Vol</span><span class="chip-val">47.69%</span></div>
+      <div class="stat-chip"><span class="chip-label">Options Vol</span><span class="chip-val">13,181</span></div>
+      <div class="stat-chip"><span class="chip-label">Rel. Volume</span><span class="chip-val">1.60x</span></div>
+      <div class="stat-chip"><span class="chip-label">Earnings</span><span class="chip-val" style="color:var(--orange);">Confirm Date</span></div>
+    </div>
+    <div class="callout" style="margin:8px 0; padding:10px 12px;">
+      <div class="callout-label">⚠ Earnings Date — Confirm Before Entry</div>
+      <p>HUM appears on both the Bullish Diagonal and Bullish Diagonal Earnings screeners. Confirm the upcoming earnings date. If within 21 days, place the long leg beyond the earnings event to avoid being caught through a print.</p>
+    </div>
+    <p style="font-size:13px; color:var(--text-muted);">Healthcare sector leader today (+0.99%). IV at 47.69% with only moderate IVR/IVP — premiums are elevated but not stretched. Structure: buy 45–60 DTE ATM/slightly-OTM call ($295–$300 strike), sell 21–28 DTE higher-strike call ($305–$310 strike). Target net debit under $12. Benefits from sector momentum and time decay differential.</p>
+  </div>
+
+  <!-- PG -->
+  <div class="candidate-card">
+    <div class="candidate-header">
+      <div class="candidate-ticker">PG</div>
+      <div>
+        <div style="font-weight:600; color:var(--text);">Procter &amp; Gamble Co.</div>
+        <div class="candidate-name">Consumer Staples &nbsp;|&nbsp; <span class="badge badge-ic">Iron Condor</span></div>
+      </div>
+    </div>
+    <div class="candidate-stats">
+      <div class="stat-chip"><span class="chip-label">Price</span><span class="chip-val">$143.91</span></div>
+      <div class="stat-chip"><span class="chip-label">Exp. Move (est.)</span><span class="chip-val">~$2.20–$2.50</span></div>
+      <div class="stat-chip"><span class="chip-label">Earnings</span><span class="chip-val" style="color:var(--green);">Complete (April)</span></div>
+    </div>
+    <p style="font-size:13px; color:var(--text-muted);">Highly liquid companion to KMB. Same sector, same structure, same logic. Sell OTM call spread near $146–$147, put spread near $141–$140 in a 21–28 DTE window. Tight bid/ask spreads make this a mechanical execution.</p>
+  </div>
+
+  <h4>Secondary Discovery List</h4>
+  <table>
+    <thead><tr><th>Ticker</th><th>Setup</th><th>IVR</th><th>IVP</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td><strong>VVV</strong></td><td><span class="badge badge-bearish">Bearish Diagonal</span></td><td>39.72%</td><td>70%</td><td>IV 42.28%, ExpMove $0.42; lower liquidity (Vol 2,667, RelVol 1.66x)</td></tr>
+      <tr><td><strong>BMY</strong></td><td><span class="badge badge-bps">Naked Put / Put Spread</span></td><td>—</td><td>Elevated</td><td>Bristol-Myers; dividend; defensive pharma; confirm IV before entry</td></tr>
+      <tr><td><strong>TMDX</strong></td><td><span class="badge badge-bearish">Bearish Diagonal</span></td><td>—</td><td>Elevated</td><td>Confirm liquidity threshold before sizing</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <div class="section-title">Portfolio Risk Carry Forward</div>
+  </div>
+
+  <h4>Greeks Environment</h4>
+  <table>
+    <thead><tr><th>Greek</th><th>Status</th><th>Assessment</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Theta</strong></td><td class="up">Working</td><td>Positive theta collecting adequately in VIX 18–19 environment</td></tr>
+      <tr><td><strong>Gamma</strong></td><td style="color:var(--orange);">Elevated</td><td>Summit event elevates gamma into tomorrow; monitor positions near short strikes</td></tr>
+      <tr><td><strong>Vega</strong></td><td style="color:var(--orange);">Monitor</td><td>VIX at 18.11; a 2–3 point spike creates vega losses on net-short-vega positions</td></tr>
+      <tr><td><strong>Rho</strong></td><td style="color:var(--orange);">Elevated</td><td>Cuts pushed to 2027; favor shorter DTE (21–30 day) structures to reduce rho exposure</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Stress Scenarios</h4>
+  <div class="scenario-grid">
+    <div class="scenario-card scenario-a">
+      <div class="scenario-label">Strong Trade Agreement</div>
+      <div class="scenario-prob">35%</div>
+      <div class="scenario-desc">Gap up 2–3%, VIX drops to 14–15. Short calls on semis/tech at risk. IC call side stressed. Defensive hedges underperform.</div>
+    </div>
+    <div class="scenario-card scenario-c">
+      <div class="scenario-label">Vague Language / No Deal</div>
+      <div class="scenario-prob">35%</div>
+      <div class="scenario-desc">Status quo maintained. SPY flat to −0.5%. Best outcome for IC book — theta decay continues, no directional stress.</div>
+    </div>
+    <div class="scenario-card scenario-b">
+      <div class="scenario-label">Summit Disappoints</div>
+      <div class="scenario-prob">20%</div>
+      <div class="scenario-desc">SPY −1.5–2.5%, IWM −2–3%, VIX 21–24. Short puts on IWM-adjacent names challenged. Vega losses on short-vega positions.</div>
+    </div>
+    <div class="scenario-card scenario-d">
+      <div class="scenario-label">Exogenous Disruption</div>
+      <div class="scenario-prob">10%</div>
+      <div class="scenario-desc">Iran escalation or tariff surprise. VIX 25+. Tail risk. Defined-risk structures contain damage — active management required.</div>
+    </div>
+  </div>
+
+  <div class="callout risk" style="margin-top:14px;">
+    <div class="callout-label">Next Session Priorities</div>
+    <p>1. Confirm HUM earnings date — structure diagonal long leg beyond the earnings event if within 21 days.</p>
+    <p>2. Assess tech/semiconductor short call exposure — adjust or roll if within one expected move of current price.</p>
+    <p>3. Review small-cap short puts — IWM −1.58% today; near-the-money puts need immediate attention.</p>
+    <p>4. Reduce gross exposure heading into the summit open Thursday.</p>
+    <p>5. KMB and PG IC entries are conditional on a stable Thursday open post-summit resolution.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Risk Posture for Tomorrow</div>
+    <p>Moderate risk heading into a known binary macro event. VIX at 18, workable IV environment, defensive sector support. Primary risk is the Trump-Xi summit. Enter Thursday with trimmed gross exposure and defined-risk structures. Healthcare and consumer staples are the safest sectors for premium collection. Technology and small cap require vigilance on both sides of existing positions.</p>
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <div class="section-title">Tomorrow Game Plan</div>
+  </div>
+
+  <div class="callout blue">
+    <div class="callout-label">Opening Backdrop</div>
+    <p><strong>Fragile constructive / binary-event dependent.</strong> SPY near 52-week high ($740.79). Healthcare and staples supporting quality rotation. Trump-Xi summit is the opening tone setter for Thursday. Pre-market liquidity will be thin as participants wait for summit headlines before committing.</p>
+  </div>
+
+  <h4>Primary Themes to Watch</h4>
+  <table>
+    <thead><tr><th>Theme</th><th>Priority</th></tr></thead>
+    <tbody>
+      <tr><td>Trump-Xi Summit Outcome — Defines session direction</td><td><span class="badge badge-signal">Primary</span></td></tr>
+      <tr><td>Rate Environment / CPI Follow-Through — Higher for longer through 2026</td><td><span class="badge badge-signal">Persistent</span></td></tr>
+      <tr><td>Sector Rotation — Healthcare/staples vs. tech/small cap</td><td><span class="badge badge-monitor">Tactical</span></td></tr>
+      <tr><td>VIX Direction — First 30 minutes tells the institutional read</td><td><span class="badge badge-monitor">Monitor</span></td></tr>
+      <tr><td>IWM vs. SPY Spread — Structural signal, not noise</td><td><span class="badge badge-monitor">Monitor</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="posture-box">
+    <div class="posture-label">Execution Posture</div>
+    <div class="posture-value">SELECTIVE OFFENSE</div>
+    <div class="posture-rationale">Execute high-conviction setups after opening tone is established. Hold capacity for post-summit positioning. Do not pre-load directional bets into a known binary event.</div>
+  </div>
+
+  <h4>Priority Watchlist</h4>
+
+  <div style="margin-bottom:6px;"><span class="badge badge-active">Active Execution</span> <span style="font-size:11px; color:var(--text-muted);">(Conditional on stable open + HUM earnings date confirmed)</span></div>
+  <div class="watchlist-row">
+    <div class="watchlist-item"><span class="wl-ticker">KMB</span><span class="badge badge-ic">Iron Condor</span><span style="color:var(--text-muted); font-size:12px;">$97.34 · $1.66 exp move · IVR 50%</span></div>
+    <div class="watchlist-item"><span class="wl-ticker">PG</span><span class="badge badge-ic">Iron Condor</span><span style="color:var(--text-muted); font-size:12px;">$143.91 · staples companion</span></div>
+    <div class="watchlist-item"><span class="wl-ticker">HUM</span><span class="badge badge-diagonal">Bullish Diagonal</span><span style="color:var(--text-muted); font-size:12px;">$295.35 · IV 47.69% · confirm earnings</span></div>
+  </div>
+
+  <div style="margin:10px 0 6px 0;"><span class="badge badge-monitor">Active Monitor</span> <span style="font-size:11px; color:var(--text-muted);">(Evaluate post-summit)</span></div>
+  <div class="watchlist-row">
+    <div class="watchlist-item"><span class="wl-ticker">VVV</span><span class="badge badge-bearish">Bearish Diagonal</span><span style="color:var(--text-muted); font-size:12px;">IVP 70% · low liquidity — size small</span></div>
+    <div class="watchlist-item"><span class="wl-ticker">BMY</span><span class="badge badge-bps">Put Spread</span><span style="color:var(--text-muted); font-size:12px;">Defensive pharma · confirm IV</span></div>
+    <div class="watchlist-item"><span class="wl-ticker">DT</span><span class="badge badge-monitor">Hold</span><span style="color:var(--text-muted); font-size:12px;">Confirm earnings status</span></div>
+  </div>
+
+  <div style="margin:10px 0 6px 0;"><span class="badge badge-signal">Session Tone Signals</span></div>
+  <div class="watchlist-row">
+    <div class="watchlist-item"><span style="font-size:12px; color:var(--text-muted);">SPY vs. $740 level</span></div>
+    <div class="watchlist-item"><span style="font-size:12px; color:var(--text-muted);">IWM open direction</span></div>
+    <div class="watchlist-item"><span style="font-size:12px; color:var(--text-muted);">VIX first 30 min</span></div>
+    <div class="watchlist-item"><span style="font-size:12px; color:var(--text-muted);">Summit headline tone pre-market</span></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CLOSING DESK NOTE -->
+<div class="closing-note">
+  <div class="cn-label">Closing Desk Note — Thursday, May 14</div>
+  <p>Thursday's session is defined by one event: the Trump-Xi summit. Everything else — VIX levels, sector rotation, the quality-versus-small-cap divergence — is context. SPY entering near its 52-week high reflects accumulated optimism around the trade truce and AI earnings cycle. The summit either validates or resets that optimism, and the answer comes in the pre-market. Approach the open with reduced gross exposure and no pre-loaded directional bets. Once the headline clears and the tone is established, execute the IC book in consumer staples (KMB, PG) and move to the HUM Bullish Diagonal if earnings timing confirms. Healthcare and consumer staples are the defensible premium zones in this tape. Technology and small caps carry the highest event-driven risk on both sides. The top focus for Thursday is building positions in areas where the macro supports the structure — and waiting for the event to tell you which version of Thursday you're trading.</p>
+</div>
+
+<!-- DISCLAIMER 1467D -->
+<div class="disclaimer" style="margin-top:24px;">
+  <div class="disclaimer-label">1467D — Options &amp; Market Commentary Disclosure</div>
+  Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span>CJ Desk · PM Market Rundown · Wednesday, May 13, 2026</span>
+  <span>Defined-Risk Premium Selling Desk</span>
+</div>
+
+</body>
+</html>
