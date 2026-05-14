@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CJ Desk PM Rundown — May 13, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 14px; line-height: 1.6; }
+  a { color: #c9a84c; }
+
+  /* Masthead */
+  .masthead { background: #161b22; border-bottom: 2px solid #c9a84c; padding: 18px 32px; display: flex; justify-content: space-between; align-items: center; }
+  .masthead-title { font-size: 22px; font-weight: 700; color: #c9a84c; letter-spacing: 0.5px; }
+  .masthead-sub { font-size: 13px; color: #8b949e; margin-top: 2px; }
+  .masthead-date { font-size: 13px; color: #8b949e; text-align: right; }
+
+  /* Disclaimer */
+  .disclaimer { background: #161b22; border-left: 3px solid #6e7681; padding: 10px 32px; font-size: 11.5px; color: #8b949e; line-height: 1.5; }
+
+  /* Layout */
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px 32px; }
+
+  /* Section headers */
+  .section-header { border-bottom: 1px solid #30363d; margin: 32px 0 16px 0; padding-bottom: 8px; }
+  .section-header h2 { font-size: 16px; font-weight: 700; color: #c9a84c; text-transform: uppercase; letter-spacing: 1px; }
+  .section-header .section-label { font-size: 11px; color: #8b949e; margin-top: 2px; }
+
+  /* Stat boxes */
+  .stat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 16px 0; }
+  .stat-box { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 12px 14px; }
+  .stat-box .ticker { font-size: 12px; font-weight: 700; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-box .price { font-size: 20px; font-weight: 700; color: #c9d1d9; margin: 4px 0; }
+  .stat-box .change { font-size: 13px; font-weight: 600; }
+  .pos { color: #3fb950; }
+  .neg { color: #f85149; }
+  .flat { color: #8b949e; }
+
+  /* VIX box special */
+  .vix-box { border-color: #c9a84c; }
+  .vix-box .price { color: #c9a84c; }
+
+  /* AH box */
+  .ah-callout { background: #1f2937; border: 1px solid #3fb950; border-left: 4px solid #3fb950; border-radius: 6px; padding: 12px 16px; margin: 12px 0; }
+  .ah-callout .ah-label { font-size: 11px; font-weight: 700; color: #3fb950; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .ah-callout .ah-content { font-size: 13px; color: #c9d1d9; }
+
+  /* Tone badge */
+  .tone-badge { display: inline-block; background: #2d3748; border: 1px solid #c9a84c; border-radius: 4px; padding: 4px 10px; font-size: 12px; font-weight: 600; color: #c9a84c; margin: 8px 0; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th { background: #161b22; color: #8b949e; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 10px; text-align: left; border-bottom: 1px solid #30363d; }
+  td { padding: 8px 10px; border-bottom: 1px solid #21262d; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1c2128; }
+  .td-ticker { font-weight: 700; color: #c9d1d9; }
+  .td-pos { color: #3fb950; font-weight: 600; }
+  .td-neg { color: #f85149; font-weight: 600; }
+  .td-neutral { color: #c9a84c; font-weight: 600; }
+  .td-muted { color: #8b949e; font-size: 12px; }
+
+  /* Callout boxes */
+  .callout { border-radius: 6px; padding: 14px 16px; margin: 14px 0; }
+  .callout-warning { background: #2d1f0a; border-left: 4px solid #c9a84c; }
+  .callout-risk { background: #1f0d0d; border-left: 4px solid #f85149; }
+  .callout-opportunity { background: #0d1f0d; border-left: 4px solid #3fb950; }
+  .callout-info { background: #0d1620; border-left: 4px solid #388bfd; }
+  .callout-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .callout-warning .callout-label { color: #c9a84c; }
+  .callout-risk .callout-label { color: #f85149; }
+  .callout-opportunity .callout-label { color: #3fb950; }
+  .callout-info .callout-label { color: #388bfd; }
+  .callout-body { font-size: 13px; color: #c9d1d9; }
+
+  /* Posture badge */
+  .posture-block { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px 20px; margin: 14px 0; display: flex; align-items: center; gap: 16px; }
+  .posture-label { font-size: 11px; font-weight: 700; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+  .posture-value { font-size: 18px; font-weight: 700; color: #c9a84c; }
+  .posture-desc { font-size: 12px; color: #8b949e; margin-top: 2px; }
+
+  /* Trade candidate cards */
+  .candidate-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px 20px; margin: 12px 0; }
+  .candidate-card.top-pick { border-color: #c9a84c; }
+  .candidate-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .candidate-ticker { font-size: 20px; font-weight: 700; color: #c9d1d9; }
+  .candidate-name { font-size: 12px; color: #8b949e; margin-top: 2px; }
+  .candidate-strategy { background: #2d3748; border-radius: 4px; padding: 3px 8px; font-size: 11px; font-weight: 700; color: #c9a84c; }
+  .candidate-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+  .metric-box { background: #0d1117; border-radius: 4px; padding: 8px 10px; }
+  .metric-label { font-size: 10px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+  .metric-value { font-size: 15px; font-weight: 700; color: #c9d1d9; margin-top: 2px; }
+  .metric-value.high-iv { color: #f85149; }
+  .metric-value.max-ivr { color: #c9a84c; }
+  .candidate-why { font-size: 13px; color: #c9d1d9; margin-top: 10px; border-top: 1px solid #21262d; padding-top: 10px; }
+  .candidate-strikes { background: #0d1117; border-radius: 4px; padding: 10px 12px; margin-top: 10px; font-size: 12px; color: #8b949e; }
+  .candidate-strikes strong { color: #c9d1d9; }
+
+  /* Scenario table */
+  .scenario-row-high { background: #0d1f0d; }
+  .scenario-row-med { background: #1a1a0d; }
+  .scenario-row-low { background: #1f0d0d; }
+  .scenario-row-tail { background: #0d0d1f; }
+
+  /* Watchlist priority tags */
+  .tag { display: inline-block; border-radius: 3px; padding: 2px 6px; font-size: 11px; font-weight: 600; margin-right: 4px; }
+  .tag-execute { background: #1f4a1f; color: #3fb950; }
+  .tag-monitor { background: #2d2d00; color: #c9a84c; }
+  .tag-signal { background: #1a1a2d; color: #388bfd; }
+  .tag-gate { background: #2d1a1a; color: #f85149; }
+
+  /* Sector bar */
+  .sector-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .sector-item { background: #161b22; border-radius: 4px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; }
+  .sector-name { font-size: 13px; color: #c9d1d9; }
+  .sector-pct { font-size: 13px; font-weight: 700; }
+
+  /* Section divider */
+  .section-divider { border: none; border-top: 1px solid #21262d; margin: 32px 0; }
+
+  /* Prose */
+  p { margin: 10px 0; font-size: 13px; color: #c9d1d9; }
+  ul { margin: 8px 0 8px 20px; }
+  li { margin: 4px 0; font-size: 13px; color: #c9d1d9; }
+
+  /* Footer */
+  .footer { background: #161b22; border-top: 1px solid #30363d; padding: 16px 32px; margin-top: 40px; }
+  .footer-disclaimer { font-size: 11px; color: #6e7681; line-height: 1.5; max-width: 1100px; margin: 0 auto; }
+  .footer-label { font-size: 10px; font-weight: 700; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  /* Carry-forward yes/no */
+  .cf-yes { color: #3fb950; font-weight: 600; }
+  .cf-no { color: #6e7681; }
+
+  @media (max-width: 768px) {
+    .stat-grid { grid-template-columns: repeat(3, 1fr); }
+    .candidate-metrics { grid-template-columns: repeat(2, 1fr); }
+    .sector-grid { grid-template-columns: 1fr; }
+    .masthead { flex-direction: column; gap: 6px; }
+    .container { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div>
+    <div class="masthead-title">CJ Desk PM Rundown</div>
+    <div class="masthead-sub">End-of-Day Options Trading Desk Report</div>
+  </div>
+  <div class="masthead-date">
+    Wednesday, May 13, 2026<br>
+    <span style="color:#8b949e;font-size:11px;">Published after market close</span>
+  </div>
+</div>
+
+<!-- DISCLAIMER TOP (1467C) -->
+<div class="disclaimer">
+  <strong style="color:#8b949e;">DISCLOSURE:</strong> This material is provided for general market commentary, education, and discussion purposes only. It is not personal financial advice, investment advice, a recommendation, or an offer to buy or sell any financial product or security. Any market views, trade examples, or strategy references are general in nature and do not take into account any person's objectives, financial situation, or needs. Past performance is not a reliable indicator of future results. Trading and investing involve risk, and losses can exceed expectations.
+</div>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 1: PM MARKET RECAP -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Section 1 — PM Market Recap</h2>
+  <div class="section-label">Wednesday, May 13, 2026 Close</div>
+</div>
+
+<!-- Index Stat Boxes -->
+<div class="stat-grid">
+  <div class="stat-box">
+    <div class="ticker">SPY</div>
+    <div class="price">$740.28</div>
+    <div class="change pos">+$2.79 &nbsp;+0.38%</div>
+  </div>
+  <div class="stat-box">
+    <div class="ticker">QQQ</div>
+    <div class="price">$712.92</div>
+    <div class="change pos">+$5.68 &nbsp;+0.80%</div>
+  </div>
+  <div class="stat-box">
+    <div class="ticker">IWM</div>
+    <div class="price">$282.26</div>
+    <div class="change neg">−$4.54 &nbsp;−1.58%</div>
+  </div>
+  <div class="stat-box">
+    <div class="ticker">DIA</div>
+    <div class="price">~$497.50</div>
+    <div class="change flat">~flat &nbsp;~+0.05%</div>
+  </div>
+  <div class="stat-box vix-box">
+    <div class="ticker">VIX</div>
+    <div class="price">18.11</div>
+    <div class="change neg">+0.12 &nbsp;+0.67%</div>
+  </div>
+</div>
+
+<!-- AH Notable -->
+<div class="ah-callout">
+  <div class="ah-label">After-Hours Notable — CSCO +17%</div>
+  <div class="ah-content">Cisco Systems Q3 FY2026: EPS $1.06 vs. $1.04 est. | Revenue $15.84B vs. $15.56B est. (+12% YoY) | AI infrastructure orders nearly doubled to $9B for FY2026 | Full-year guidance raised for the third consecutive quarter. Gap candidate for Thursday open — will shape the AI/tech tone at the session start.</div>
+</div>
+
+<!-- Futures note -->
+<p style="color:#8b949e;font-size:12px;margin-top:4px;">Overnight futures: ES and NQ modestly bid in thin after-hours trade on the CSCO catalyst and pre-summit positioning. ER2 (small-cap futures) lagging consistent with the cash session.</p>
+
+<!-- Market Tone -->
+<div style="margin:16px 0;">
+  <div class="tone-badge">Bifurcated Quality Bid — Not a Clean Risk-On Session</div>
+  <p>SPY pressed near its 52-week high ($740.79) while IWM dropped 1.58%. VIX ticking higher on a positive SPY close signals simultaneous hedging into the Trump-Xi summit binary. The tape rewarded size, quality, and AI-specific catalysts — not breadth.</p>
+</div>
+
+<!-- Sector Leadership -->
+<div style="margin:16px 0;">
+  <p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Sector Leadership &amp; Weakness</p>
+  <div class="sector-grid">
+    <div class="sector-item"><span class="sector-name">Healthcare</span><span class="sector-pct pos">+0.99%</span></div>
+    <div class="sector-item"><span class="sector-name">Technology (broad)</span><span class="sector-pct neg">−1.46%</span></div>
+    <div class="sector-item"><span class="sector-name">Energy</span><span class="sector-pct pos">+0.32%</span></div>
+    <div class="sector-item"><span class="sector-name">Small Caps (IWM)</span><span class="sector-pct neg">−1.58%</span></div>
+    <div class="sector-item"><span class="sector-name">Consumer Staples</span><span class="sector-pct pos">~+0.40%</span></div>
+    <div class="sector-item"><span class="sector-name">Consumer Discretionary</span><span class="sector-pct neg">est. −0.50%</span></div>
+  </div>
+  <p style="font-size:12px;color:#8b949e;">Note: Within the tech sector, MRVL +9.96% and BIDU +7.9% were notable AI outperformers against the sector's broader decline. CSCO +17% in extended hours would — if held at Thursday's open — make AI infrastructure the session focus.</p>
+</div>
+
+<!-- VIX callout -->
+<div class="callout callout-warning">
+  <div class="callout-label">Volatility Environment</div>
+  <div class="callout-body">VIX at 18.11 — up 0.67% despite positive SPY close. A rising VIX alongside large-cap index gains is a hedging signal, not complacency. The structural driver: back-to-back CPI (3.8% annual, three-year high) and PPI (+1.4% MoM vs. 0.4% est.) shocks, combined with Kevin Warsh's Fed Chair confirmation and the binary Trump-Xi summit, maintain a floor under volatility. VIX below 15 is not a realistic near-term scenario. For premium sellers: the 17–19 VIX range is workable for defined-risk structures; MRVL (IV 93.65%) and BIDU (IV 65.11%) offer exceptional individual-name premium independent of index vol.</div>
+</div>
+
+<!-- Key Session Drivers -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Key Session Drivers</p>
+<table>
+  <thead><tr><th>#</th><th>Driver</th><th>Impact</th></tr></thead>
+  <tbody>
+    <tr><td class="td-neutral">1</td><td><strong>PPI Shock (April 2026)</strong> — +1.4% MoM vs. 0.4% est.; core +1.0% vs. 0.3% est.</td><td>Confirms inflation not normalizing. Removes remaining case for 2026 rate cuts. 80% probability of hike by April 2027.</td></tr>
+    <tr><td class="td-neutral">2</td><td><strong>Kevin Warsh Confirmed as Fed Chair</strong> — Senate 54-45, closest margin in modern history. Takes over May 15; first FOMC June 16–17.</td><td>Policy tension: Trump wants cuts; data demands holds/hikes. Uncertainty maintains structural VIX floor into June.</td></tr>
+    <tr><td class="td-neutral">3</td><td><strong>Trump-Xi Summit Positioning</strong> — Beijing summit Thursday. Semiconductor access, tariffs, tech licensing on agenda.</td><td>Primary binary event for Thursday. Market in "buy the rumor" mode. ±1.5–2.5% move potential in either direction.</td></tr>
+    <tr><td class="td-neutral">4</td><td><strong>BIDU +7.9%</strong> — Baidu Create 2026: DuMate AI agent, Miaoda coding agent, Ernie 5.1 (94% training cost reduction), DAA metric introduced.</td><td>Real product catalyst. Options volume 2.26x normal. Earnings May 18 — IV at maximum. Active trade candidate.</td></tr>
+    <tr><td class="td-neutral">5</td><td><strong>MRVL +9.96%</strong> — AI chip demand and bullish analyst commentary. IVR 100%, IVP 100%, IV 93.65%, 170K+ contracts.</td><td>Best premium-selling setup on today's screen. Earnings May 27 — 14 days to structure and exit.</td></tr>
+    <tr><td class="td-neutral">6</td><td><strong>CSCO +17% AH</strong> — AI infrastructure orders near-doubled to $9B; FY guidance raised third consecutive quarter.</td><td>Most significant catalyst heading into Thursday. Gap behavior at open determines whether AI infrastructure is a session driver or sell-the-news event.</td></tr>
+  </tbody>
+</table>
+
+<!-- Scenarios -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Trader Takeaway for Tomorrow — Two-Scenario Read</p>
+<div class="callout callout-opportunity">
+  <div class="callout-label">Scenario A — Risk-On: Constructive Summit + CSCO Gap Holds</div>
+  <div class="callout-body">AI/tech gap-up led by semiconductors and data center infrastructure. QQQ likely tests $720+. IWM recovers toward $285–$287 if risk-on is genuine. VIX compresses toward 15–16. Entry conditions improve for MRVL IC and BIDU BPS_EARNINGS structures. Defensive healthcare/staples names give back some of today's relative outperformance.</div>
+</div>
+<div class="callout callout-risk">
+  <div class="callout-label">Scenario B — Risk-Off: Summit Disappointment or CSCO Fade</div>
+  <div class="callout-body">SPY re-tests $733–$736 support. QQQ pressured near $700. IWM extends lower — rate sensitivity amplifies any risk-off move. VIX spikes toward 21–23. Defer BIDU entry; MRVL IC remains viable given defined risk. Healthcare and staples outperform. Defensive positioning is the correct posture.</div>
+</div>
+<p style="font-size:12px;color:#8b949e;margin-top:4px;"><strong style="color:#c9d1d9;">Watch:</strong> Summit headline pre-market (primary) · CSCO open print vs. AH close · VIX direction first 30 minutes · SPY at $740 key level</p>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 2: NEWS & CATALYST REVIEW -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Section 2 — News &amp; Catalyst Review</h2>
+</div>
+
+<!-- Macro Catalysts -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Macro Catalysts</p>
+<table>
+  <thead><tr><th>Catalyst</th><th>Detail</th><th>Desk Relevance</th></tr></thead>
+  <tbody>
+    <tr><td class="td-ticker">April CPI (Tue)</td><td>3.8% annual — three-year high. BofA moved first rate cut to mid-2027. Fed on hold through 2026 as base case.</td><td>Dominant macro overhang. Removing rate-cut hope repriced growth multiples and maintained pressure on small caps.</td></tr>
+    <tr><td class="td-ticker">April PPI (Wed)</td><td>+1.4% MoM vs. 0.4% est. Core +1.0% vs. 0.3% est. Largest MoM beat in current cycle.</td><td>Back-to-back inflation shock confirms inflation not normalizing. 80% probability of rate hike by April 2027 now priced.</td></tr>
+    <tr><td class="td-ticker">Kevin Warsh (Fed)</td><td>Senate confirmed 54-45. Replaces Powell May 15. First FOMC June 16–17. Trump wants cuts; inflation data argues against.</td><td>Policy uncertainty is a structural VIX floor. Watch June 16–17 for Warsh's inaugural response function signal.</td></tr>
+    <tr><td class="td-ticker">Trump-Xi Summit</td><td>Beijing, Thursday. Semiconductor access, tariff frameworks, tech licensing on agenda.</td><td>Binary event — primary driver for Thursday's session. Gating factor for BIDU entry and AI/tech positioning.</td></tr>
+    <tr><td class="td-ticker">Oil / Iran</td><td>WTI $102+. No ceasefire. Ongoing Middle East tension underpins energy complex.</td><td>Stagflationary if sustained. Limits Fed room. Energy sector (+0.32%) benefiting; keeps inflation narrative active.</td></tr>
+  </tbody>
+</table>
+
+<!-- Earnings Catalysts -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Earnings Catalysts</p>
+<table>
+  <thead><tr><th>Name</th><th>Ticker</th><th>Result</th><th>Reaction</th><th>Takeaway</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="td-ticker">Cisco Systems</td>
+      <td><strong>CSCO</strong></td>
+      <td>Q3 EPS $1.06 vs. $1.04 est. | Rev $15.84B vs. $15.56B (+12% YoY) | AI orders to $9B FY | Guidance raised 3rd consecutive quarter</td>
+      <td class="td-pos">+17% AH</td>
+      <td>Blowout. AI infrastructure order near-doubling is a structural signal for enterprise AI adoption. Watch Thursday open behavior — gap hold = theme continuation; gap fade = sell-the-news caution.</td>
+    </tr>
+    <tr>
+      <td class="td-ticker">Alibaba</td>
+      <td>BABA</td>
+      <td>Revenue +2.9% YoY; missed revenue expectations</td>
+      <td class="td-neg">-1.8%</td>
+      <td>Contrasts sharply with BIDU's AI catalyst session. Not an active trade candidate.</td>
+    </tr>
+    <tr>
+      <td class="td-ticker">EQPT</td>
+      <td>EQPT</td>
+      <td>Reported 05/13 | IVR 100%, IVP 99% pre-print</td>
+      <td class="td-neutral">IV crushed</td>
+      <td>Exits active screener funnel. No action.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- What Still Matters -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">What Still Matters Tomorrow</p>
+<table>
+  <thead><tr><th>Theme</th><th>Category</th><th>Carry Forward?</th></tr></thead>
+  <tbody>
+    <tr><td>Trump-Xi Summit outcome</td><td>Macro / Trade</td><td class="cf-yes">Yes — Primary Event</td></tr>
+    <tr><td>CSCO gap at open</td><td>Earnings / AI Theme</td><td class="cf-yes">Yes — Session Direction Signal</td></tr>
+    <tr><td>CPI/PPI / Rate cut repricing</td><td>Macro / Rates</td><td class="cf-yes">Yes — Persistent</td></tr>
+    <tr><td>Kevin Warsh / Fed transition</td><td>Fed Policy</td><td class="cf-yes">Yes — Background Uncertainty</td></tr>
+    <tr><td>Oil above $100</td><td>Commodities / Inflation</td><td class="cf-yes">Yes — Ongoing</td></tr>
+    <tr><td>BIDU — AI agents / earnings May 18</td><td>Stock / Earnings</td><td class="cf-yes">Yes — Active Trade Candidate</td></tr>
+    <tr><td>MRVL — AI chips / earnings May 27</td><td>Stock / Trade Setup</td><td class="cf-yes">Yes — Top Discovery Candidate</td></tr>
+    <tr><td>IWM vs. SPY divergence</td><td>Market Structure</td><td class="cf-yes">Yes — Monitor</td></tr>
+    <tr><td>Healthcare sector leadership</td><td>Sector Rotation</td><td class="cf-yes">Yes — Tactical</td></tr>
+    <tr><td>EQPT / VSH post-earnings</td><td>Earnings</td><td class="cf-no">No — Resolved</td></tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 3: TRADE DISCOVERY LAYER -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Section 3 — Trade Discovery Layer</h2>
+  <div class="section-label">Barchart End-of-Day Screeners · May 13, 2026 Close</div>
+</div>
+
+<!-- MRVL Card -->
+<div class="candidate-card top-pick">
+  <div class="candidate-header">
+    <div>
+      <div class="candidate-ticker">MRVL</div>
+      <div class="candidate-name">Marvell Technology, Inc.</div>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;">
+      <span class="candidate-strategy">IC / BCS</span>
+      <span style="background:#2d1a1a;color:#c9a84c;border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;">TOP PICK</span>
+    </div>
+  </div>
+  <div class="candidate-metrics">
+    <div class="metric-box"><div class="metric-label">Price</div><div class="metric-value">$177.95</div></div>
+    <div class="metric-box"><div class="metric-label">IVR</div><div class="metric-value max-ivr">100%</div></div>
+    <div class="metric-box"><div class="metric-label">IVP</div><div class="metric-value max-ivr">100%</div></div>
+    <div class="metric-box"><div class="metric-label">Implied Vol</div><div class="metric-value high-iv">93.65%</div></div>
+    <div class="metric-box"><div class="metric-label">Exp Move</div><div class="metric-value">$8.42</div></div>
+    <div class="metric-box"><div class="metric-label">Options Vol</div><div class="metric-value">170,603</div></div>
+    <div class="metric-box"><div class="metric-label">Rel Vol (3M)</div><div class="metric-value">1.33x</div></div>
+    <div class="metric-box"><div class="metric-label">Earnings</div><div class="metric-value td-neutral" style="font-size:13px;">05/27 (14 days)</div></div>
+  </div>
+  <div class="candidate-why">Dual screener appearance (CJ_BPS and CJ_BCS simultaneously) — the options market is pricing extreme moves in both directions. Maximum IVR, maximum IVP, and IV at 93.65% with 170K+ contracts of institutional-grade liquidity. Stock surged +9.96% today on AI chip demand. The premium-selling environment here is exceptional; the earnings window (14 days) is tight enough to keep IV elevated but wide enough to collect meaningful theta before the May 27 binary. Structure a BCS or IC and exit by May 22.</div>
+  <div class="candidate-strikes">
+    <strong>IC Strike Math:</strong> Short call ~$188–$190 · Long call ~$193–$195 · Short put ~$168–$170 · Long put ~$163–$165 · Wing width $5 · Target net credit $1.50–$2.00 · Exit at 50% max profit · Close all legs by May 22
+  </div>
+</div>
+
+<!-- BIDU Card -->
+<div class="candidate-card">
+  <div class="candidate-header">
+    <div>
+      <div class="candidate-ticker">BIDU</div>
+      <div class="candidate-name">Baidu, Inc. (ADR)</div>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;">
+      <span class="candidate-strategy">BPS_EARNINGS</span>
+      <span style="background:#1a1a2d;color:#388bfd;border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;">SUMMIT-GATED</span>
+    </div>
+  </div>
+  <div class="candidate-metrics">
+    <div class="metric-box"><div class="metric-label">Price</div><div class="metric-value">$150.50</div></div>
+    <div class="metric-box"><div class="metric-label">IVR</div><div class="metric-value max-ivr">100%</div></div>
+    <div class="metric-box"><div class="metric-label">IVP</div><div class="metric-value max-ivr">100%</div></div>
+    <div class="metric-box"><div class="metric-label">Implied Vol</div><div class="metric-value high-iv">65.11%</div></div>
+    <div class="metric-box"><div class="metric-label">Exp Move</div><div class="metric-value">$6.46</div></div>
+    <div class="metric-box"><div class="metric-label">Options Vol</div><div class="metric-value">51,709</div></div>
+    <div class="metric-box"><div class="metric-label">Rel Vol (3M)</div><div class="metric-value td-pos">2.26x</div></div>
+    <div class="metric-box"><div class="metric-label">Earnings</div><div class="metric-value td-neutral" style="font-size:13px;">05/18 (5 days)</div></div>
+  </div>
+  <div class="candidate-why">Baidu surged 7.9% today on the Create 2026 AI event — real product launches (DuMate agent, Miaoda coding agent, Ernie 5.1, DAA metric). IVR and IVP at maximum; options volume 2.26x the 90-day average. Earnings in 5 days makes this a compressed earnings-cycle trade by design. Entry is gated on a constructive Trump-Xi summit outcome — a summit breakdown makes BIDU the first position to avoid. If summit is constructive, BPS_EARNINGS structure below the post-catalyst price is the framework. One-event trade; size for the binary.</div>
+  <div class="candidate-strikes">
+    <strong>BPS Strike Math:</strong> Short put ~$143–$145 · Long put ~$138–$140 · Wing width $5 · Target net credit $1.50–$1.80 · May 22 cycle · One-event trade — size for earnings binary
+  </div>
+</div>
+
+<!-- STLD Card -->
+<div class="candidate-card">
+  <div class="candidate-header">
+    <div>
+      <div class="candidate-ticker">STLD</div>
+      <div class="candidate-name">Steel Dynamics, Inc.</div>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;">
+      <span class="candidate-strategy">Bullish Diagonal</span>
+      <span style="background:#0d1f0d;color:#3fb950;border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;">UNCONDITIONAL ENTRY</span>
+    </div>
+  </div>
+  <div class="candidate-metrics">
+    <div class="metric-box"><div class="metric-label">Price</div><div class="metric-value">$237.08</div></div>
+    <div class="metric-box"><div class="metric-label">IVR</div><div class="metric-value">39.06%</div></div>
+    <div class="metric-box"><div class="metric-label">IVP</div><div class="metric-value">60%</div></div>
+    <div class="metric-box"><div class="metric-label">Implied Vol</div><div class="metric-value">38.36%</div></div>
+    <div class="metric-box"><div class="metric-label">Exp Move</div><div class="metric-value">$6.97</div></div>
+    <div class="metric-box"><div class="metric-label">Options Vol</div><div class="metric-value">3,722</div></div>
+    <div class="metric-box"><div class="metric-label">Rel Vol (3M)</div><div class="metric-value">1.02x</div></div>
+    <div class="metric-box"><div class="metric-label">Earnings</div><div class="metric-value">Confirm date</div></div>
+  </div>
+  <div class="candidate-why">Steel Dynamics is a domestic steel producer insulated from US-China trade outcome — it benefits from tariff protections on imported steel and from domestic infrastructure and manufacturing demand. IVP at 60% with IVR at 39% is the diagonal sweet spot: enough premium to make the short leg meaningful without event-driven spike timing pressure. A patient, summit-agnostic entry that works in any stable market environment. Confirm earnings date before entry.</div>
+  <div class="candidate-strikes">
+    <strong>Diagonal Structure:</strong> Long call July/Aug $237–$240 · Short call June $247–$250 · Target net debit under $10 · Roll short leg monthly
+  </div>
+</div>
+
+<!-- Secondary List -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:20px 0 8px;">Secondary Discovery List</p>
+<table>
+  <thead><tr><th>Ticker</th><th>Screener</th><th>Strategy</th><th>IVR</th><th>IVP</th><th>Price</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr><td class="td-ticker">FLEX</td><td>CJ_BCS</td><td>BCS</td><td>~100%</td><td>~100%</td><td>$143.80</td><td class="td-muted">Appeared alongside MRVL in BCS; confirm full IV data and earnings date before entry</td></tr>
+    <tr><td class="td-ticker">LYB</td><td>CJ_Iron_Condor</td><td>IC</td><td>49.73%</td><td>69%</td><td>$73.74</td><td class="td-muted">Solid IVP but volume (2,951) and RelVol (0.50x) below preferred liquidity threshold</td></tr>
+    <tr><td class="td-ticker">RCL</td><td>CJ_Iron_Condor</td><td>IC</td><td>—</td><td>—</td><td>$264.20</td><td class="td-muted">Cruise sector; confirm IV data and earnings timing before entry</td></tr>
+    <tr><td class="td-ticker">BMY</td><td>Naked Put Candidate</td><td>Put Spread</td><td>—</td><td>Elevated</td><td>—</td><td class="td-muted">Defensive pharma with dividend; convert to defined-risk put spread in this VIX environment</td></tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 4: PORTFOLIO RISK CARRY FORWARD -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Section 4 — Portfolio Risk Carry Forward</h2>
+</div>
+
+<div class="callout callout-info">
+  <div class="callout-label">Environment Summary</div>
+  <div class="callout-body">Split tape entering Thursday: SPY at 52-week highs, IWM -1.58%, VIX 18.11, and two layered binary events (Trump-Xi summit + CSCO gap) at the open. Defined-risk structures throughout the book is the appropriate posture. Net delta broadly neutral through the summit event.</div>
+</div>
+
+<!-- Greeks -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Greeks Profile</p>
+<table>
+  <thead><tr><th>Greek</th><th>Current Environment Assessment</th></tr></thead>
+  <tbody>
+    <tr><td class="td-ticker">Theta</td><td>Positive. Collecting adequately in 17–19 VIX environment. MRVL (IV 93.65%) and BIDU (IV 65.11%) offer exceptional theta per unit of defined risk. Time decay is the book's structural friend in this environment.</td></tr>
+    <tr><td class="td-ticker">Gamma</td><td>Elevated heading into the summit event and CSCO gap. Positions near short strikes in overnight-sensitive names (tech, China ADRs) need monitoring. Gamma normalizes once the events resolve.</td></tr>
+    <tr><td class="td-ticker">Vega</td><td>Net-short-vega positions exposed to 21–23 VIX spike if summit breaks down. Watch MRVL and BIDU for independent earnings IV crush regardless of index VIX. Both could compress dramatically after their respective earnings events.</td></tr>
+    <tr><td class="td-ticker">Rho</td><td>Higher-for-longer confirmed by back-to-back CPI/PPI shocks and Warsh confirmation. Kevin Warsh inherits a structurally constrained rate environment. Prefer 21–30 DTE structures to minimize rho exposure across the book.</td></tr>
+  </tbody>
+</table>
+
+<!-- Earnings/Events Map -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Gamma / Events Exposure Map</p>
+<table>
+  <thead><tr><th>Ticker / Event</th><th>Upcoming Event</th><th>Days Out</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr><td class="td-ticker">BIDU</td><td>Q1 2026 Earnings</td><td class="td-neg">5 days (05/18)</td><td>BPS_EARNINGS structure with defined risk. Size for binary. Entry requires constructive summit.</td></tr>
+    <tr><td class="td-ticker">MRVL</td><td>Q1 2026 Earnings</td><td class="td-neutral">14 days (05/27)</td><td>IC or BCS premium window. Size for exit by May 22. Do not hold into the print.</td></tr>
+    <tr><td class="td-ticker">CSCO</td><td>Q3 FY2026 — Reported AH Today</td><td class="td-pos">Post-print</td><td>Blowout print. +17% AH. Watch Thursday gap open behavior. IV crush applies post-open.</td></tr>
+    <tr><td class="td-ticker">Trump-Xi Summit</td><td>Macro Binary Event</td><td class="td-neg">1 day (Thu AM)</td><td>Pre-market event. Gating factor for all AI/tech and China ADR entries. Read before executing.</td></tr>
+    <tr><td class="td-ticker">Kevin Warsh FOMC</td><td>First FOMC as Chair</td><td class="td-flat">34 days (06/16)</td><td>Background risk floor. Not an immediate event — but maintains structural VIX bid heading to June.</td></tr>
+  </tbody>
+</table>
+
+<!-- Stress Scenarios -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Stress Scenarios</p>
+<table>
+  <thead><tr><th>Scenario</th><th>Prob.</th><th>Impact on Premium Portfolio</th></tr></thead>
+  <tbody>
+    <tr class="scenario-row-high">
+      <td>Summit positive + CSCO gap holds — AI/tech gap-up 2–3%, VIX drops to 14–15</td>
+      <td class="td-neutral">35%</td>
+      <td>AI-adjacent short calls challenged; BIDU benefits on geopolitical bid; STLD diagonal works; ICs in defensives unaffected. Mixed overall.</td>
+    </tr>
+    <tr class="scenario-row-high">
+      <td>Summit neutral + CSCO gap holds — AI theme leads, broader market flat, VIX 17–19</td>
+      <td class="td-neutral">25%</td>
+      <td>Theta positions work cleanly. MRVL IC and BIDU BPS are clean entries. Best outcome for premium book. Favorable.</td>
+    </tr>
+    <tr class="scenario-row-med">
+      <td>Summit neutral + CSCO fades (sell-the-news) — Limited catalyst, SPY flat to -0.5%</td>
+      <td class="td-neutral">20%</td>
+      <td>ICs in staples/healthcare continue collecting. MRVL IC valid. No forced action. Neutral.</td>
+    </tr>
+    <tr class="scenario-row-low">
+      <td>Summit disappoints / breaks down — Risk-off, SPY -1.5–2.5%, IWM -2–3%, VIX 21–24</td>
+      <td class="td-neg">15%</td>
+      <td>Short puts challenged in IWM-correlated names. BIDU at maximum risk. Vega losses on net-short-vega book. Defined risk contains damage. Healthcare and staples cushion. Manageable.</td>
+    </tr>
+    <tr class="scenario-row-tail">
+      <td>Exogenous escalation (Iran, tariff surprise) — VIX 25+</td>
+      <td class="td-neg">5%</td>
+      <td>Tail scenario. Defined risk is the only protection. Full portfolio stress — size and structure matter.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Next Session Priorities -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Next Session Priorities</p>
+<table>
+  <thead><tr><th>#</th><th>Priority</th></tr></thead>
+  <tbody>
+    <tr><td class="td-neutral">1</td><td>Read summit pre-market before any entries. No new delta-sensitive positions before the headline drops.</td></tr>
+    <tr><td class="td-neutral">2</td><td>Assess CSCO's Thursday opening print. Gap hold vs. fade determines AI entry conditions for adjacent names.</td></tr>
+    <tr><td class="td-neutral">3</td><td>Review IWM-adjacent short puts — small caps down 1.58%. Any short puts near current price need a roll, close, or managed acceptance.</td></tr>
+    <tr><td class="td-neutral">4</td><td>Confirm BIDU entry conditions — constructive summit required before the BPS_EARNINGS structure is executed.</td></tr>
+    <tr><td class="td-neutral">5</td><td>MRVL IC entry — the highest-premium opportunity on the screen. Execute if session opens constructively after events resolve.</td></tr>
+    <tr><td class="td-neutral">6</td><td>Confirm STLD earnings date before diagonal entry. Unconditional patient entry in any stable environment.</td></tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 5: TOMORROW GAME PLAN -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Section 5 — Tomorrow Game Plan</h2>
+  <div class="section-label">For Thursday, May 14, 2026</div>
+</div>
+
+<!-- Execution Posture -->
+<div class="posture-block">
+  <div>
+    <div class="posture-label">Execution Posture</div>
+    <div class="posture-value">Selective Offense</div>
+    <div class="posture-desc">Gated behind summit resolution and open tone. Execute highest-conviction setups only after the session character is established.</div>
+  </div>
+</div>
+
+<!-- Opening Backdrop callout -->
+<div class="callout callout-warning">
+  <div class="callout-label">Opening Backdrop</div>
+  <div class="callout-body">Binary-event dependent with CSCO's AI infrastructure tailwind. SPY at $740.28, near its 52-week high. Two events will shape Thursday within 30 minutes of the open: the Trump-Xi summit in Beijing and CSCO's 17% AH gap behavior. Approach the open with disciplined patience — do not pre-load positions before both data points are processed.</div>
+</div>
+
+<!-- Primary Themes -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Primary Themes to Watch</p>
+<table>
+  <thead><tr><th>#</th><th>Theme</th><th>What to Watch</th></tr></thead>
+  <tbody>
+    <tr><td class="td-neutral">1</td><td><strong>Trump-Xi Summit</strong></td><td>Headline on tariffs, semiconductor access, and tone of joint statement. Pre-market. Constructive = tape opens; breakdown = closes it.</td></tr>
+    <tr><td class="td-neutral">2</td><td><strong>CSCO Gap Behavior</strong></td><td>Hold near +15%+ = AI infrastructure bid continues; fade below +10% = sell-the-news caution for AI-adjacent names.</td></tr>
+    <tr><td class="td-neutral">3</td><td><strong>Rate Environment / Inflation</strong></td><td>No Fed speakers Thursday. Narrative set by CPI/PPI: zero cuts 2026, 80% probability of hike by April 2027. Warsh era begins May 15.</td></tr>
+    <tr><td class="td-neutral">4</td><td><strong>Sector Rotation Test</strong></td><td>Does healthcare/defensives leadership persist, or does a constructive summit flip the tape to growth/tech? VIX first 30 minutes is the real-time answer.</td></tr>
+    <tr><td class="td-neutral">5</td><td><strong>VIX Behavior</strong></td><td>VIX at 18.11 into two binary events. Post-resolution compression toward 15–16 = constructive; spike toward 21–23 = risk-off signal.</td></tr>
+  </tbody>
+</table>
+
+<!-- Priority Watchlist -->
+<p style="font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 8px;">Priority Watchlist</p>
+<table>
+  <thead><tr><th>Ticker</th><th>Priority</th><th>Setup</th><th>Entry Condition</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="td-ticker">MRVL</td>
+      <td><span class="tag tag-execute">Execute</span></td>
+      <td>IC (short call ~$188–$190, short put ~$168–$170, $5 wings) or BCS. Exit by May 22.</td>
+      <td>Stable open after events resolve. No summit prerequisite but AI tone supports entry.</td>
+    </tr>
+    <tr>
+      <td class="td-ticker">STLD</td>
+      <td><span class="tag tag-execute">Execute</span></td>
+      <td>Bullish Diagonal (July/Aug $237–$240 long call, June $247–$250 short call). Confirm earnings date.</td>
+      <td>Any stable open. Summit-agnostic domestic industrials play.</td>
+    </tr>
+    <tr>
+      <td class="td-ticker">BIDU</td>
+      <td><span class="tag tag-gate">Summit-Gated</span></td>
+      <td>BPS_EARNINGS ($143–$145 short put / $138–$140 long put, May 22 cycle).</td>
+      <td>Constructive summit outcome required before entry. Geopolitical and earnings binary.</td>
+    </tr>
+    <tr>
+      <td class="td-ticker">CSCO</td>
+      <td><span class="tag tag-monitor">Monitor</span></td>
+      <td>Watch gap open behavior. Do not chase — use to gauge AI infrastructure theme for the session.</td>
+      <td>Observation only. Gap hold vs. fade sets context for other AI entries.</td>
+    </tr>
+    <tr>
+      <td class="td-ticker">HUM</td>
+      <td><span class="tag tag-monitor">Monitor</span></td>
+      <td>Bullish Diagonal candidate from prior screen. Confirm earnings date before entry.</td>
+      <td>Healthcare momentum play — still valid if sector leadership persists.</td>
+    </tr>
+    <tr>
+      <td class="td-ticker">SPY / IWM / VIX</td>
+      <td><span class="tag tag-signal">Tone Signal</span></td>
+      <td>SPY at $740; IWM bounce or extension; VIX first 30 minutes.</td>
+      <td>Session tone signals — no trade; pure read.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Game Plan Summary -->
+<div class="callout callout-info" style="margin-top:20px;">
+  <div class="callout-label">Tomorrow Game Plan Summary</div>
+  <div class="callout-body" style="font-size:14px;line-height:1.7;">Thursday opens into two layered events: the Trump-Xi summit in Beijing and CSCO's 17% after-hours move on an AI infrastructure blowout. A constructive summit amplifies the CSCO AI narrative across the tape; a breakdown overshadows it. Read the summit pre-market, observe CSCO's first 15 minutes, and let VIX confirm the institutional verdict before committing to any net-delta-sensitive entries. Once the session character is established, MRVL is the premium-selling priority — maximum IV, maximum IVR, exceptional liquidity, and a clean IC or BCS structure with 14 days to the earnings window. STLD is the unconditional patient diagonal that works in any stable environment. BIDU is the highest-potential, highest-risk trade and requires the summit to resolve constructively before entry. Healthcare and consumer staples remain defensible premium structures regardless of summit outcome. Patience is the opening posture; discipline is the execution standard.</div>
+</div>
+
+<hr class="section-divider">
+
+<!-- CLOSING DESK NOTE -->
+<div style="background:#1a1400;border:1px solid #c9a84c;border-radius:8px;padding:20px 24px;margin:24px 0;">
+  <div style="font-size:12px;font-weight:700;color:#c9a84c;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Closing Desk Note</div>
+  <div style="font-size:13px;color:#c9d1d9;line-height:1.7;">
+    <strong>Posture: Selective Offense — gated behind summit and CSCO open.</strong><br><br>
+    Tomorrow is not a "charge into positions" day — it is a "read the environment, then act decisively" day. Two binary events at the open mean reduced gross exposure heading in and a clear entry queue ready to deploy once the tape reveals itself. The AI infrastructure theme (CSCO, MRVL) and the geopolitical trade theme (BIDU, summit-linked names) are where the action will be. The highest-priority premium-selling opportunity is MRVL — if you execute one trade Thursday, that is the candidate. Everything else follows from the summit headline.
+  </div>
+</div>
+
+</div><!-- end .container -->
+
+<!-- FOOTER / DISCLAIMER BOTTOM (1467D) -->
+<div class="footer">
+  <div class="footer-disclaimer">
+    <div class="footer-label">Disclosure</div>
+    Any options, equities, ETF, futures, or market-related commentary contained in this report is for informational and educational use only and should not be relied upon as a personal recommendation or trade instruction. Before acting on any information, traders should conduct their own research, assess the suitability of any strategy, and understand the risks involved, including volatility, liquidity, assignment risk, and potential loss of capital. All trade ideas, market observations, and scenario analysis are illustrative only.
+    <br><br>
+    <span style="color:#6e7681;">CJ Desk PM Rundown · Wednesday, May 13, 2026 · Published after market close</span>
+  </div>
+</div>
+
+</body>
+</html>
